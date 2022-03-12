@@ -2551,7 +2551,7 @@
     <span class="bp">self</span><span class="o">.</span><span class="n">ping_task</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Task</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">websocket</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientWebSocketResponse</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">query_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;verifyKey&quot;</span><span class="p">:</span> <span class="n">mirai_session</span><span class="o">.</span><span class="n">verify_key</span><span class="p">}</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">id_manager</span> <span class="o">=</span> <span class="n">SyncIDManager</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">future_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">log</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">mirai_session</span><span class="o">.</span><span class="n">single_mode</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">query_dict</span><span class="p">[</span><span class="s2">&quot;qq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mirai_session</span><span class="o">.</span><span class="n">account</span>
@@ -2670,6 +2670,7 @@
     </div>
 
   </div>
+
 
 
 
