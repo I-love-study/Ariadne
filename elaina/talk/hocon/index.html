@@ -2210,7 +2210,9 @@
     <span class="o">...</span> <span class="c1"># 其他的字段也可以一并加上, 并且我推荐尽可能的提供默认值.</span>
     <span class="c1"># 比如你其实也可以把 access_token 也换成 optional, 只不过没有 access_token, github 会疯狂给你返回 429 就是了.</span>
 </code></pre></div>
-<p>!!! warn "这里的命名方式为 <code>snake_case</code> 的字段会被转换为 <code>camelCase</code>.</p>
+<div class="admonition warn">
+<p class="admonition-title">这里的命名方式为 <code>snake_case</code> 的字段会被转换为 <code>camelCase</code>.</p>
+</div>
 <p>其对应的配置文件格式是这样的:</p>
 <div class="highlight"><pre><span></span><code>access-token: balabala
 </code></pre></div>

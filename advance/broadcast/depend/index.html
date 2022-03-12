@@ -580,9 +580,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          依赖注入
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         依赖注入
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基础: 用于验证的依赖
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    下一步: 代码复用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2066,6 +2104,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    基础: 用于验证的依赖
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    下一步: 代码复用
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2084,10 +2144,14 @@
 
 <h1 id="depend-">Depend - 依赖注入<a class="headerlink" href="#depend-" title="Permanent link">🔗</a></h1>
 <p>有时, 前面介绍的基础消息链处理器与 <code>Twilight</code> 消息链处理器, 都不能满足我们的需求. 例如, 对某些数据 (好友号, 群号, 权限等) 的主动判断.</p>
-<p>此时, <code>Depend</code> 即可助你一臂之力. 我们可利用其构造构造一个 <code>Headless Decorator</code>.</p>
+<p>此时, <code>Depend</code> 即可助你一臂之力. 我们可利用其构造一个 <code>Decorator</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">你可以从 <code>graia.broadcast.builtin.decorators</code> 导入 <code>Depend</code>.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">这里所说的 <code>Decorator</code> 是 <code>Graia Broadcast</code> 的一部分, 而非 Python 的 <code>@decorator</code> 语法糖. </p>
+</div>
+<h2 id="_1">基础: 用于验证的依赖<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h2>
 <p>首先, 我们需要实现一个异步函数. 它可以接收 <a href="../../../basic/params/">与事件处理函数相同的参数</a>. 如果我们想对群号进行检查, 可以这样写：</p>
 <div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">check_group</span><span class="p">(</span><span class="n">group</span><span class="p">:</span> <span class="n">Group</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">group</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="mi">12345678</span><span class="p">:</span>
@@ -2098,6 +2162,28 @@
 <div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">GroupMessage</span><span class="p">,</span> <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Depend</span><span class="p">(</span><span class="n">check_group</span><span class="p">)])</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
 </code></pre></div>
+<details open="open">
+<summary>什么是 <code>依赖注入</code>?</summary>
+<p><code>依赖注入</code> 这个词听起来挺高大上, 但实际上它的设计思想只有一个: 代码复用.</p>
+<p>上面你用 <code>Depend</code> 注入的函数, 基本等价于以下表示:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">不用 Depend</label><label for="__tabbed_1_2">使用 Depend</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">GroupMessage</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">group</span><span class="p">:</span> <span class="n">Group</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">group</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="mi">12345678</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">ExecutionStop</span>
+    <span class="o">...</span> <span class="c1"># 跳过其他代码</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">GroupMessage</span><span class="p">,</span> <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">Depend</span><span class="p">(</span><span class="n">check_group</span><span class="p">)])</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
 <p>运行机器人进行测试, 此时机器人只会响应群号为 12345678 的群里的消息.</p>
 <div class="admonition note">
 <p class="admonition-title">提示</p>
@@ -2120,6 +2206,29 @@
 <span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="o">...</span><span class="p">):</span> <span class="o">...</span>
 </code></pre></div>
+<h2 id="_2">下一步: 代码复用<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<p><code>Depend</code> 可以返回值, 以便你在函数中直接使用.</p>
+<p>比如, 假设你想写一个自动提取消息中图片, 并自动下载其 <code>bytes</code> 的 <code>Depend</code>:</p>
+<div class="admonition info">
+<p class="admonition-title">这里我们将使用 <code>Python</code> 的 <code>@decorator</code> 直接包装这个内部函数.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nd">@Depend</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">get_img_bytes</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]:</span>
+    <span class="n">result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">chain</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">Image</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="k">await</span> <span class="n">element</span><span class="o">.</span><span class="n">get_bytes</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># example</span>
+<span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">GroupMessage</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">save_images</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">img_bytes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">bytes</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_img_bytes</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">img_bytes</span> <span class="ow">in</span> <span class="n">img_bytes</span><span class="p">:</span>
+        <span class="o">...</span> <span class="c1"># do sth</span>
+</code></pre></div>
+<p>就是这样! 你可以且应该通过在函数定义的 <code>默认值</code> 位置放置 <code>Decorator</code> 来创建所谓的 “有头装饰器” ,</p>
+<p><code>Depend</code> 包装函数所返回的 <strong>所有</strong> 值 (包括 <code>None</code>) 都会被传递回去. 同样, 引发的 <code>ExecutionStop</code> 会招致执行的停止.</p>
+<p>最后顺口一提, 有头和无头装饰器并不冲突.</p>
 <div class="admonition graiax">
 <p class="admonition-title">社区文档相关章节: <a href="https://graiax.cn/make_ero_bot/tutorials/9_not_everyone_have_st.html">链接</a></p>
 </div>
