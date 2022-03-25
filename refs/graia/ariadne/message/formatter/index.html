@@ -2209,7 +2209,8 @@
 
 
 <h2 id="graia.ariadne.message.formatter.Formatter" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">Formatter</span><span class="p">(</span><span class="n">format_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+          <code>Formatter</code>
+
 
 
 <a href="#graia.ariadne.message.formatter.Formatter" class="headerlink" title="Permanent link">🔗</a></h2>
@@ -2221,18 +2222,101 @@
       <p>类似于 string.Formatter 的消息链格式化器</p>
 
 
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/message/formatter.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">format_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">format_string</span> <span class="o">=</span> <span class="n">format_string</span>
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/formatter.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Formatter</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;类似于 string.Formatter 的消息链格式化器&quot;&quot;&quot;</span>
+
+    <span class="n">format_string</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">format_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">format_string</span> <span class="o">=</span> <span class="n">format_string</span>
+
+    <span class="k">def</span> <span class="nf">format</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">o_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">o_kwargs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MessageChain</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;通过初始化时传入的格式字符串 格式化消息链</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            *args (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
+<span class="sd">            **kwargs (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            MessageChain: 格式化后的消息链</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">args</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">o_args</span><span class="p">]</span>
+        <span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">o_kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+        <span class="n">args_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x02</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="se">\x02</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">chain</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">chain</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">kwargs_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x03</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="se">\x03</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">chain</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">chain</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">args_mapping</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x03</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="se">\x03</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">})</span>
+
+        <span class="n">chain_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Plain</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;([</span><span class="se">\x02\x03</span><span class="s2">][</span><span class="se">\\</span><span class="s2">d</span><span class="se">\\</span><span class="s2">w]+[</span><span class="se">\x02\x03</span><span class="s2">])&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s2">&quot;(?P&lt;header&gt;[</span><span class="se">\x02\x03</span><span class="s2">])(?P&lt;content&gt;</span><span class="se">\\</span><span class="s2">w+)(?P=header)&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+                <span class="n">header</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;header&quot;</span><span class="p">)</span>
+                <span class="n">full</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">header</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="se">\x02</span><span class="s2">&quot;</span><span class="p">:</span>  <span class="c1"># from args</span>
+                    <span class="n">chain_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">args_mapping</span><span class="p">[</span><span class="n">full</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>  <span class="c1"># \x03, from kwargs</span>
+                    <span class="n">chain_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kwargs_mapping</span><span class="p">[</span><span class="n">full</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">chain_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Plain</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">*</span><span class="n">chain_list</span><span class="p">)</span><span class="o">.</span><span class="n">merge</span><span class="p">()</span>
 </code></pre></div>
 </td></tr></table>
-            </details>
+          </details>
 
 
 
   <div class="doc doc-children">
+
 
 
 
@@ -2247,11 +2331,12 @@
 
 
 <h3 id="graia.ariadne.message.formatter.Formatter.format" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">format</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">MessageChain</span></code>
+format
 
 
 <a href="#graia.ariadne.message.formatter.Formatter.format" class="headerlink" title="Permanent link">🔗</a></h3>
-
+<div class="highlight"><pre><span></span><code><span class="nb">format</span><span class="p">(</span><span class="o">*</span><span class="n">o_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">o_kwargs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">MessageChain</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2275,7 +2360,7 @@
           </td>
           <td><p>格式化时传入的关键字参数</p></td>
           <td>
-                <code>()</code>
+              <em>required</em>
           </td>
         </tr>
         <tr>
@@ -2285,7 +2370,7 @@
           </td>
           <td><p>格式化时传入的关键字参数</p></td>
           <td>
-                <code>{}</code>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -2346,7 +2431,7 @@
 <span class="normal">49</span>
 <span class="normal">50</span>
 <span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">format</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">o_args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">o_kwargs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MessageChain</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;通过初始化时传入的格式字符串 格式化消息链</span>
 
@@ -2357,17 +2442,17 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        MessageChain: 格式化后的消息链</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">args</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
-    <span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+    <span class="n">args</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">o_args</span><span class="p">]</span>
+    <span class="n">kwargs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">o_kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 
     <span class="n">args_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
         <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x02</span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="se">\x02</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">chain</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">chain</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
     <span class="p">}</span>
     <span class="n">kwargs_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x03</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="se">\x03</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">chain</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">chain</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 
-    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">args_mapping</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x03</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="se">\x03</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">()})</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">args_mapping</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\x03</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="se">\x03</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">})</span>
 
-    <span class="n">chain_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">chain_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Plain</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;([</span><span class="se">\x02\x03</span><span class="s2">][</span><span class="se">\\</span><span class="s2">d</span><span class="se">\\</span><span class="s2">w]+[</span><span class="se">\x02\x03</span><span class="s2">])&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">match</span> <span class="o">:=</span> <span class="n">re</span><span class="o">.</span><span class="n">fullmatch</span><span class="p">(</span><span class="s2">&quot;(?P&lt;header&gt;[</span><span class="se">\x02\x03</span><span class="s2">])(?P&lt;content&gt;</span><span class="se">\\</span><span class="s2">w+)(?P=header)&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>

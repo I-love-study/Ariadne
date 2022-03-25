@@ -1525,8 +1525,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="md-nav__link">
-    ApplicationLifecycleEvent
+  <a href="#graia.ariadne.event.lifecycle.AdapterLaunched" class="md-nav__link">
+    AdapterLaunched
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.event.lifecycle.AdapterShutdowned" class="md-nav__link">
+    AdapterShutdowned
   </a>
   
 </li>
@@ -1539,22 +1546,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="md-nav__link">
+    ApplicationLifecycleEvent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graia.ariadne.event.lifecycle.ApplicationShutdowned" class="md-nav__link">
     ApplicationShutdowned
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.event.lifecycle.AdapterLaunched" class="md-nav__link">
-    AdapterLaunched
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.event.lifecycle.AdapterShutdowned" class="md-nav__link">
-    AdapterShutdowned
   </a>
   
 </li>
@@ -2163,8 +2163,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="md-nav__link">
-    ApplicationLifecycleEvent
+  <a href="#graia.ariadne.event.lifecycle.AdapterLaunched" class="md-nav__link">
+    AdapterLaunched
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.event.lifecycle.AdapterShutdowned" class="md-nav__link">
+    AdapterShutdowned
   </a>
   
 </li>
@@ -2177,22 +2184,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="md-nav__link">
+    ApplicationLifecycleEvent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graia.ariadne.event.lifecycle.ApplicationShutdowned" class="md-nav__link">
     ApplicationShutdowned
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.event.lifecycle.AdapterLaunched" class="md-nav__link">
-    AdapterLaunched
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.event.lifecycle.AdapterShutdowned" class="md-nav__link">
-    AdapterShutdowned
   </a>
   
 </li>
@@ -2238,113 +2238,6 @@
 
 
 
-<h2 id="graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ApplicationLifecycleEvent</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="s1">&#39;Ariadne&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-
-<a href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><span title="graia.broadcast.entities.event.Dispatchable">Dispatchable</span></code></p>
-
-
-      <p>指示有关应用 (Ariadne) 的事件.</p>
-
-
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/event/lifecycle.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Ariadne&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">app</span>
-</code></pre></div>
-</td></tr></table>
-            </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.event.lifecycle.ApplicationLaunched" class="doc doc-heading">
-          <code>ApplicationLaunched</code>
-
-
-
-<a href="#graia.ariadne.event.lifecycle.ApplicationLaunched" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><a class="autorefs autorefs-internal" title="graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent">ApplicationLifecycleEvent</a></code></p>
-
-
-      <p>指示 Ariadne 启动.</p>
-
-
-
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.event.lifecycle.ApplicationShutdowned" class="doc doc-heading">
-          <code>ApplicationShutdowned</code>
-
-
-
-<a href="#graia.ariadne.event.lifecycle.ApplicationShutdowned" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><a class="autorefs autorefs-internal" title="graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent">ApplicationLifecycleEvent</a></code></p>
-
-
-      <p>指示 Ariadne 关闭.</p>
-
-
-
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
 <h2 id="graia.ariadne.event.lifecycle.AdapterLaunched" class="doc doc-heading">
           <code>AdapterLaunched</code>
 
@@ -2361,6 +2254,18 @@
       <p>指示远程适配器启动了.</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/event/lifecycle.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AdapterLaunched</span><span class="p">(</span><span class="n">ApplicationLifecycleEvent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    指示远程适配器启动了.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
     </div>
@@ -2389,6 +2294,183 @@
       <p>指示远程适配器关闭了.</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/event/lifecycle.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AdapterShutdowned</span><span class="p">(</span><span class="n">ApplicationLifecycleEvent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    指示远程适配器关闭了.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.event.lifecycle.ApplicationLaunched" class="doc doc-heading">
+          <code>ApplicationLaunched</code>
+
+
+
+<a href="#graia.ariadne.event.lifecycle.ApplicationLaunched" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a class="autorefs autorefs-internal" title="graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent">ApplicationLifecycleEvent</a></code></p>
+
+
+      <p>指示 Ariadne 启动.</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/event/lifecycle.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ApplicationLaunched</span><span class="p">(</span><span class="n">ApplicationLifecycleEvent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    指示 Ariadne 启动.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="doc doc-heading">
+          <code>ApplicationLifecycleEvent</code>
+
+
+
+<a href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><span title="graia.broadcast.entities.event.Dispatchable">Dispatchable</span></code></p>
+
+
+      <p>指示有关应用 (Ariadne) 的事件.</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/event/lifecycle.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ApplicationLifecycleEvent</span><span class="p">(</span><span class="n">Dispatchable</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    指示有关应用 (Ariadne) 的事件.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Ariadne&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Ariadne&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">app</span>
+
+    <span class="k">class</span> <span class="nc">Dispatcher</span><span class="p">(</span><span class="n">BaseDispatcher</span><span class="p">):</span>
+        <span class="nd">@staticmethod</span>
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="n">interface</span><span class="p">:</span> <span class="s2">&quot;DispatcherInterface&quot;</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">..app</span> <span class="kn">import</span> <span class="n">Ariadne</span>
+
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="n">ApplicationLifecycleEvent</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">generic_issubclass</span><span class="p">(</span><span class="n">Ariadne</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">app</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.event.lifecycle.ApplicationShutdowned" class="doc doc-heading">
+          <code>ApplicationShutdowned</code>
+
+
+
+<a href="#graia.ariadne.event.lifecycle.ApplicationShutdowned" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a class="autorefs autorefs-internal" title="graia.ariadne.event.lifecycle.ApplicationLifecycleEvent" href="#graia.ariadne.event.lifecycle.ApplicationLifecycleEvent">ApplicationLifecycleEvent</a></code></p>
+
+
+      <p>指示 Ariadne 关闭.</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/event/lifecycle.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ApplicationShutdowned</span><span class="p">(</span><span class="n">ApplicationLifecycleEvent</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    指示 Ariadne 关闭.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
     </div>

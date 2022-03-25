@@ -1396,15 +1396,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.context.enter_message_send_context" class="md-nav__link">
-    enter_message_send_context()
+  <a href="#graia.ariadne.context.enter_context" class="md-nav__link">
+    enter_context()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.context.enter_context" class="md-nav__link">
-    enter_context()
+  <a href="#graia.ariadne.context.enter_message_send_context" class="md-nav__link">
+    enter_message_send_context()
   </a>
   
 </li>
@@ -2140,15 +2140,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.context.enter_message_send_context" class="md-nav__link">
-    enter_message_send_context()
+  <a href="#graia.ariadne.context.enter_context" class="md-nav__link">
+    enter_context()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.context.enter_context" class="md-nav__link">
-    enter_context()
+  <a href="#graia.ariadne.context.enter_message_send_context" class="md-nav__link">
+    enter_message_send_context()
   </a>
   
 </li>
@@ -2202,81 +2202,13 @@
 
 
 
-<h2 id="graia.ariadne.context.enter_message_send_context" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enter_message_send_context</span><span class="p">(</span><span class="n">method</span><span class="p">:</span> <span class="s1">&#39;UploadMethod&#39;</span><span class="p">)</span></code>
-
-
-<a href="#graia.ariadne.context.enter_message_send_context" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>进入消息发送上下文</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>method</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.model.UploadMethod" href="../model/#graia.ariadne.model.UploadMethod">UploadMethod</a></code>
-          </td>
-          <td><p>消息上下文的枚举对象</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/context.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@contextmanager</span>
-<span class="k">def</span> <span class="nf">enter_message_send_context</span><span class="p">(</span><span class="n">method</span><span class="p">:</span> <span class="s2">&quot;UploadMethod&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;进入消息发送上下文</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        method (UploadMethod): 消息上下文的枚举对象</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">upload_method_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
-    <span class="k">yield</span>
-    <span class="n">upload_method_ctx</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
 <h2 id="graia.ariadne.context.enter_context" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">enter_context</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="s1">&#39;Ariadne&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="s1">&#39;Dispatchable&#39;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+enter_context
 
 
 <a href="#graia.ariadne.context.enter_context" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<div class="highlight"><pre><span></span><code><span class="n">enter_context</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;AriadneMixin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s1">&#39;Dispatchable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2318,8 +2250,7 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/context.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">52</span>
-<span class="normal">53</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
 <span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
@@ -2350,35 +2281,28 @@
 <span class="normal">81</span>
 <span class="normal">82</span>
 <span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@contextmanager</span>
-<span class="k">def</span> <span class="nf">enter_context</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="s2">&quot;Ariadne&quot;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="s2">&quot;Dispatchable&quot;</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="normal">84</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">enter_context</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;AriadneMixin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Dispatchable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;进入事件上下文</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        app (Ariadne, optional): Ariadne 实例.</span>
 <span class="sd">        event (Dispatchable, optional): 当前事件</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">token_app</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">token_event</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">token_loop</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">token_bcc</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">token_adapter</span> <span class="o">=</span> <span class="kc">None</span>
 
+    <span class="n">token_app</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">if</span> <span class="n">app</span><span class="p">:</span>
         <span class="n">token_app</span> <span class="o">=</span> <span class="n">ariadne_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
         <span class="n">token_loop</span> <span class="o">=</span> <span class="n">event_loop_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">loop</span><span class="p">)</span>
         <span class="n">token_bcc</span> <span class="o">=</span> <span class="n">broadcast_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">broadcast</span><span class="p">)</span>
         <span class="n">token_adapter</span> <span class="o">=</span> <span class="n">adapter_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">adapter</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">event</span><span class="p">:</span>
-        <span class="n">token_event</span> <span class="o">=</span> <span class="n">event_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
-
+    <span class="n">token_event</span> <span class="o">=</span> <span class="n">event_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="k">if</span> <span class="n">event</span> <span class="k">else</span> <span class="kc">None</span>
     <span class="k">yield</span>
 
-    <span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">token_app</span><span class="p">:</span>
             <span class="n">ariadne_ctx</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">token_app</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">token_adapter</span><span class="p">:</span>
@@ -2389,8 +2313,76 @@
             <span class="n">event_loop_ctx</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">token_loop</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">token_bcc</span><span class="p">:</span>
             <span class="n">broadcast_ctx</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">token_bcc</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.context.enter_message_send_context" class="doc doc-heading">
+enter_message_send_context
+
+
+<a href="#graia.ariadne.context.enter_message_send_context" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">enter_message_send_context</span><span class="p">(</span><span class="n">method</span><span class="p">:</span> <span class="s1">&#39;UploadMethod&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>进入消息发送上下文</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>method</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="graia.ariadne.model.UploadMethod" href="../model/#graia.ariadne.model.UploadMethod">UploadMethod</a></code>
+          </td>
+          <td><p>消息上下文的枚举对象</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/context.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">enter_message_send_context</span><span class="p">(</span><span class="n">method</span><span class="p">:</span> <span class="s2">&quot;UploadMethod&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;进入消息发送上下文</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        method (UploadMethod): 消息上下文的枚举对象</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">upload_method_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+    <span class="k">yield</span>
+    <span class="n">upload_method_ctx</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>

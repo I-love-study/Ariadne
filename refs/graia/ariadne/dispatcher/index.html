@@ -1410,8 +1410,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.MessageChainDispatcher" class="md-nav__link">
-    MessageChainDispatcher
+  <a href="#graia.ariadne.dispatcher.BaseDispatcher" class="md-nav__link">
+    BaseDispatcher
   </a>
   
 </li>
@@ -1424,8 +1424,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.SourceDispatcher" class="md-nav__link">
-    SourceDispatcher
+  <a href="#graia.ariadne.dispatcher.MessageChainDispatcher" class="md-nav__link">
+    MessageChainDispatcher
   </a>
   
 </li>
@@ -1438,15 +1438,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.SubjectDispatcher" class="md-nav__link">
-    SubjectDispatcher
+  <a href="#graia.ariadne.dispatcher.SourceDispatcher" class="md-nav__link">
+    SourceDispatcher
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.BaseDispatcher" class="md-nav__link">
-    BaseDispatcher
+  <a href="#graia.ariadne.dispatcher.SubjectDispatcher" class="md-nav__link">
+    SubjectDispatcher
   </a>
   
 </li>
@@ -2168,8 +2168,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.MessageChainDispatcher" class="md-nav__link">
-    MessageChainDispatcher
+  <a href="#graia.ariadne.dispatcher.BaseDispatcher" class="md-nav__link">
+    BaseDispatcher
   </a>
   
 </li>
@@ -2182,8 +2182,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.SourceDispatcher" class="md-nav__link">
-    SourceDispatcher
+  <a href="#graia.ariadne.dispatcher.MessageChainDispatcher" class="md-nav__link">
+    MessageChainDispatcher
   </a>
   
 </li>
@@ -2196,15 +2196,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.SubjectDispatcher" class="md-nav__link">
-    SubjectDispatcher
+  <a href="#graia.ariadne.dispatcher.SourceDispatcher" class="md-nav__link">
+    SourceDispatcher
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.dispatcher.BaseDispatcher" class="md-nav__link">
-    BaseDispatcher
+  <a href="#graia.ariadne.dispatcher.SubjectDispatcher" class="md-nav__link">
+    SubjectDispatcher
   </a>
   
 </li>
@@ -2250,12 +2250,12 @@
 
 
 
-<h2 id="graia.ariadne.dispatcher.MessageChainDispatcher" class="doc doc-heading">
-          <code>MessageChainDispatcher</code>
+<h2 id="graia.ariadne.dispatcher.BaseDispatcher" class="doc doc-heading">
+          <code>BaseDispatcher</code>
 
 
 
-<a href="#graia.ariadne.dispatcher.MessageChainDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
+<a href="#graia.ariadne.dispatcher.BaseDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
 
 
     <div class="doc doc-contents ">
@@ -2263,9 +2263,25 @@
           Bases: <code><span title="graia.broadcast.entities.dispatcher.BaseDispatcher">AbstractDispatcher</span></code></p>
 
 
-      <p>从 MessageEvent 提取 MessageChain 的 Dispatcher</p>
+      <p>空 Dispatcher</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/dispatcher.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BaseDispatcher</span><span class="p">(</span><span class="n">AbstractDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;空 Dispatcher&quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="o">*</span><span class="n">_</span><span class="p">):</span>
+        <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 
@@ -2309,6 +2325,32 @@
       <p>提取上下文的 Dispatcher</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/dispatcher.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ContextDispatcher</span><span class="p">(</span><span class="n">AbstractDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;提取上下文的 Dispatcher&quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">get_running</span>
+
+        <span class="k">if</span> <span class="n">generic_isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span>
+
+        <span class="k">return</span> <span class="n">get_running</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 
@@ -2336,12 +2378,12 @@
 
 
 
-<h2 id="graia.ariadne.dispatcher.SourceDispatcher" class="doc doc-heading">
-          <code>SourceDispatcher</code>
+<h2 id="graia.ariadne.dispatcher.MessageChainDispatcher" class="doc doc-heading">
+          <code>MessageChainDispatcher</code>
 
 
 
-<a href="#graia.ariadne.dispatcher.SourceDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
+<a href="#graia.ariadne.dispatcher.MessageChainDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
 
 
     <div class="doc doc-contents ">
@@ -2349,9 +2391,33 @@
           Bases: <code><span title="graia.broadcast.entities.dispatcher.BaseDispatcher">AbstractDispatcher</span></code></p>
 
 
-      <p>提取 MessageEvent 消息链 Source 元素的 Dispatcher</p>
+      <p>从 MessageEvent 提取 MessageChain 的 Dispatcher</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/dispatcher.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MessageChainDispatcher</span><span class="p">(</span><span class="n">AbstractDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;从 MessageEvent 提取 MessageChain 的 Dispatcher&quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">.event.message</span> <span class="kn">import</span> <span class="n">ActiveMessage</span><span class="p">,</span> <span class="n">MessageEvent</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="p">(</span><span class="n">MessageEvent</span><span class="p">,</span> <span class="n">ActiveMessage</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">generic_issubclass</span><span class="p">(</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">messageChain</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 
@@ -2395,6 +2461,107 @@
       <p>从 MessageEvent 提取 sender 的 Dispatcher.</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/dispatcher.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SenderDispatcher</span><span class="p">(</span><span class="n">AbstractDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    从 MessageEvent 提取 sender 的 Dispatcher.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">.event.message</span> <span class="kn">import</span> <span class="n">MessageEvent</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="n">MessageEvent</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">generic_isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">sender</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">sender</span>
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.dispatcher.SourceDispatcher" class="doc doc-heading">
+          <code>SourceDispatcher</code>
+
+
+
+<a href="#graia.ariadne.dispatcher.SourceDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><span title="graia.broadcast.entities.dispatcher.BaseDispatcher">AbstractDispatcher</span></code></p>
+
+
+      <p>提取 MessageEvent 消息链 Source 元素的 Dispatcher</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/dispatcher.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SourceDispatcher</span><span class="p">(</span><span class="n">AbstractDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;提取 MessageEvent 消息链 Source 元素的 Dispatcher&quot;&quot;&quot;</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">.event.message</span> <span class="kn">import</span> <span class="n">ActiveMessage</span><span class="p">,</span> <span class="n">MessageEvent</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="p">(</span><span class="n">MessageEvent</span><span class="p">,</span> <span class="n">ActiveMessage</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">generic_issubclass</span><span class="p">(</span><span class="n">Source</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">messageChain</span><span class="o">.</span><span class="n">getFirst</span><span class="p">(</span><span class="n">Source</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 
@@ -2438,49 +2605,30 @@
       <p>从 ActiveMessage 提取 subject 的 Dispatcher</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/dispatcher.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SubjectDispatcher</span><span class="p">(</span><span class="n">AbstractDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;从 ActiveMessage 提取 subject 的 Dispatcher&quot;&quot;&quot;</span>
 
+    <span class="nd">@staticmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">.event.message</span> <span class="kn">import</span> <span class="n">ActiveMessage</span>
 
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.dispatcher.BaseDispatcher" class="doc doc-heading">
-          <code>BaseDispatcher</code>
-
-
-
-<a href="#graia.ariadne.dispatcher.BaseDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><span title="graia.broadcast.entities.dispatcher.BaseDispatcher">AbstractDispatcher</span></code></p>
-
-
-      <p>空 Dispatcher</p>
-
-
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="p">,</span> <span class="n">ActiveMessage</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">generic_issubclass</span><span class="p">(</span><span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">subject</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">interface</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">subject</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 

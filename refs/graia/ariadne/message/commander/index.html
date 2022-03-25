@@ -2093,49 +2093,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.message.commander.ParamDesc" class="md-nav__link">
-    ParamDesc
-  </a>
-  
-    <nav class="md-nav" aria-label="ParamDesc">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#graia.ariadne.message.commander.ParamDesc.gen_model" class="md-nav__link">
-    gen_model()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.message.commander.Slot" class="md-nav__link">
-    Slot
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#graia.ariadne.message.commander.Arg" class="md-nav__link">
     Arg
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.message.commander.CommandPattern" class="md-nav__link">
-    CommandPattern
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.message.commander.MismatchError" class="md-nav__link">
-    MismatchError
   </a>
   
 </li>
@@ -2161,12 +2120,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graia.ariadne.message.commander.CommandPattern" class="md-nav__link">
+    CommandPattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graia.ariadne.message.commander.Commander" class="md-nav__link">
     Commander
   </a>
   
     <nav class="md-nav" aria-label="Commander">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graia.ariadne.message.commander.Commander.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#graia.ariadne.message.commander.Commander.add_type_cast" class="md-nav__link">
@@ -2191,6 +2164,40 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.message.commander.MismatchError" class="md-nav__link">
+    MismatchError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.message.commander.ParamDesc" class="md-nav__link">
+    ParamDesc
+  </a>
+  
+    <nav class="md-nav" aria-label="ParamDesc">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graia.ariadne.message.commander.ParamDesc.gen_model" class="md-nav__link">
+    gen_model()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.message.commander.Slot" class="md-nav__link">
+    Slot
+  </a>
   
 </li>
       
@@ -2245,200 +2252,9 @@
 
 
 
-<h2 id="graia.ariadne.message.commander.ParamDesc" class="doc doc-heading">
-          <code>ParamDesc</code>
-
-
-
-<a href="#graia.ariadne.message.commander.ParamDesc" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/abc.html#module-abc">abc</a>.<a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/zh-cn/3/library/abc.html#abc.ABC">ABC</a></code></p>
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="graia.ariadne.message.commander.ParamDesc.gen_model" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">gen_model</span><span class="p">(</span><span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-
-<a href="#graia.ariadne.message.commander.ParamDesc.gen_model" class="headerlink" title="Permanent link">🔗</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>生成用于 pydantic 解析的 model 属性</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>validators</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>]</code>
-          </td>
-          <td><p>用作 validator 的 Callable 可迭代对象</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-<span class="k">def</span> <span class="nf">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;生成用于 pydantic 解析的 model 属性</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        validators (Iterable[Callable]): 用作 validator 的 Callable 可迭代对象</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="o">...</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.message.commander.Slot" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">Slot</span><span class="p">(</span><span class="n">placeholder</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span> <span class="o">=</span> <span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="bp">Ellipsis</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-
-<a href="#graia.ariadne.message.commander.Slot" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.commander.ParamDesc" href="#graia.ariadne.message.commander.ParamDesc">ParamDesc</a></code></p>
-
-
-      <p>Slot</p>
-
-
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span>
-    <span class="n">placeholder</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
-    <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-    <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-    <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">placeholder</span> <span class="o">=</span> <span class="n">placeholder</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;raw&quot;</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">_raw</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">default</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="o">=</span> <span class="n">default_factory</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-</code></pre></div>
-</td></tr></table>
-            </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
 <h2 id="graia.ariadne.message.commander.Arg" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">Arg</span><span class="p">(</span><span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="bp">Ellipsis</span><span class="p">,</span> <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="bp">Ellipsis</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+          <code>Arg</code>
+
 
 
 <a href="#graia.ariadne.message.commander.Arg" class="headerlink" title="Permanent link">🔗</a></h2>
@@ -2452,9 +2268,11 @@
       <p>Argument</p>
 
 
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">139</span>
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
 <span class="normal">140</span>
 <span class="normal">141</span>
 <span class="normal">142</span>
@@ -2490,46 +2308,134 @@
 <span class="normal">172</span>
 <span class="normal">173</span>
 <span class="normal">174</span>
-<span class="normal">175</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span>
-    <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-    <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-    <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Arg</span><span class="p">(</span><span class="n">ParamDesc</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Argument&quot;&quot;&quot;</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">pattern</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">match_patterns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">default</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="o">=</span> <span class="n">default_factory</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">param_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
+        <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
+        <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 
-    <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize_command</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">pattern</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">match_patterns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="o">=</span> <span class="n">default_factory</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">assert</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span><span class="n">CommandToken</span><span class="o">.</span><span class="n">TEXT</span><span class="p">,</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">CHOICE</span><span class="p">},</span> <span class="s2">&quot;Required argument pattern!&quot;</span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokenize_command</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">match_patterns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">assert</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">{</span><span class="n">CommandToken</span><span class="o">.</span><span class="n">TEXT</span><span class="p">,</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">CHOICE</span><span class="p">},</span> <span class="s2">&quot;Required argument pattern!&quot;</span>
 
-    <span class="k">for</span> <span class="n">t_type</span><span class="p">,</span> <span class="n">token_list</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
-        <span class="k">if</span> <span class="n">t_type</span> <span class="ow">in</span> <span class="p">{</span><span class="n">CommandToken</span><span class="o">.</span><span class="n">TEXT</span><span class="p">,</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">CHOICE</span><span class="p">}:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="sd">&quot;&quot;&quot;Argument pattern can only be placed at head. &quot;&quot;&quot;</span>
-                <span class="sd">&quot;&quot;&quot;Use &quot;{&quot; and &quot;}&quot; for placeholders.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">match_patterns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+
+        <span class="k">for</span> <span class="n">t_type</span><span class="p">,</span> <span class="n">token_list</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+            <span class="k">if</span> <span class="n">t_type</span> <span class="ow">in</span> <span class="p">{</span><span class="n">CommandToken</span><span class="o">.</span><span class="n">TEXT</span><span class="p">,</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">CHOICE</span><span class="p">}:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sd">&quot;&quot;&quot;Argument pattern can only be placed at head. &quot;&quot;&quot;</span>
+                    <span class="sd">&quot;&quot;&quot;Use &quot;{&quot; and &quot;}&quot; for placeholders.&quot;&quot;&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">t_type</span> <span class="ow">is</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">PARAM</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">token_list</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Arg doesn&#39;t support aliasing!&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">token_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Duplicated tag!&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">token_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">nargs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nargs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="nb">bool</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="o">...</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">nargs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="n">MessageChain</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="o">=</span> <span class="n">const_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">BaseModel</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">AriadneBaseModel</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">nargs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Set default</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span>
+                <span class="s2">&quot;ArgModel&quot;</span><span class="p">,</span>
+                <span class="n">__validators__</span><span class="o">=</span><span class="p">{</span>
+                    <span class="sa">f</span><span class="s2">&quot;#validator_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">#&quot;</span><span class="p">:</span> <span class="n">validator</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allow_reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">validators</span><span class="p">)</span>
+                <span class="p">},</span>
+                <span class="n">val</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span>
             <span class="p">)</span>
-        <span class="k">if</span> <span class="n">t_type</span> <span class="ow">is</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">PARAM</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">token_list</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Arg doesn&#39;t support aliasing!&quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">token_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Duplicated tag!&quot;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">token_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">nargs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span>
+                <span class="s2">&quot;ArgModel&quot;</span><span class="p">,</span>
+                <span class="n">__validators__</span><span class="o">=</span><span class="p">{</span>
+                    <span class="sa">f</span><span class="s2">&quot;#validator_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">#&quot;</span><span class="p">:</span> <span class="n">validator</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allow_reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">v</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">validators</span><span class="p">)</span>
+                <span class="p">},</span>
+                <span class="o">**</span><span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="o">...</span><span class="p">)},</span>
+            <span class="p">)</span>
 
-    <span class="bp">self</span><span class="o">.</span><span class="n">nargs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tags</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You didn&#39;t supply a suitable model for </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">param_name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-            </details>
+          </details>
 
 
 
@@ -2554,81 +2460,8 @@
 
 
 
-  </div>
-
-    </div>
 
   </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.message.commander.CommandPattern" class="doc doc-heading">
-          <code>CommandPattern</code>
-
-
-
-<a href="#graia.ariadne.message.commander.CommandPattern" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-
-      <p>命令样式</p>
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.message.commander.MismatchError" class="doc doc-heading">
-          <code>MismatchError</code>
-
-
-
-<a href="#graia.ariadne.message.commander.MismatchError" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError">ValueError</a></code></p>
-
-
-      <p>指令失配</p>
-
-
-
 
     </div>
 
@@ -2641,7 +2474,8 @@
 
 
 <h2 id="graia.ariadne.message.commander.CommandHandler" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">CommandHandler</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="n">CommandPattern</span><span class="p">,</span> <span class="n">callable</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
+          <code>CommandHandler</code>
+
 
 
 <a href="#graia.ariadne.message.commander.CommandHandler" class="headerlink" title="Permanent link">🔗</a></h2>
@@ -2655,9 +2489,11 @@
       <p>Command 的 ExecTarget 对象, 承担了参数提取等任务</p>
 
 
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">249</span>
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
 <span class="normal">250</span>
 <span class="normal">251</span>
 <span class="normal">252</span>
@@ -2673,30 +2509,155 @@
 <span class="normal">262</span>
 <span class="normal">263</span>
 <span class="normal">264</span>
-<span class="normal">265</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span>
-    <span class="n">record</span><span class="p">:</span> <span class="n">CommandPattern</span><span class="p">,</span>
-    <span class="n">callable</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
-    <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">):</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-        <span class="n">callable</span><span class="p">,</span>
-        <span class="p">[</span>
-            <span class="n">ConstantDispatcher</span><span class="p">(</span><span class="n">commander_data_ctx</span><span class="p">),</span>
-            <span class="n">ContextDispatcher</span><span class="p">(),</span>
-            <span class="o">*</span><span class="n">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span> <span class="ow">or</span> <span class="p">[]),</span>
-        <span class="p">],</span>
-        <span class="nb">list</span><span class="p">(</span><span class="n">decorators</span><span class="p">),</span>
-    <span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">:</span> <span class="n">CommandPattern</span> <span class="o">=</span> <span class="n">record</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">CommandHandler</span><span class="p">(</span><span class="n">ExecTarget</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Command 的 ExecTarget 对象, 承担了参数提取等任务&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">record</span><span class="p">:</span> <span class="n">CommandPattern</span><span class="p">,</span>
+        <span class="n">callable</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+        <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+        <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">callable</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="n">ConstantDispatcher</span><span class="p">(</span><span class="n">commander_data_ctx</span><span class="p">),</span>
+                <span class="n">ContextDispatcher</span><span class="p">(),</span>
+                <span class="o">*</span><span class="n">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span><span class="p">),</span>
+            <span class="p">],</span>
+            <span class="nb">list</span><span class="p">(</span><span class="n">decorators</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">:</span> <span class="n">CommandPattern</span> <span class="o">=</span> <span class="n">record</span>
+
+    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">],</span>
+        <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]],</span>
+        <span class="n">wildcard_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;基于 CommandRecord 与解析数据设置 ConstantDispatcher 参数</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            slot_data (Dict[Union[int, str], MessageChain]): Slot 的解析结果</span>
+<span class="sd">            arg_data (Dict[str, List[MessageChain]]): Arg 的解析结果</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, Any]: 参数</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">param_result</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">arg_map</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">default_factory</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="n">arg</span><span class="o">.</span><span class="n">param_name</span>
+                <span class="k">assert</span> <span class="n">arg</span><span class="o">.</span><span class="n">model</span>
+            <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">nargs</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">arg</span><span class="o">.</span><span class="n">match_patterns</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">arg_data</span><span class="p">:</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span> <span class="n">arg_data</span><span class="p">[</span><span class="n">param</span><span class="p">]))</span>
+                        <span class="k">break</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">BaseModel</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">arg</span><span class="o">.</span><span class="n">type</span><span class="p">):</span>
+                        <span class="n">param_result</span><span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+                        <span class="k">continue</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">value</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                        <span class="n">value</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+
+                <span class="k">if</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">BaseModel</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">arg</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">AriadneBaseModel</span><span class="p">):</span>
+                    <span class="n">param_result</span><span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="o">**</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">param_result</span><span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="o">**</span><span class="n">value</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">param</span> <span class="ow">in</span> <span class="n">arg_data</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">arg</span><span class="o">.</span><span class="n">match_patterns</span><span class="p">):</span>
+                    <span class="n">value</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">value</span>
+                <span class="n">param_result</span><span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">slot</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">slot_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+                <span class="k">assert</span> <span class="n">slot</span><span class="o">.</span><span class="n">model</span>
+            <span class="k">if</span> <span class="n">slot</span><span class="o">.</span><span class="n">param_name</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">wildcard</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">slot_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="n">slot</span><span class="o">.</span><span class="n">default_factory</span><span class="p">()</span>
+                <span class="n">param_result</span><span class="p">[</span><span class="n">slot</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">slot</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">slot</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="n">_raw</span><span class="p">:</span>
+                    <span class="n">param_result</span><span class="p">[</span><span class="n">slot</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">MessageChain</span><span class="p">([</span><span class="s2">&quot; &quot;</span><span class="p">])</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">wildcard_list</span><span class="p">,</span> <span class="n">merge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">param_result</span><span class="p">[</span><span class="n">slot</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span>
+                        <span class="n">slot</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">chain</span><span class="p">)</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">chain</span> <span class="ow">in</span> <span class="n">wildcard_list</span>
+                    <span class="p">)</span>
+        <span class="k">return</span> <span class="n">param_result</span>
 </code></pre></div>
 </td></tr></table>
-            </details>
+          </details>
 
 
 
   <div class="doc doc-children">
+
 
 
 
@@ -2711,11 +2672,12 @@
 
 
 <h3 id="graia.ariadne.message.commander.CommandHandler.get_data" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_data</span><span class="p">(</span><span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">],</span> <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]],</span> <span class="n">wildcard_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span></code>
+get_data
 
 
 <a href="#graia.ariadne.message.commander.CommandHandler.get_data" class="headerlink" title="Permanent link">🔗</a></h3>
-
+<div class="highlight"><pre><span></span><code><span class="n">get_data</span><span class="p">(</span><span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">],</span> <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]],</span> <span class="n">wildcard_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2775,8 +2737,7 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">267</span>
-<span class="normal">268</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">268</span>
 <span class="normal">269</span>
 <span class="normal">270</span>
 <span class="normal">271</span>
@@ -2828,7 +2789,13 @@
 <span class="normal">317</span>
 <span class="normal">318</span>
 <span class="normal">319</span>
-<span class="normal">320</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">],</span>
     <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]],</span>
@@ -2846,6 +2813,9 @@
     <span class="n">param_result</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">arg_map</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
         <span class="n">value</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">default_factory</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">arg</span><span class="o">.</span><span class="n">param_name</span>
+            <span class="k">assert</span> <span class="n">arg</span><span class="o">.</span><span class="n">model</span>
         <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">nargs</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">arg</span><span class="o">.</span><span class="n">match_patterns</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">arg_data</span><span class="p">:</span>
@@ -2871,6 +2841,8 @@
             <span class="n">param_result</span><span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span>
 
     <span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">slot</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">slot_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">slot</span><span class="o">.</span><span class="n">model</span>
         <span class="k">if</span> <span class="n">slot</span><span class="o">.</span><span class="n">param_name</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="o">.</span><span class="n">wildcard</span><span class="p">:</span>
             <span class="n">value</span> <span class="o">=</span> <span class="n">slot_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="n">slot</span><span class="o">.</span><span class="n">default_factory</span><span class="p">()</span>
             <span class="n">param_result</span><span class="p">[</span><span class="n">slot</span><span class="o">.</span><span class="n">param_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">slot</span><span class="o">.</span><span class="n">model</span><span class="p">(</span><span class="n">val</span><span class="o">=</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;val&quot;</span><span class="p">]</span>
@@ -2905,8 +2877,87 @@
 
 
 
+<h2 id="graia.ariadne.message.commander.CommandPattern" class="doc doc-heading">
+          <code>CommandPattern</code>
+
+
+
+<a href="#graia.ariadne.message.commander.CommandPattern" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+
+      <p>命令样式</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">CommandPattern</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;命令样式&quot;&quot;&quot;</span>
+
+    <span class="k">class</span> <span class="nc">ELast</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+        <span class="n">REQUIRED</span> <span class="o">=</span> <span class="s2">&quot;required&quot;</span>
+        <span class="n">OPTIONAL</span> <span class="o">=</span> <span class="s2">&quot;optional&quot;</span>
+        <span class="n">WILDCARD</span> <span class="o">=</span> <span class="s2">&quot;wildcard&quot;</span>
+
+    <span class="n">token_list</span><span class="p">:</span> <span class="s2">&quot;List[Set[str] | List[int | str]]&quot;</span>
+    <span class="n">slot_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Slot</span><span class="p">]</span>
+    <span class="n">arg_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]</span>
+    <span class="n">last_type</span><span class="p">:</span> <span class="n">ELast</span>
+    <span class="n">wildcard</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
 <h2 id="graia.ariadne.message.commander.Commander" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">Commander</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">listen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span></code>
+          <code>Commander</code>
+
 
 
 <a href="#graia.ariadne.message.commander.Commander" class="headerlink" title="Permanent link">🔗</a></h2>
@@ -2918,15 +2969,9 @@
       <p>便利的指令触发体系</p>
 
 
-      <div class="highlight"><pre><span></span><code>listen (bool): 是否监听指令
-</code></pre></div>
-
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">329</span>
 <span class="normal">330</span>
 <span class="normal">331</span>
 <span class="normal">332</span>
@@ -2945,188 +2990,16 @@
 <span class="normal">345</span>
 <span class="normal">346</span>
 <span class="normal">347</span>
-<span class="normal">348</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">listen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Args:</span>
-<span class="sd">        broadcast (Broadcast): 事件系统</span>
-<span class="sd">        listen (bool): 是否监听指令</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span> <span class="o">=</span> <span class="n">broadcast</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">command_handlers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CommandHandler</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">chain_validator</span><span class="p">]</span>
-
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">execute_func</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
-        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
-
-    <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span> <span class="o">=</span> <span class="n">execute_func</span>
-
-    <span class="k">if</span> <span class="n">listen</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">listeners</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-            <span class="n">Listener</span><span class="p">(</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span><span class="p">,</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">getDefaultNamespace</span><span class="p">(),</span>
-                <span class="nb">list</span><span class="p">(</span><span class="n">gen_subclass</span><span class="p">(</span><span class="n">MessageEvent</span><span class="p">)),</span>
-            <span class="p">)</span>
-        <span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-            </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="graia.ariadne.message.commander.Commander.add_type_cast" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_type_cast</span><span class="p">(</span><span class="o">*</span><span class="n">caster</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span></code>
-
-
-<a href="#graia.ariadne.message.commander.Commander.add_type_cast" class="headerlink" title="Permanent link">🔗</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>添加类型验证器 (type caster / validator)</p>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">353</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
 <span class="normal">354</span>
-<span class="normal">355</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_type_cast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">caster</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;添加类型验证器 (type caster / validator)&quot;&quot;&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">validators</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="nb">reversed</span><span class="p">(</span><span class="n">caster</span><span class="p">),</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">]</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h3 id="graia.ariadne.message.commander.Commander.command" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">command</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">setting</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T_Callable</span><span class="p">],</span> <span class="n">T_Callable</span><span class="p">]</span></code>
-
-
-<a href="#graia.ariadne.message.commander.Commander.command" class="headerlink" title="Permanent link">🔗</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-      <p>装饰一个命令处理函数</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>command</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>要处理的命令</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>setting</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.commander.Slot" href="#graia.ariadne.message.commander.Slot">Slot</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.commander.Arg" href="#graia.ariadne.message.commander.Arg">Arg</a>]]</code>
-          </td>
-          <td><p>参数设置.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>dispatchers</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Sequence" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Sequence">Sequence</a>[<span title="graia.broadcast.entities.dispatcher.BaseDispatcher">BaseDispatcher</span>]</code>
-          </td>
-          <td><p>可选的额外 Dispatcher 序列.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>decorators</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Sequence" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Sequence">Sequence</a>[<span title="graia.broadcast.entities.decorator.Decorator">Decorator</span>]</code>
-          </td>
-          <td><p>可选的额外 Decorator 序列.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError">ValueError</a></code>
-          </td>
-          <td><p>命令格式错误</p></td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[<span title="graia.ariadne.message.commander.T_Callable">T_Callable</span>], <span title="graia.ariadne.message.commander.T_Callable">T_Callable</span>]</code>
-          </td>
-          <td><p>Callable[[T_Callable], T_Callable]: 装饰器</p></td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">357</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
 <span class="normal">358</span>
 <span class="normal">359</span>
 <span class="normal">360</span>
@@ -3265,10 +3138,716 @@
 <span class="normal">493</span>
 <span class="normal">494</span>
 <span class="normal">495</span>
-<span class="normal">496</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">command</span><span class="p">(</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span>
+<span class="normal">549</span>
+<span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span>
+<span class="normal">553</span>
+<span class="normal">554</span>
+<span class="normal">555</span>
+<span class="normal">556</span>
+<span class="normal">557</span>
+<span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Commander</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;便利的指令触发体系&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">listen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            broadcast (Broadcast): 事件系统</span>
+<span class="sd">            listen (bool): 是否监听指令</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span> <span class="o">=</span> <span class="n">broadcast</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">command_handlers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CommandHandler</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">chain_validator</span><span class="p">]</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">execute_func</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span> <span class="o">=</span> <span class="n">execute_func</span>
+
+        <span class="k">if</span> <span class="n">listen</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">listeners</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Listener</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">getDefaultNamespace</span><span class="p">(),</span>
+                    <span class="nb">list</span><span class="p">(</span><span class="n">gen_subclass</span><span class="p">(</span><span class="n">MessageEvent</span><span class="p">)),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">listeners</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">listeners</span> <span class="k">if</span> <span class="n">i</span><span class="o">.</span><span class="n">callable</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">add_type_cast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">caster</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;添加类型验证器 (type caster / validator)&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validators</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="nb">reversed</span><span class="p">(</span><span class="n">caster</span><span class="p">),</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">command</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">setting</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+        <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T_Callable</span><span class="p">],</span> <span class="n">T_Callable</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;装饰一个命令处理函数</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            command (str): 要处理的命令</span>
+<span class="sd">            setting (Dict[str, Union[Slot, Arg]], optional): 参数设置.</span>
+<span class="sd">            dispatchers (Sequence[BaseDispatcher], optional): 可选的额外 Dispatcher 序列.</span>
+<span class="sd">            decorators (Sequence[Decorator], optional): 可选的额外 Decorator 序列.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: 命令格式错误</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Callable[[T_Callable], T_Callable]: 装饰器</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">slot_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Slot</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">pattern_arg_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">param_arg_map</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="p">(</span><span class="n">setting</span> <span class="ow">or</span> <span class="p">{})</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">Slot</span><span class="p">):</span>
+                <span class="n">slot_map</span><span class="p">[</span><span class="n">val</span><span class="o">.</span><span class="n">placeholder</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">Arg</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">val</span><span class="o">.</span><span class="n">match_patterns</span><span class="p">:</span>
+                    <span class="n">pattern_arg_map</span><span class="p">[</span><span class="n">pattern</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+                <span class="n">param_arg_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown setting value: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">val</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">val</span><span class="o">.</span><span class="n">param_name</span> <span class="o">=</span> <span class="n">name</span>
+
+        <span class="n">token_list</span><span class="p">:</span> <span class="s2">&quot;List[Set[str] | List[int | str]]&quot;</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># set: const, list: param</span>
+
+        <span class="n">placeholder_set</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+        <span class="n">last</span><span class="p">:</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span> <span class="o">=</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">REQUIRED</span>
+        <span class="n">wildcard_slot_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="n">command_tokens</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CommandTokenTuple</span><span class="p">]</span> <span class="o">=</span> <span class="n">tokenize_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">t_type</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span> <span class="ow">in</span> <span class="n">command_tokens</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">t_type</span> <span class="ow">in</span> <span class="p">{</span><span class="n">CommandToken</span><span class="o">.</span><span class="n">TEXT</span><span class="p">,</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">CHOICE</span><span class="p">}:</span>
+                <span class="k">assert</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span>
+                    <span class="n">token</span> <span class="ow">in</span> <span class="n">pattern_arg_map</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span>
+                <span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">tokens</span><span class="si">}</span><span class="s2"> conflicts with a Arg object!&quot;</span>
+
+                <span class="n">token_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">tokens</span><span class="p">)))</span>
+
+            <span class="k">elif</span> <span class="n">t_type</span> <span class="ow">is</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">ANNOTATED</span><span class="p">:</span>
+                <span class="n">wildcard</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">tokens</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">wildcard</span> <span class="ow">or</span> <span class="n">default</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="p">(</span>
+                        <span class="n">tokens</span> <span class="ow">is</span> <span class="n">command_tokens</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="p">),</span> <span class="s2">&quot;Not setting wildcard / optional on the last slot!&quot;</span>
+                <span class="k">if</span> <span class="n">wildcard</span><span class="p">:</span>
+                    <span class="n">last</span> <span class="o">=</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">WILDCARD</span>
+                <span class="k">if</span> <span class="n">default</span><span class="p">:</span>
+                    <span class="n">last</span> <span class="o">=</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">OPTIONAL</span>
+                <span class="k">assert</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">placeholder_set</span><span class="p">,</span> <span class="s2">&quot;Duplicated parameter slot!&quot;</span>
+                <span class="n">placeholder_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">parsed_slot</span> <span class="o">=</span> <span class="n">Slot</span><span class="p">(</span>
+                    <span class="n">name</span><span class="p">,</span>
+                    <span class="nb">eval</span><span class="p">(</span><span class="n">annotation</span> <span class="ow">or</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">eval_ctx</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;raw&quot;</span><span class="p">:</span> <span class="n">_raw</span><span class="p">})),</span>
+                    <span class="nb">eval</span><span class="p">(</span><span class="n">default</span> <span class="ow">or</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">eval_ctx</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span>
+                <span class="p">)</span>
+                <span class="n">parsed_slot</span><span class="o">.</span><span class="n">param_name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># assuming that param_name is consistent</span>
+                <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">slot_map</span><span class="p">:</span>
+                    <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_slot</span> <span class="o">|</span> <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># parsed slot &lt; provided slot</span>
+                <span class="k">if</span> <span class="n">wildcard</span><span class="p">:</span>
+                    <span class="n">wildcard_slot_name</span> <span class="o">=</span> <span class="n">name</span>
+                <span class="n">token_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">name</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="n">t_type</span> <span class="ow">is</span> <span class="n">CommandToken</span><span class="o">.</span><span class="n">PARAM</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">param_name</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="n">param_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">placeholder_set</span><span class="p">,</span> <span class="s2">&quot;Duplicated parameter slot!&quot;</span>
+                    <span class="n">placeholder_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">param_name</span><span class="p">)</span>
+                <span class="n">token_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">T_Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T_Callable</span><span class="p">:</span>
+            <span class="sd">&quot;&quot;&quot;register as command executor&quot;&quot;&quot;</span>
+
+            <span class="c1"># scan function signature</span>
+
+            <span class="k">def</span> <span class="nf">__translate_obj</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="n">inspect</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="o">...</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">Decorator</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="o">...</span>
+                <span class="k">return</span> <span class="n">obj</span>
+
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">func</span><span class="p">)</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">annotation</span><span class="p">,</span> <span class="n">default</span> <span class="o">=</span> <span class="n">__translate_obj</span><span class="p">(</span><span class="n">parameter</span><span class="o">.</span><span class="n">annotation</span><span class="p">),</span> <span class="n">__translate_obj</span><span class="p">(</span>
+                    <span class="n">parameter</span><span class="o">.</span><span class="n">default</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">placeholder_set</span><span class="p">:</span>
+                    <span class="n">parsed_slot</span> <span class="o">=</span> <span class="n">Slot</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
+                    <span class="n">parsed_slot</span><span class="o">.</span><span class="n">param_name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># assuming that param_name is consistent</span>
+                    <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">slot_map</span><span class="p">:</span>
+                        <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_slot</span> <span class="o">|</span> <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># parsed slot &lt; provided slot</span>
+                    <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span><span class="p">:</span>
+                        <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span>
+                            <span class="p">[</span>
+                                <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">placeholder</span> <span class="ow">in</span> <span class="n">command_tokens</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+                                <span class="n">command_tokens</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                                <span class="ow">in</span> <span class="p">{</span>
+                                    <span class="n">CommandToken</span><span class="o">.</span><span class="n">ANNOTATED</span><span class="p">,</span>
+                                    <span class="n">CommandToken</span><span class="o">.</span><span class="n">PARAM</span><span class="p">,</span>
+                                <span class="p">},</span>
+                            <span class="p">]</span>
+                        <span class="p">),</span> <span class="s2">&quot;Not setting wildcard / optional on the last slot!&quot;</span>
+
+                        <span class="k">nonlocal</span> <span class="n">last</span>
+                        <span class="k">if</span> <span class="n">last</span> <span class="ow">is</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">REQUIRED</span><span class="p">:</span>
+                            <span class="n">last</span> <span class="o">=</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">OPTIONAL</span>
+
+                <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">param_arg_map</span><span class="p">:</span>
+                    <span class="n">arg</span> <span class="o">=</span> <span class="n">param_arg_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+                    <span class="n">arg</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">arg</span><span class="o">.</span><span class="n">type</span> <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="n">parameter</span><span class="o">.</span><span class="n">annotation</span>
+                    <span class="k">if</span> <span class="n">arg</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="o">...</span> <span class="ow">and</span> <span class="n">arg</span><span class="o">.</span><span class="n">default_factory</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+                        <span class="n">arg</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">parameter</span><span class="o">.</span><span class="n">default</span>
+
+            <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">slot_map</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">slot</span><span class="o">.</span><span class="n">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">param_arg_map</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                <span class="n">arg</span><span class="o">.</span><span class="n">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">command_handlers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">CommandHandler</span><span class="p">(</span>
+                    <span class="n">CommandPattern</span><span class="p">(</span><span class="n">token_list</span><span class="p">,</span> <span class="n">slot_map</span><span class="p">,</span> <span class="n">pattern_arg_map</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">wildcard_slot_name</span><span class="p">),</span>
+                    <span class="n">func</span><span class="p">,</span>
+                    <span class="n">dispatchers</span><span class="p">,</span>
+                    <span class="n">decorators</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">func</span>
+
+        <span class="k">return</span> <span class="n">wrapper</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;触发 Commander.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            chain (MessageChain): 触发的消息链</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">mapping_str</span><span class="p">,</span> <span class="n">elem_m</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">_to_mapping_str</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command_handlers</span><span class="p">):</span>  <span class="c1"># starting from latest added</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">pattern</span>
+            <span class="n">text_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">token_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">text_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">mapping_str</span><span class="p">)</span>
+            <span class="n">wildcard_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">IndexError</span><span class="p">,</span> <span class="n">MismatchError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="n">RequirementCrashed</span><span class="p">,</span> <span class="n">ExecutionStop</span><span class="p">):</span>
+                <span class="k">while</span> <span class="n">text_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">text_list</span><span class="p">):</span>
+                    <span class="n">text</span> <span class="o">=</span> <span class="n">text_list</span><span class="p">[</span><span class="n">text_index</span><span class="p">]</span>
+                    <span class="n">text_index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+                    <span class="k">if</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">pattern</span><span class="o">.</span><span class="n">arg_map</span><span class="p">:</span>  <span class="c1"># Arg handle</span>
+                        <span class="k">if</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">arg_data</span><span class="p">:</span>
+                            <span class="k">raise</span> <span class="n">MismatchError</span><span class="p">(</span><span class="s2">&quot;Duplicated argument&quot;</span><span class="p">)</span>
+                        <span class="n">nargs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">arg_map</span><span class="p">[</span><span class="n">text</span><span class="p">]</span><span class="o">.</span><span class="n">nargs</span>
+                        <span class="n">arg_data</span><span class="p">[</span><span class="n">text</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+                            <span class="n">MessageChain</span><span class="o">.</span><span class="n">_from_mapping_string</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">elem_m</span><span class="p">)</span>
+                            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">text_list</span><span class="p">[</span><span class="n">text_index</span> <span class="p">:</span> <span class="n">text_index</span> <span class="o">+</span> <span class="n">nargs</span><span class="p">]</span>
+                        <span class="p">]</span>
+                        <span class="n">text_index</span> <span class="o">+=</span> <span class="n">nargs</span>
+
+                    <span class="k">else</span><span class="p">:</span>  <span class="c1"># Constant and Slot handle</span>
+                        <span class="n">tokens</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">token_list</span><span class="p">[</span><span class="n">token_index</span><span class="p">]</span>
+                        <span class="n">token_index</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="nb">set</span><span class="p">)</span> <span class="ow">and</span> <span class="n">text</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+                            <span class="k">raise</span> <span class="n">MismatchError</span>
+                        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                            <span class="k">if</span> <span class="n">pattern</span><span class="o">.</span><span class="n">last_type</span> <span class="ow">is</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">WILDCARD</span> <span class="ow">and</span> <span class="n">token_index</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span>
+                                <span class="n">pattern</span><span class="o">.</span><span class="n">token_list</span>
+                            <span class="p">):</span>
+                                <span class="n">wildcard_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MessageChain</span><span class="o">.</span><span class="n">_from_mapping_string</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">elem_m</span><span class="p">))</span>
+                                <span class="n">token_index</span> <span class="o">-=</span> <span class="mi">1</span>
+                            <span class="k">for</span> <span class="n">slot</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+                                <span class="n">slot_data</span><span class="p">[</span><span class="n">slot</span><span class="p">]</span> <span class="o">=</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">_from_mapping_string</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">elem_m</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">text_index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">token_list</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span>
+                    <span class="n">pattern</span><span class="o">.</span><span class="n">last_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">CommandPattern</span><span class="o">.</span><span class="n">ELast</span><span class="o">.</span><span class="n">REQUIRED</span>
+                <span class="p">):</span>
+                    <span class="k">continue</span>
+
+                <span class="n">dispatchers</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">if</span> <span class="n">event</span> <span class="o">:=</span> <span class="n">event_ctx</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">None</span><span class="p">):</span>
+                    <span class="n">dispatchers</span> <span class="o">=</span> <span class="n">resolve_dispatchers_mixin</span><span class="p">([</span><span class="n">event</span><span class="o">.</span><span class="n">Dispatcher</span><span class="p">])</span>
+                <span class="n">token</span> <span class="o">=</span> <span class="n">commander_data_ctx</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">handler</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">slot_data</span><span class="p">,</span> <span class="n">arg_data</span><span class="p">,</span> <span class="n">wildcard_list</span><span class="p">))</span>
+                <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">Executor</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">dispatchers</span><span class="p">)</span>
+                <span class="n">commander_data_ctx</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="graia.ariadne.message.commander.Commander.__init__" class="doc doc-heading">
+__init__
+
+
+<a href="#graia.ariadne.message.commander.Commander.__init__" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">listen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>broadcast</code></td>
+          <td>
+                <code><span title="graia.broadcast.Broadcast">Broadcast</span></code>
+          </td>
+          <td><p>事件系统</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>listen</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td><p>是否监听指令</p></td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">listen</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Args:</span>
+<span class="sd">        broadcast (Broadcast): 事件系统</span>
+<span class="sd">        listen (bool): 是否监听指令</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span> <span class="o">=</span> <span class="n">broadcast</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">command_handlers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CommandHandler</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">chain_validator</span><span class="p">]</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">execute_func</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span> <span class="o">=</span> <span class="n">execute_func</span>
+
+    <span class="k">if</span> <span class="n">listen</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">listeners</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">Listener</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">listen_func</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">getDefaultNamespace</span><span class="p">(),</span>
+                <span class="nb">list</span><span class="p">(</span><span class="n">gen_subclass</span><span class="p">(</span><span class="n">MessageEvent</span><span class="p">)),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="graia.ariadne.message.commander.Commander.add_type_cast" class="doc doc-heading">
+add_type_cast
+
+
+<a href="#graia.ariadne.message.commander.Commander.add_type_cast" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">add_type_cast</span><span class="p">(</span><span class="o">*</span><span class="n">caster</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>添加类型验证器 (type caster / validator)</p>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add_type_cast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">caster</span><span class="p">:</span> <span class="n">Callable</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;添加类型验证器 (type caster / validator)&quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">validators</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="nb">reversed</span><span class="p">(</span><span class="n">caster</span><span class="p">),</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">validators</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="graia.ariadne.message.commander.Commander.command" class="doc doc-heading">
+command
+
+
+<a href="#graia.ariadne.message.commander.Commander.command" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">command</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">setting</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T_Callable</span><span class="p">],</span> <span class="n">T_Callable</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>装饰一个命令处理函数</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>command</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td><p>要处理的命令</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>setting</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.commander.Slot" href="#graia.ariadne.message.commander.Slot">Slot</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.commander.Arg" href="#graia.ariadne.message.commander.Arg">Arg</a>]]</code>
+          </td>
+          <td><p>参数设置.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dispatchers</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Sequence" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Sequence">Sequence</a>[<span title="graia.broadcast.entities.dispatcher.BaseDispatcher">BaseDispatcher</span>]</code>
+          </td>
+          <td><p>可选的额外 Dispatcher 序列.</p></td>
+          <td>
+                <code>()</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>decorators</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Sequence" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Sequence">Sequence</a>[<span title="graia.broadcast.entities.decorator.Decorator">Decorator</span>]</code>
+          </td>
+          <td><p>可选的额外 Decorator 序列.</p></td>
+          <td>
+                <code>()</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError">ValueError</a></code>
+          </td>
+          <td><p>命令格式错误</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[<span title="graia.ariadne.message.commander.T_Callable">T_Callable</span>], <span title="graia.ariadne.message.commander.T_Callable">T_Callable</span>]</code>
+          </td>
+          <td><p>Callable[[T_Callable], T_Callable]: 装饰器</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">command</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="n">setting</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">setting</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
     <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T_Callable</span><span class="p">],</span> <span class="n">T_Callable</span><span class="p">]:</span>
@@ -3336,7 +3915,8 @@
                 <span class="nb">eval</span><span class="p">(</span><span class="n">default</span> <span class="ow">or</span> <span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">eval_ctx</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span>
             <span class="p">)</span>
             <span class="n">parsed_slot</span><span class="o">.</span><span class="n">param_name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># assuming that param_name is consistent</span>
-            <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_slot</span> <span class="o">|</span> <span class="n">slot_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{})</span>  <span class="c1"># parsed slot &lt; provided slot</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">slot_map</span><span class="p">:</span>
+                <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_slot</span> <span class="o">|</span> <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># parsed slot &lt; provided slot</span>
             <span class="k">if</span> <span class="n">wildcard</span><span class="p">:</span>
                 <span class="n">wildcard_slot_name</span> <span class="o">=</span> <span class="n">name</span>
             <span class="n">token_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">name</span><span class="p">])</span>
@@ -3365,7 +3945,8 @@
             <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">placeholder_set</span><span class="p">:</span>
                 <span class="n">parsed_slot</span> <span class="o">=</span> <span class="n">Slot</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">default</span><span class="p">)</span>
                 <span class="n">parsed_slot</span><span class="o">.</span><span class="n">param_name</span> <span class="o">=</span> <span class="n">name</span>  <span class="c1"># assuming that param_name is consistent</span>
-                <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_slot</span> <span class="o">|</span> <span class="n">slot_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">{})</span>  <span class="c1"># parsed slot &lt; provided slot</span>
+                <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">slot_map</span><span class="p">:</span>
+                    <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parsed_slot</span> <span class="o">|</span> <span class="n">slot_map</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>  <span class="c1"># parsed slot &lt; provided slot</span>
                 <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span><span class="p">:</span>
                     <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span>
                         <span class="p">[</span>
@@ -3419,14 +4000,15 @@
 
 
 <h3 id="graia.ariadne.message.commander.Commander.execute" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">execute</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">)</span></code>
+execute
 
   <span class="doc doc-properties">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
 <a href="#graia.ariadne.message.commander.Commander.execute" class="headerlink" title="Permanent link">🔗</a></h3>
-
+<div class="highlight"><pre><span></span><code><span class="n">execute</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">)</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -3458,15 +4040,7 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">498</span>
-<span class="normal">499</span>
-<span class="normal">500</span>
-<span class="normal">501</span>
-<span class="normal">502</span>
-<span class="normal">503</span>
-<span class="normal">504</span>
-<span class="normal">505</span>
-<span class="normal">506</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">506</span>
 <span class="normal">507</span>
 <span class="normal">508</span>
 <span class="normal">509</span>
@@ -3514,7 +4088,15 @@
 <span class="normal">551</span>
 <span class="normal">552</span>
 <span class="normal">553</span>
-<span class="normal">554</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
+<span class="normal">554</span>
+<span class="normal">555</span>
+<span class="normal">556</span>
+<span class="normal">557</span>
+<span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;触发 Commander.</span>
 
 <span class="sd">    Args:</span>
@@ -3590,17 +4172,337 @@
 
 
 
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.message.commander.MismatchError" class="doc doc-heading">
+          <code>MismatchError</code>
+
+
+
+<a href="#graia.ariadne.message.commander.MismatchError" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError">ValueError</a></code></p>
+
+
+      <p>指令失配</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">240</span>
+<span class="normal">241</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MismatchError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;指令失配&quot;&quot;&quot;</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.message.commander.ParamDesc" class="doc doc-heading">
+          <code>ParamDesc</code>
+
+
+
+<a href="#graia.ariadne.message.commander.ParamDesc" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/abc.html#module-abc">abc</a>.<a class="autorefs autorefs-external" title="abc.ABC" href="https://docs.python.org/zh-cn/3/library/abc.html#abc.ABC">ABC</a></code></p>
+
+
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ParamDesc</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span>
+    <span class="n">default</span><span class="p">:</span> <span class="n">Any</span>
+    <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__or__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s2">&quot;ParamDesc | Dict[str, Any]&quot;</span><span class="p">):</span>
+        <span class="n">dct</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">ParamDesc</span><span class="p">)</span> <span class="k">else</span> <span class="n">other</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dct</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="ow">and</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">Decorator</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;生成用于 pydantic 解析的 model 属性</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            validators (Iterable[Callable]): 用作 validator 的 Callable 可迭代对象</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h3 id="graia.ariadne.message.commander.ParamDesc.gen_model" class="doc doc-heading">
+gen_model
+
+
+<a href="#graia.ariadne.message.commander.ParamDesc.gen_model" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">gen_model</span><span class="p">(</span><span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>生成用于 pydantic 解析的 model 属性</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>validators</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>]</code>
+          </td>
+          <td><p>用作 validator 的 Callable 可迭代对象</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+<span class="k">def</span> <span class="nf">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;生成用于 pydantic 解析的 model 属性</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        validators (Iterable[Callable]): 用作 validator 的 Callable 可迭代对象</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="o">...</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.message.commander.Slot" class="doc doc-heading">
+          <code>Slot</code>
+
+
+
+<a href="#graia.ariadne.message.commander.Slot" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.commander.ParamDesc" href="#graia.ariadne.message.commander.ParamDesc">ParamDesc</a></code></p>
+
+
+      <p>Slot</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Slot</span><span class="p">(</span><span class="n">ParamDesc</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Slot&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">placeholder</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+        <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
+        <span class="n">default</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
+        <span class="n">default_factory</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">placeholder</span> <span class="o">=</span> <span class="n">placeholder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;raw&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">_raw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="o">=</span> <span class="n">default_factory</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">gen_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validators</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Callable</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="n">_raw</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span> <span class="o">=</span> <span class="n">const_call</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="o">...</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_factory</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="o">...</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">MessageChain</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span>
+            <span class="s2">&quot;SlotModel&quot;</span><span class="p">,</span>
+            <span class="n">__validators__</span><span class="o">=</span><span class="p">{</span>
+                <span class="sa">f</span><span class="s2">&quot;#validator_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">#&quot;</span><span class="p">:</span> <span class="n">validator</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allow_reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)(</span><span class="n">v</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">validators</span><span class="p">)</span>
+            <span class="p">},</span>
+            <span class="n">val</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span>  <span class="c1"># default is handled at exec</span>
+        <span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
 
   <div class="doc doc-object doc-function">
 
 
 
 <h2 id="graia.ariadne.message.commander.chain_validator" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">chain_validator</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">ModelField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span></code>
+chain_validator
 
 
 <a href="#graia.ariadne.message.commander.chain_validator" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<div class="highlight"><pre><span></span><code><span class="n">chain_validator</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">ModelField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -3662,8 +4564,7 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/commander/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">49</span>
-<span class="normal">50</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
 <span class="normal">51</span>
 <span class="normal">52</span>
 <span class="normal">53</span>
@@ -3685,7 +4586,8 @@
 <span class="normal">69</span>
 <span class="normal">70</span>
 <span class="normal">71</span>
-<span class="normal">72</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chain_validator</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">ModelField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">chain_validator</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">ModelField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    MessageChain 处理函数.</span>
 <span class="sd">    应用作 pydantic 的 Model validator.</span>

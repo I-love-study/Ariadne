@@ -2174,10 +2174,47 @@
       <p>Ariadne 的事件基类</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/event/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MiraiEvent</span><span class="p">(</span><span class="n">Dispatchable</span><span class="p">,</span> <span class="n">AriadneBaseModel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Ariadne 的事件基类&quot;&quot;&quot;</span>
+
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="sd">&quot;&quot;&quot;事件类型&quot;&quot;&quot;</span>
+
+    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="n">allow_reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">validate_event_type</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;验证事件类型, 通过比对 type 字段实现&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;cls must be a class!&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="n">v</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InvalidEventTypeDefinition</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">&#39;s type must be &#39;</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">&#39;, not &#39;</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">v</span>
+
+    <span class="n">Dispatcher</span> <span class="o">=</span> <span class="n">BaseDispatcher</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 
   <div class="doc doc-children">
+
 
 
 
@@ -2189,14 +2226,15 @@
 
 
 <h3 id="graia.ariadne.event.MiraiEvent.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span></code>
+type
 
   <span class="doc doc-properties">
       <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
   </span>
 
 <a href="#graia.ariadne.event.MiraiEvent.type" class="headerlink" title="Permanent link">🔗</a></h3>
-
+<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2209,17 +2247,17 @@
 
 
 
-
   <div class="doc doc-object doc-function">
 
 
 
 <h3 id="graia.ariadne.event.MiraiEvent.validate_event_type" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">validate_event_type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span></code>
+validate_event_type
 
 
 <a href="#graia.ariadne.event.MiraiEvent.validate_event_type" class="headerlink" title="Permanent link">🔗</a></h3>
-
+<div class="highlight"><pre><span></span><code><span class="n">validate_event_type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 

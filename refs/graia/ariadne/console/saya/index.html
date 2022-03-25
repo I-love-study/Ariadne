@@ -1377,6 +1377,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graia.ariadne.console.saya.ConsoleBehaviour" class="md-nav__link">
+    ConsoleBehaviour
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graia.ariadne.console.saya.ConsoleSchema" class="md-nav__link">
     ConsoleSchema
   </a>
@@ -1393,13 +1400,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.console.saya.ConsoleBehaviour" class="md-nav__link">
-    ConsoleBehaviour
-  </a>
   
 </li>
       
@@ -2155,6 +2155,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graia.ariadne.console.saya.ConsoleBehaviour" class="md-nav__link">
+    ConsoleBehaviour
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graia.ariadne.console.saya.ConsoleSchema" class="md-nav__link">
     ConsoleSchema
   </a>
@@ -2171,13 +2178,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.console.saya.ConsoleBehaviour" class="md-nav__link">
-    ConsoleBehaviour
-  </a>
   
 </li>
       
@@ -2222,6 +2222,94 @@
 
 
 
+<h2 id="graia.ariadne.console.saya.ConsoleBehaviour" class="doc doc-heading">
+          <code>ConsoleBehaviour</code>
+
+
+
+<a href="#graia.ariadne.console.saya.ConsoleBehaviour" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><span title="graia.saya.behaviour.Behaviour">Behaviour</span></code></p>
+
+
+      <p>控制台的 Saya Behaviour 实现, 传入 Console 对象</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/console/saya.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ConsoleBehaviour</span><span class="p">(</span><span class="n">Behaviour</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;控制台的 Saya Behaviour 实现, 传入 Console 对象&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">console</span><span class="p">:</span> <span class="n">Console</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">console</span> <span class="o">=</span> <span class="n">console</span>
+
+    <span class="k">def</span> <span class="nf">allocate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cube</span><span class="p">:</span> <span class="n">Cube</span><span class="p">[</span><span class="n">ConsoleSchema</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cube</span><span class="o">.</span><span class="n">metaclass</span><span class="p">,</span> <span class="n">ConsoleSchema</span><span class="p">):</span>
+            <span class="k">return</span>
+        <span class="n">cube</span><span class="o">.</span><span class="n">metaclass</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">cube</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">console</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">uninstall</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cube</span><span class="p">:</span> <span class="n">Cube</span><span class="p">[</span><span class="n">ConsoleSchema</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cube</span><span class="o">.</span><span class="n">metaclass</span><span class="p">,</span> <span class="n">ConsoleSchema</span><span class="p">):</span>
+            <span class="k">return</span>
+        <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">console</span><span class="o">.</span><span class="n">registry</span><span class="p">[:]:</span>
+            <span class="k">if</span> <span class="n">cube</span><span class="o">.</span><span class="n">content</span> <span class="ow">is</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">console</span><span class="o">.</span><span class="n">registry</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-class">
+
+
+
 <h2 id="graia.ariadne.console.saya.ConsoleSchema" class="doc doc-heading">
           <code>ConsoleSchema</code>
 
@@ -2238,6 +2326,40 @@
       <p>控制台监听 Schema, 相当于 console.register</p>
 
 
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/console/saya.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">ConsoleSchema</span><span class="p">(</span><span class="n">BaseSchema</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;控制台监听 Schema, 相当于 console.register&quot;&quot;&quot;</span>
+
+    <span class="n">dispatchers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">decorators</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">console</span><span class="p">:</span> <span class="n">Console</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;注册 func 至 console</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            func (Callable): 监听函数</span>
+<span class="sd">            console (Console): 注册到的 console</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dispatchers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">decorators</span><span class="p">)(</span><span class="n">func</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
 
 
 
@@ -2257,11 +2379,12 @@
 
 
 <h3 id="graia.ariadne.console.saya.ConsoleSchema.register" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">register</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">console</span><span class="p">:</span> <span class="n">Console</span><span class="p">)</span></code>
+register
 
 
 <a href="#graia.ariadne.console.saya.ConsoleSchema.register" class="headerlink" title="Permanent link">🔗</a></h3>
-
+<div class="highlight"><pre><span></span><code><span class="n">register</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">console</span><span class="p">:</span> <span class="n">Console</span><span class="p">)</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2324,58 +2447,6 @@
     </div>
 
   </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-class">
-
-
-
-<h2 id="graia.ariadne.console.saya.ConsoleBehaviour" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ConsoleBehaviour</span><span class="p">(</span><span class="n">console</span><span class="p">:</span> <span class="n">Console</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-
-<a href="#graia.ariadne.console.saya.ConsoleBehaviour" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-        <p class="doc doc-class-bases">
-          Bases: <code><span title="graia.saya.behaviour.Behaviour">Behaviour</span></code></p>
-
-
-      <p>控制台的 Saya Behaviour 实现, 传入 Console 对象</p>
-
-
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/console/saya.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">console</span><span class="p">:</span> <span class="n">Console</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">console</span> <span class="o">=</span> <span class="n">console</span>
-</code></pre></div>
-</td></tr></table>
-            </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
 
 
 

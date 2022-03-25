@@ -2091,6 +2091,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#graia.ariadne.util.AsyncSignal" class="md-nav__link">
+    AsyncSignal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#graia.ariadne.util.ConstantDispatcher" class="md-nav__link">
     ConstantDispatcher
   </a>
@@ -2105,64 +2112,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.util.loguru_excepthook" class="md-nav__link">
-    loguru_excepthook()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.loguru_async_handler" class="md-nav__link">
-    loguru_async_handler()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.inject_loguru_traceback" class="md-nav__link">
-    inject_loguru_traceback()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.inject_bypass_listener" class="md-nav__link">
-    inject_bypass_listener()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#graia.ariadne.util.app_ctx_manager" class="md-nav__link">
     app_ctx_manager()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.gen_subclass" class="md-nav__link">
-    gen_subclass()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.wrap_bracket" class="md-nav__link">
-    wrap_bracket()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.const_call" class="md-nav__link">
-    const_call()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graia.ariadne.util.eval_ctx" class="md-nav__link">
-    eval_ctx()
   </a>
   
 </li>
@@ -2175,8 +2126,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#graia.ariadne.util.yield_with_timeout" class="md-nav__link">
-    yield_with_timeout()
+  <a href="#graia.ariadne.util.const_call" class="md-nav__link">
+    const_call()
   </a>
   
 </li>
@@ -2184,6 +2135,48 @@
         <li class="md-nav__item">
   <a href="#graia.ariadne.util.deprecated" class="md-nav__link">
     deprecated()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.eval_ctx" class="md-nav__link">
+    eval_ctx()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.gen_subclass" class="md-nav__link">
+    gen_subclass()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.inject_bypass_listener" class="md-nav__link">
+    inject_bypass_listener()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.inject_loguru_traceback" class="md-nav__link">
+    inject_loguru_traceback()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.loguru_async_handler" class="md-nav__link">
+    loguru_async_handler()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.loguru_excepthook" class="md-nav__link">
+    loguru_excepthook()
   </a>
   
 </li>
@@ -2198,6 +2191,20 @@
         <li class="md-nav__item">
   <a href="#graia.ariadne.util.signal_handler" class="md-nav__link">
     signal_handler()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.wrap_bracket" class="md-nav__link">
+    wrap_bracket()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graia.ariadne.util.yield_with_timeout" class="md-nav__link">
+    yield_with_timeout()
   </a>
   
 </li>
@@ -2240,13 +2247,128 @@
 
 
 
+  <div class="doc doc-object doc-class">
+
+
+
+<h2 id="graia.ariadne.util.AsyncSignal" class="doc doc-heading">
+          <code>AsyncSignal</code>
+
+
+
+<a href="#graia.ariadne.util.AsyncSignal" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+        <p class="doc doc-class-bases">
+          Bases: <code><a class="autorefs autorefs-external" title="typing.Generic" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Generic">Generic</a>[<span title="graia.ariadne.typing.T">T</span>]</code></p>
+
+
+      <p>模拟 asyncio.Event, 但是支持 sig.wait(Hashable)</p>
+
+
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AsyncSignal</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+    <span class="sd">&quot;&quot;&quot;模拟 asyncio.Event, 但是支持 sig.wait(Hashable)&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_waiters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">Deque</span><span class="p">[</span><span class="n">asyncio</span><span class="o">.</span><span class="n">Future</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="p">:</span> <span class="n">T</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">waiter_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;, waiters: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_waiters</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_waiters</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;AsyncSignal [value: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_value</span><span class="si">}{</span><span class="n">waiter_str</span><span class="si">}</span><span class="s2">]&gt;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">value</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span>
+
+    <span class="k">def</span> <span class="nf">set</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="n">waiter_deque</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_waiters</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">())</span>
+
+        <span class="k">for</span> <span class="n">fut</span> <span class="ow">in</span> <span class="n">waiter_deque</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">fut</span><span class="o">.</span><span class="n">done</span><span class="p">():</span>
+                <span class="n">fut</span><span class="o">.</span><span class="n">set_result</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">waiter_deque</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Literal</span><span class="p">[</span><span class="kc">True</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_value</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="n">fut</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_running_loop</span><span class="p">()</span><span class="o">.</span><span class="n">create_future</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_waiters</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">())</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fut</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">fut</span>
+</code></pre></div>
+</td></tr></table>
+          </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+
 
   <div class="doc doc-object doc-class">
 
 
 
 <h2 id="graia.ariadne.util.ConstantDispatcher" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">ConstantDispatcher</span><span class="p">(</span><span class="n">context</span><span class="p">:</span> <span class="n">ContextVar</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+          <code>ConstantDispatcher</code>
+
 
 
 <a href="#graia.ariadne.util.ConstantDispatcher" class="headerlink" title="Permanent link">🔗</a></h2>
@@ -2260,18 +2382,33 @@
       <p>分发常量给指定名称的参数</p>
 
 
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">296</span>
-<span class="normal">297</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextVar</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">ctx_var</span> <span class="o">=</span> <span class="n">context</span>
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ConstantDispatcher</span><span class="p">(</span><span class="n">BaseDispatcher</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;分发常量给指定名称的参数&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextVar</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctx_var</span> <span class="o">=</span> <span class="n">context</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">interface</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctx_var</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ctx_var</span><span class="o">.</span><span class="n">get</span><span class="p">()[</span><span class="n">interface</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
 </code></pre></div>
 </td></tr></table>
-            </details>
+          </details>
 
 
 
   <div class="doc doc-children">
+
 
 
 
@@ -2297,7 +2434,8 @@
 
 
 <h2 id="graia.ariadne.util.Dummy" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">Dummy</span><span class="p">(</span><span class="o">**</span><span class="n">kwds</span><span class="p">)</span></code>
+          <code>Dummy</code>
+
 
 
 <a href="#graia.ariadne.util.Dummy" class="headerlink" title="Permanent link">🔗</a></h2>
@@ -2309,16 +2447,42 @@
       <p>Dummy 类, 对所有调用返回 None. (可以预设某些值)</p>
 
 
-            <details class="quote">
-              <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-              <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">307</span>
-<span class="normal">308</span>
-<span class="normal">309</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+          <details class="quote">
+            <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Dummy</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Dummy 类, 对所有调用返回 None. (可以预设某些值)&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwds</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">yield</span>
+        <span class="k">return</span> <span class="bp">self</span>
 </code></pre></div>
 </td></tr></table>
-            </details>
+          </details>
 
 
 
@@ -2336,6 +2500,7 @@
 
 
 
+
   </div>
 
     </div>
@@ -2343,343 +2508,6 @@
   </div>
 
 
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.loguru_excepthook" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">loguru_excepthook</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">)</span></code>
-
-
-<a href="#graia.ariadne.util.loguru_excepthook" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>loguru 异常回调</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>cls</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#Exception">Exception</a>]</code>
-          </td>
-          <td><p>异常类</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>val</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#Exception">Exception</a></code>
-          </td>
-          <td><p>异常的实际值</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>tb</code></td>
-          <td>
-                <code>TracebackType</code>
-          </td>
-          <td><p>回溯消息</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">loguru_excepthook</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;loguru 异常回调</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        cls (Type[Exception]): 异常类</span>
-<span class="sd">        val (Exception): 异常的实际值</span>
-<span class="sd">        tb (TracebackType): 回溯消息</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">logger</span><span class="o">.</span><span class="n">opt</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">tb</span><span class="p">))</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Exception:&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.loguru_async_handler" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">loguru_async_handler</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span></code>
-
-
-<a href="#graia.ariadne.util.loguru_async_handler" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>loguru 异步异常回调</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>_</code></td>
-          <td>
-                <code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>
-          </td>
-          <td><p>异常发生的事件循环</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>ctx</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a></code>
-          </td>
-          <td><p>异常上下文</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">loguru_async_handler</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;loguru 异步异常回调</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        _ (AbstractEventLoop): 异常发生的事件循环</span>
-<span class="sd">        ctx (dict): 异常上下文</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="s2">&quot;exception&quot;</span> <span class="ow">in</span> <span class="n">ctx</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">opt</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="n">ctx</span><span class="p">[</span><span class="s2">&quot;exception&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Exception:&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exception: </span><span class="si">{</span><span class="n">ctx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.inject_loguru_traceback" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">inject_loguru_traceback</span><span class="p">(</span><span class="n">loop</span><span class="p">:</span> <span class="n">AbstractEventLoop</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span></code>
-
-
-<a href="#graia.ariadne.util.inject_loguru_traceback" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>使用 loguru 模块替换默认的 traceback.print_exception 与 sys.excepthook</p>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inject_loguru_traceback</span><span class="p">(</span><span class="n">loop</span><span class="p">:</span> <span class="n">AbstractEventLoop</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;使用 loguru 模块替换默认的 traceback.print_exception 与 sys.excepthook&quot;&quot;&quot;</span>
-    <span class="n">traceback</span><span class="o">.</span><span class="n">print_exception</span> <span class="o">=</span> <span class="n">loguru_excepthook</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">excepthook</span> <span class="o">=</span> <span class="n">loguru_excepthook</span>
-    <span class="k">if</span> <span class="n">loop</span><span class="p">:</span>
-        <span class="n">loop</span><span class="o">.</span><span class="n">set_exception_handler</span><span class="p">(</span><span class="n">loguru_async_handler</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.inject_bypass_listener" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">inject_bypass_listener</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">)</span></code>
-
-
-<a href="#graia.ariadne.util.inject_bypass_listener" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>注入 BypassListener 以享受子事件解析.</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>broadcast</code></td>
-          <td>
-                <code><span title="graia.broadcast.Broadcast">Broadcast</span></code>
-          </td>
-          <td><p>外部事件系统, 提供了 event_class_generator 方法以生成子事件.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inject_bypass_listener</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;注入 BypassListener 以享受子事件解析.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        broadcast (Broadcast): 外部事件系统, 提供了 event_class_generator 方法以生成子事件.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">class</span> <span class="nc">BypassListener</span><span class="p">(</span><span class="n">Listener</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;透传监听器的实现&quot;&quot;&quot;</span>
-
-        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span>
-            <span class="n">callable</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
-            <span class="n">namespace</span><span class="p">:</span> <span class="n">Namespace</span><span class="p">,</span>
-            <span class="n">listening_events</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Dispatchable</span><span class="p">]],</span>
-            <span class="n">inline_dispatchers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">decorators</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
-        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">listening_events</span><span class="p">:</span>
-                <span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
-                <span class="n">events</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">broadcast</span><span class="o">.</span><span class="n">event_class_generator</span><span class="p">(</span><span class="n">event</span><span class="p">))</span>
-            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-                <span class="n">callable</span><span class="p">,</span>
-                <span class="n">namespace</span><span class="p">,</span>
-                <span class="n">events</span><span class="p">,</span>
-                <span class="n">inline_dispatchers</span><span class="o">=</span><span class="n">inline_dispatchers</span><span class="p">,</span>
-                <span class="n">decorators</span><span class="o">=</span><span class="n">decorators</span><span class="p">,</span>
-                <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="p">,</span>
-            <span class="p">)</span>
-
-    <span class="kn">import</span> <span class="nn">graia.broadcast.entities.listener</span>
-
-    <span class="n">graia</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">entities</span><span class="o">.</span><span class="n">listener</span><span class="o">.</span><span class="n">Listener</span> <span class="o">=</span> <span class="n">BypassListener</span>  <span class="c1"># type: ignore</span>
-    <span class="n">graia</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">Listener</span> <span class="o">=</span> <span class="n">BypassListener</span>  <span class="c1"># type: ignore</span>
-    <span class="k">try</span><span class="p">:</span>  <span class="c1"># Override saya listener</span>
-        <span class="kn">import</span> <span class="nn">graia.saya.builtins.broadcast.schema</span>
-
-        <span class="n">graia</span><span class="o">.</span><span class="n">saya</span><span class="o">.</span><span class="n">builtins</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">Listener</span> <span class="o">=</span> <span class="n">BypassListener</span>  <span class="c1"># type: ignore</span>
-    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>  <span class="c1"># Saya not installed, pass.</span>
-        <span class="k">pass</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
 
 
 
@@ -2688,11 +2516,12 @@
 
 
 <h2 id="graia.ariadne.util.app_ctx_manager" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">app_ctx_manager</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]</span></code>
+app_ctx_manager
 
 
 <a href="#graia.ariadne.util.app_ctx_manager" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<div class="highlight"><pre><span></span><code><span class="n">app_ctx_manager</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2742,26 +2571,26 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">app_ctx_manager</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]:</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">app_ctx_manager</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;包装声明需要在 Ariadne Context 中执行的函数</span>
 
 <span class="sd">    Args:</span>
@@ -2772,13 +2601,13 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="kn">from</span> <span class="nn">..context</span> <span class="kn">import</span> <span class="n">enter_context</span>
 
         <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s2">&quot;CallAriadneAPI&quot;</span><span class="p">,</span> <span class="n">func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
 
-        <span class="k">with</span> <span class="n">enter_context</span><span class="p">(</span><span class="n">app</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-            <span class="k">return</span> <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">enter_context</span><span class="p">(</span><span class="n">app</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>  <span class="c1"># type: ignore</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">wrapper</span>
 </code></pre></div>
@@ -2794,16 +2623,20 @@
 
 
 
-<h2 id="graia.ariadne.util.gen_subclass" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">gen_subclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span></code>
+<h2 id="graia.ariadne.util.await_predicate" class="doc doc-heading">
+await_predicate
 
+  <span class="doc doc-properties">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
 
-<a href="#graia.ariadne.util.gen_subclass" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<a href="#graia.ariadne.util.await_predicate" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">await_predicate</span><span class="p">(</span><span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>生成某个类的所有子类 (包括其自身)</p>
+      <p>异步阻塞至满足 predicate 为 True</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2817,96 +2650,47 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>cls</code></td>
+          <td><code>predicate</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
+                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[], <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a>]</code>
           </td>
-          <td><p>类</p></td>
+          <td><p>判断条件</p></td>
           <td>
               <em>required</em>
           </td>
         </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Yields:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
         <tr>
+          <td><code>interval</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" title="typing.Generator" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Generator">Generator</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.typing.T">T</span>], None, None]</code>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#float">float</a></code>
           </td>
-          <td><p>Type[T]: 子类</p></td>
+          <td><p>每次检查间隔. Defaults to 0.01.</p></td>
+          <td>
+                <code>0.01</code>
+          </td>
         </tr>
     </tbody>
   </table>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen_subclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;生成某个类的所有子类 (包括其自身)</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">await_predicate</span><span class="p">(</span><span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;异步阻塞至满足 predicate 为 True</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        cls (Type[T]): 类</span>
-
-<span class="sd">    Yields:</span>
-<span class="sd">        Type[T]: 子类</span>
+<span class="sd">        predicate (Callable[[], bool]): 判断条件</span>
+<span class="sd">        interval (float, optional): 每次检查间隔. Defaults to 0.01.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">yield</span> <span class="bp">cls</span>
-    <span class="k">for</span> <span class="n">sub_cls</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">():</span>
-        <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
-            <span class="k">assert</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">sub_cls</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
-        <span class="k">yield from</span> <span class="n">gen_subclass</span><span class="p">(</span><span class="n">sub_cls</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.wrap_bracket" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">wrap_bracket</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span></code>
-
-
-<a href="#graia.ariadne.util.wrap_bracket" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>在字符串中转义中括号括号</p>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">wrap_bracket</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;在字符串中转义中括号括号&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">u005b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">u005d&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">predicate</span><span class="p">():</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -2921,11 +2705,12 @@
 
 
 <h2 id="graia.ariadne.util.const_call" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">const_call</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">T</span><span class="p">]</span></code>
+const_call
 
 
 <a href="#graia.ariadne.util.const_call" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<div class="highlight"><pre><span></span><code><span class="n">const_call</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">T</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -2975,16 +2760,16 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">const_call</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">T</span><span class="p">]:</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">const_call</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">T</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;生成一个返回常量的 Callable</span>
 
 <span class="sd">    Args:</span>
@@ -3007,12 +2792,123 @@
 
 
 
+<h2 id="graia.ariadne.util.deprecated" class="doc doc-heading">
+deprecated
+
+
+<a href="#graia.ariadne.util.deprecated" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">deprecated</span><span class="p">(</span><span class="n">remove_ver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>标注一个方法 / 函数已被弃用</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>remove_ver</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
+          </td>
+          <td><p>将被移除的版本.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]], <a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]]</code>
+          </td>
+          <td><p>Callable[[T_Callable], T_Callable]: 包装器.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">remove_ver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot;标注一个方法 / 函数已被弃用</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        remove_ver (str): 将被移除的版本.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Callable[[T_Callable], T_Callable]: 包装器.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">out_wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]:</span>
+        <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="ne">DeprecationWarning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2"> will be removed in </span><span class="si">{</span><span class="n">remove_ver</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">))</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deprecated function: </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2"> will be removed in </span><span class="si">{</span><span class="n">remove_ver</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">wrapper</span>
+
+    <span class="k">return</span> <span class="n">out_wrapper</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
 <h2 id="graia.ariadne.util.eval_ctx" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">eval_ctx</span><span class="p">(</span><span class="n">layer</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">globals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">locals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">,</span> <span class="n">DictStrAny</span><span class="p">]</span></code>
+eval_ctx
 
 
 <a href="#graia.ariadne.util.eval_ctx" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<div class="highlight"><pre><span></span><code><span class="n">eval_ctx</span><span class="p">(</span><span class="n">layer</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">globals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">locals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">,</span> <span class="n">DictStrAny</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -3082,24 +2978,24 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
-<span class="normal">195</span>
-<span class="normal">196</span>
-<span class="normal">197</span>
-<span class="normal">198</span>
-<span class="normal">199</span>
-<span class="normal">200</span>
-<span class="normal">201</span>
-<span class="normal">202</span>
-<span class="normal">203</span>
-<span class="normal">204</span>
-<span class="normal">205</span>
-<span class="normal">206</span>
-<span class="normal">207</span>
-<span class="normal">208</span>
-<span class="normal">209</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">eval_ctx</span><span class="p">(</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">eval_ctx</span><span class="p">(</span>
     <span class="n">layer</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">globals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">locals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">,</span> <span class="n">DictStrAny</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;获取一个上下文的全局和局部变量</span>
@@ -3130,19 +3026,17 @@
 
 
 
-<h2 id="graia.ariadne.util.await_predicate" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">await_predicate</span><span class="p">(</span><span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
+<h2 id="graia.ariadne.util.gen_subclass" class="doc doc-heading">
+gen_subclass
 
-  <span class="doc doc-properties">
-      <small class="doc doc-label doc-label-async"><code>async</code></small>
-  </span>
 
-<a href="#graia.ariadne.util.await_predicate" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<a href="#graia.ariadne.util.gen_subclass" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">gen_subclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>异步阻塞至满足 predicate 为 True</p>
+      <p>生成某个类的所有子类 (包括其自身)</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -3156,23 +3050,110 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>predicate</code></td>
+          <td><code>cls</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[], <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a>]</code>
+                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
           </td>
-          <td><p>判断条件</p></td>
+          <td><p>类</p></td>
           <td>
               <em>required</em>
           </td>
         </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Yields:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
         <tr>
-          <td><code>interval</code></td>
           <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#float">float</a></code>
+                <code><a class="autorefs autorefs-external" title="typing.Generator" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Generator">Generator</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.typing.T">T</span>], None, None]</code>
           </td>
-          <td><p>每次检查间隔. Defaults to 0.01.</p></td>
+          <td><p>Type[T]: 子类</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gen_subclass</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;生成某个类的所有子类 (包括其自身)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cls (Type[T]): 类</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        Type[T]: 子类</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">yield</span> <span class="bp">cls</span>
+    <span class="k">for</span> <span class="n">sub_cls</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__subclasses__</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">sub_cls</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+        <span class="k">yield from</span> <span class="n">gen_subclass</span><span class="p">(</span><span class="n">sub_cls</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.inject_bypass_listener" class="doc doc-heading">
+inject_bypass_listener
+
+
+<a href="#graia.ariadne.util.inject_bypass_listener" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">inject_bypass_listener</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>注入 BypassListener 以享受子事件解析.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>broadcast</code></td>
           <td>
-                <code>0.01</code>
+                <code><span title="graia.broadcast.Broadcast">Broadcast</span></code>
+          </td>
+          <td><p>外部事件系统, 提供了 event_class_generator 方法以生成子事件.</p></td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>
@@ -3180,23 +3161,555 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">215</span>
-<span class="normal">216</span>
-<span class="normal">217</span>
-<span class="normal">218</span>
-<span class="normal">219</span>
-<span class="normal">220</span>
-<span class="normal">221</span>
-<span class="normal">222</span>
-<span class="normal">223</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">await_predicate</span><span class="p">(</span><span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;异步阻塞至满足 predicate 为 True</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inject_bypass_listener</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;注入 BypassListener 以享受子事件解析.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        predicate (Callable[[], bool]): 判断条件</span>
-<span class="sd">        interval (float, optional): 每次检查间隔. Defaults to 0.01.</span>
+<span class="sd">        broadcast (Broadcast): 外部事件系统, 提供了 event_class_generator 方法以生成子事件.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">while</span> <span class="ow">not</span> <span class="n">predicate</span><span class="p">():</span>
-        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">BypassListener</span><span class="p">(</span><span class="n">Listener</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;透传监听器的实现&quot;&quot;&quot;</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">callable</span><span class="p">:</span> <span class="n">Callable</span><span class="p">,</span>
+            <span class="n">namespace</span><span class="p">:</span> <span class="n">Namespace</span><span class="p">,</span>
+            <span class="n">listening_events</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Dispatchable</span><span class="p">]],</span>
+            <span class="n">inline_dispatchers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">decorators</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">listening_events</span><span class="p">:</span>
+                <span class="n">events</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+                <span class="n">events</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">broadcast</span><span class="o">.</span><span class="n">event_class_generator</span><span class="p">(</span><span class="n">event</span><span class="p">))</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+                <span class="n">callable</span><span class="p">,</span>
+                <span class="n">namespace</span><span class="p">,</span>
+                <span class="n">events</span><span class="p">,</span>
+                <span class="n">inline_dispatchers</span><span class="o">=</span><span class="n">inline_dispatchers</span> <span class="ow">or</span> <span class="p">[],</span>
+                <span class="n">decorators</span><span class="o">=</span><span class="n">decorators</span> <span class="ow">or</span> <span class="p">[],</span>
+                <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="kn">import</span> <span class="nn">graia.broadcast.entities.listener</span>
+
+    <span class="n">graia</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">entities</span><span class="o">.</span><span class="n">listener</span><span class="o">.</span><span class="n">Listener</span> <span class="o">=</span> <span class="n">BypassListener</span>  <span class="c1"># type: ignore</span>
+    <span class="n">graia</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">Listener</span> <span class="o">=</span> <span class="n">BypassListener</span>  <span class="c1"># type: ignore</span>
+    <span class="k">try</span><span class="p">:</span>  <span class="c1"># Override saya listener</span>
+        <span class="kn">import</span> <span class="nn">graia.saya.builtins.broadcast.schema</span>
+
+        <span class="n">graia</span><span class="o">.</span><span class="n">saya</span><span class="o">.</span><span class="n">builtins</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">Listener</span> <span class="o">=</span> <span class="n">BypassListener</span>  <span class="c1"># type: ignore</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>  <span class="c1"># Saya not installed, pass.</span>
+        <span class="k">pass</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.inject_loguru_traceback" class="doc doc-heading">
+inject_loguru_traceback
+
+
+<a href="#graia.ariadne.util.inject_loguru_traceback" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">inject_loguru_traceback</span><span class="p">(</span><span class="n">loop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AbstractEventLoop</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>使用 loguru 模块替换默认的 traceback.print_exception 与 sys.excepthook</p>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inject_loguru_traceback</span><span class="p">(</span><span class="n">loop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AbstractEventLoop</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;使用 loguru 模块替换默认的 traceback.print_exception 与 sys.excepthook&quot;&quot;&quot;</span>
+    <span class="n">traceback</span><span class="o">.</span><span class="n">print_exception</span> <span class="o">=</span> <span class="n">loguru_excepthook</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">excepthook</span> <span class="o">=</span> <span class="n">loguru_excepthook</span>
+    <span class="k">if</span> <span class="n">loop</span><span class="p">:</span>
+        <span class="n">loop</span><span class="o">.</span><span class="n">set_exception_handler</span><span class="p">(</span><span class="n">loguru_async_handler</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.loguru_async_handler" class="doc doc-heading">
+loguru_async_handler
+
+
+<a href="#graia.ariadne.util.loguru_async_handler" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">loguru_async_handler</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>loguru 异步异常回调</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>_</code></td>
+          <td>
+                <code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>
+          </td>
+          <td><p>异常发生的事件循环</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ctx</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a></code>
+          </td>
+          <td><p>异常上下文</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">loguru_async_handler</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">ctx</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;loguru 异步异常回调</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        _ (AbstractEventLoop): 异常发生的事件循环</span>
+<span class="sd">        ctx (dict): 异常上下文</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;exception&quot;</span> <span class="ow">in</span> <span class="n">ctx</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">opt</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="n">ctx</span><span class="p">[</span><span class="s2">&quot;exception&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Exception:&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exception: </span><span class="si">{</span><span class="n">ctx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.loguru_excepthook" class="doc doc-heading">
+loguru_excepthook
+
+
+<a href="#graia.ariadne.util.loguru_excepthook" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">loguru_excepthook</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>loguru 异常回调</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cls</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#Exception">Exception</a>]</code>
+          </td>
+          <td><p>异常类</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>val</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#Exception">Exception</a></code>
+          </td>
+          <td><p>异常的实际值</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tb</code></td>
+          <td>
+                <code>TracebackType</code>
+          </td>
+          <td><p>回溯消息</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">loguru_excepthook</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">tb</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;loguru 异常回调</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cls (Type[Exception]): 异常类</span>
+<span class="sd">        val (Exception): 异常的实际值</span>
+<span class="sd">        tb (TracebackType): 回溯消息</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">opt</span><span class="p">(</span><span class="n">exception</span><span class="o">=</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">tb</span><span class="p">))</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Exception:&quot;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.resolve_dispatchers_mixin" class="doc doc-heading">
+resolve_dispatchers_mixin
+
+
+<a href="#graia.ariadne.util.resolve_dispatchers_mixin" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>解析 dispatcher list 的 mixin</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>dispatchers</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<span title="graia.broadcast.typing.T_Dispatcher">T_Dispatcher</span>]</code>
+          </td>
+          <td><p>dispatcher 列表</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.typing.T_Dispatcher">T_Dispatcher</span>]</code>
+          </td>
+          <td><p>List[T_Dispatcher]: 解析后的 dispatcher 列表</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;解析 dispatcher list 的 mixin</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dispatchers (Iterable[T_Dispatcher]): dispatcher 列表</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[T_Dispatcher]: 解析后的 dispatcher 列表</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">dispatcher</span> <span class="ow">in</span> <span class="n">dispatchers</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">dispatcher_mixin_handler</span><span class="p">(</span><span class="n">dispatcher</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.signal_handler" class="doc doc-heading">
+signal_handler
+
+
+<a href="#graia.ariadne.util.signal_handler" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">signal_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">one_time</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>注册信号处理器</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>callback</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[], None]</code>
+          </td>
+          <td><p>信号处理器</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>one_time</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+          </td>
+          <td><p>是否只执行一次. 默认为 True.</p></td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>None</code>
+          </td>
+          <td><p>None</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">one_time</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;注册信号处理器</span>
+<span class="sd">    Args:</span>
+<span class="sd">        callback (Callable[[], None]): 信号处理器</span>
+<span class="sd">        one_time (bool, optional): 是否只执行一次. 默认为 True.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">signal</span>
+    <span class="kn">import</span> <span class="nn">threading</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">threading</span><span class="o">.</span><span class="n">main_thread</span><span class="p">()</span><span class="o">.</span><span class="n">ident</span> <span class="o">==</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">ident</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">HANDLED_SIGNAL</span> <span class="o">=</span> <span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGTERM</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">HANDLED_SIGNAL</span><span class="p">:</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">getsignal</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">handler_wrapper</span><span class="p">(</span><span class="n">sig_num</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">handler</span><span class="p">):</span>
+                <span class="n">handler</span><span class="p">(</span><span class="n">sig_num</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+            <span class="n">callback</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">one_time</span><span class="p">:</span>
+                <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">sig_num</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+
+        <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">handler_wrapper</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="graia.ariadne.util.wrap_bracket" class="doc doc-heading">
+wrap_bracket
+
+
+<a href="#graia.ariadne.util.wrap_bracket" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">wrap_bracket</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>在字符串中转义中括号括号</p>
+
+        <details class="quote">
+          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">wrap_bracket</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;在字符串中转义中括号括号&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">u005b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">u005d&quot;</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -3211,14 +3724,15 @@
 
 
 <h2 id="graia.ariadne.util.yield_with_timeout" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">yield_with_timeout</span><span class="p">(</span><span class="n">getter_coro</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Coroutine</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="p">]],</span> <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">await_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]</span></code>
+yield_with_timeout
 
   <span class="doc doc-properties">
       <small class="doc doc-label doc-label-async"><code>async</code></small>
   </span>
 
 <a href="#graia.ariadne.util.yield_with_timeout" class="headerlink" title="Permanent link">🔗</a></h2>
-
+<div class="highlight"><pre><span></span><code><span class="n">yield_with_timeout</span><span class="p">(</span><span class="n">getter_coro</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Coroutine</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="p">]],</span> <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">await_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
+</code></pre></div>
 
     <div class="doc doc-contents ">
 
@@ -3288,33 +3802,32 @@
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">226</span>
-<span class="normal">227</span>
-<span class="normal">228</span>
-<span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span>
-<span class="normal">241</span>
-<span class="normal">242</span>
-<span class="normal">243</span>
-<span class="normal">244</span>
-<span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span>
-<span class="normal">248</span>
-<span class="normal">249</span>
-<span class="normal">250</span>
-<span class="normal">251</span>
-<span class="normal">252</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">yield_with_timeout</span><span class="p">(</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">yield_with_timeout</span><span class="p">(</span>
     <span class="n">getter_coro</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Coroutine</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="p">]],</span>
     <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span>
     <span class="n">await_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
@@ -3336,8 +3849,7 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
             <span class="k">continue</span>
         <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">done</span><span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">t</span>
-            <span class="k">yield</span> <span class="n">res</span>
+            <span class="k">yield</span> <span class="k">await</span> <span class="n">t</span>
     <span class="k">if</span> <span class="n">last_tsk</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">tsk</span> <span class="ow">in</span> <span class="n">last_tsk</span><span class="p">:</span>
             <span class="n">tsk</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
@@ -3347,340 +3859,6 @@
     </div>
 
   </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.deprecated" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">deprecated</span><span class="p">(</span><span class="n">remove_ver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]]</span></code>
-
-
-<a href="#graia.ariadne.util.deprecated" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>标注一个方法 / 函数已被弃用</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>remove_ver</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>将被移除的版本.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[<a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]], <a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]]</code>
-          </td>
-          <td><p>Callable[[T_Callable], T_Callable]: 包装器.</p></td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">255</span>
-<span class="normal">256</span>
-<span class="normal">257</span>
-<span class="normal">258</span>
-<span class="normal">259</span>
-<span class="normal">260</span>
-<span class="normal">261</span>
-<span class="normal">262</span>
-<span class="normal">263</span>
-<span class="normal">264</span>
-<span class="normal">265</span>
-<span class="normal">266</span>
-<span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span>
-<span class="normal">270</span>
-<span class="normal">271</span>
-<span class="normal">272</span>
-<span class="normal">273</span>
-<span class="normal">274</span>
-<span class="normal">275</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">deprecated</span><span class="p">(</span><span class="n">remove_ver</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]],</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]]:</span>
-    <span class="sd">&quot;&quot;&quot;标注一个方法 / 函数已被弃用</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        remove_ver (str): 将被移除的版本.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        Callable[[T_Callable], T_Callable]: 包装器.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="k">def</span> <span class="nf">out_wrapper</span><span class="p">(</span><span class="n">func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="n">P</span><span class="p">,</span> <span class="n">R</span><span class="p">]:</span>
-        <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">P</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">R</span><span class="p">:</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="ne">DeprecationWarning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2"> will be removed in </span><span class="si">{</span><span class="n">remove_ver</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">))</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deprecated function: </span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="o">.</span><span class="vm">__qualname__</span><span class="si">}</span><span class="s2"> will be removed in </span><span class="si">{</span><span class="n">remove_ver</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">wrapper</span>
-
-    <span class="k">return</span> <span class="n">out_wrapper</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.resolve_dispatchers_mixin" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]</span></code>
-
-
-<a href="#graia.ariadne.util.resolve_dispatchers_mixin" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>解析 dispatcher list 的 mixin</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>dispatchers</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.typing.T_Dispatcher">T_Dispatcher</span>]</code>
-          </td>
-          <td><p>dispatcher 列表</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.typing.T_Dispatcher">T_Dispatcher</span>]</code>
-          </td>
-          <td><p>List[T_Dispatcher]: 解析后的 dispatcher 列表</p></td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">278</span>
-<span class="normal">279</span>
-<span class="normal">280</span>
-<span class="normal">281</span>
-<span class="normal">282</span>
-<span class="normal">283</span>
-<span class="normal">284</span>
-<span class="normal">285</span>
-<span class="normal">286</span>
-<span class="normal">287</span>
-<span class="normal">288</span>
-<span class="normal">289</span>
-<span class="normal">290</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;解析 dispatcher list 的 mixin</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        dispatchers (List[T_Dispatcher]): dispatcher 列表</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        List[T_Dispatcher]: 解析后的 dispatcher 列表</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">dispatcher</span> <span class="ow">in</span> <span class="n">dispatchers</span><span class="p">:</span>
-        <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">dispatcher_mixin_handler</span><span class="p">(</span><span class="n">dispatcher</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">result</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-function">
-
-
-
-<h2 id="graia.ariadne.util.signal_handler" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">signal_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">one_time</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span></code>
-
-
-<a href="#graia.ariadne.util.signal_handler" class="headerlink" title="Permanent link">🔗</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-      <p>注册信号处理器</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>callback</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[[], None]</code>
-          </td>
-          <td><p>信号处理器</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>one_time</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否只执行一次. 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>None</code>
-          </td>
-          <td><p>None</p></td>
-        </tr>
-    </tbody>
-  </table>
-
-        <details class="quote">
-          <summary>Source code in <code>graia/ariadne/util/__init__.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">322</span>
-<span class="normal">323</span>
-<span class="normal">324</span>
-<span class="normal">325</span>
-<span class="normal">326</span>
-<span class="normal">327</span>
-<span class="normal">328</span>
-<span class="normal">329</span>
-<span class="normal">330</span>
-<span class="normal">331</span>
-<span class="normal">332</span>
-<span class="normal">333</span>
-<span class="normal">334</span>
-<span class="normal">335</span>
-<span class="normal">336</span>
-<span class="normal">337</span>
-<span class="normal">338</span>
-<span class="normal">339</span>
-<span class="normal">340</span>
-<span class="normal">341</span>
-<span class="normal">342</span>
-<span class="normal">343</span>
-<span class="normal">344</span>
-<span class="normal">345</span>
-<span class="normal">346</span>
-<span class="normal">347</span>
-<span class="normal">348</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="kc">None</span><span class="p">],</span> <span class="n">one_time</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;注册信号处理器</span>
-<span class="sd">    Args:</span>
-<span class="sd">        callback (Callable[[], None]): 信号处理器</span>
-<span class="sd">        one_time (bool, optional): 是否只执行一次. 默认为 True.</span>
-<span class="sd">    Returns:</span>
-<span class="sd">        None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">import</span> <span class="nn">signal</span>
-    <span class="kn">import</span> <span class="nn">threading</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">threading</span><span class="o">.</span><span class="n">main_thread</span><span class="p">()</span><span class="o">.</span><span class="n">ident</span> <span class="o">==</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span><span class="o">.</span><span class="n">ident</span><span class="p">:</span>
-        <span class="k">return</span>
-
-    <span class="n">HANDLED_SIGNAL</span> <span class="o">=</span> <span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGTERM</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="n">HANDLED_SIGNAL</span><span class="p">:</span>
-        <span class="n">handler</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">getsignal</span><span class="p">(</span><span class="n">sig</span><span class="p">)</span>
-
-        <span class="k">def</span> <span class="nf">handler_wrapper</span><span class="p">(</span><span class="n">sig_num</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">handler</span><span class="p">:</span>
-                <span class="n">handler</span><span class="p">(</span><span class="n">sig_num</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
-            <span class="n">callback</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">one_time</span><span class="p">:</span>
-                <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">sig_num</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
-
-        <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">handler_wrapper</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-        </details>
-    </div>
-
-  </div>
-
 
 
 
