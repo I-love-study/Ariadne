@@ -2171,18 +2171,18 @@
 </div>
 <h2 id="_1">快速开始<a class="headerlink" href="#_1" title="Permanent link">🔗</a></h2>
 <p>以下将直观展示<code>Alconna</code>的使用方法:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">arclet.alconna</span> <span class="kn">import</span> <span class="n">AlconnaString</span>
-<span class="kn">from</span> <span class="nn">graia.ariadne.message.parser.alconna</span> <span class="kn">import</span> <span class="n">AlconnaDispatcher</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">arclet.alconna</span> <span class="kn">import</span> <span class="n">AlconnaString</span><span class="p">,</span> <span class="n">Arpamar</span>
+<span class="kn">from</span> <span class="nn">arclet.alconna.graia</span> <span class="kn">import</span> <span class="n">AlconnaDispatcher</span>
 <span class="c1"># example: !点歌 &lt;歌名&gt; --歌手 &lt;歌手名&gt;</span>
 <span class="n">music</span> <span class="o">=</span> <span class="n">AlconnaString</span><span class="p">(</span>
     <span class="s2">&quot;!点歌 &lt;song_name:str&gt;  #在XXX中搜索歌名&quot;</span><span class="p">,</span> <span class="c1"># 主参数: &lt;歌名&gt;</span>
     <span class="s2">&quot;--歌手|-s &lt;singer_name:str&gt; #指定歌手&quot;</span>  <span class="c1"># 选项名: --歌手  选项别名: -s  选项参数: &lt;歌手名&gt;</span>
 <span class="p">)</span>
-<span class="nd">@app</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">FriendMessage</span><span class="p">,</span> <span class="n">dispatchers</span><span class="o">=</span><span class="p">[</span><span class="n">AlconnaDispatcher</span><span class="p">(</span><span class="n">alconna</span><span class="o">=</span><span class="n">music</span><span class="p">,</span> <span class="n">reply_help</span><span class="o">=</span><span class="kc">True</span><span class="p">)])</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">friend_message_listener</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Ariadne</span><span class="p">,</span> <span class="n">friend</span><span class="p">:</span> <span class="n">Friend</span><span class="p">,</span> <span class="n">song_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">singer_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sendFriendMessage</span><span class="p">(</span><span class="n">friend</span><span class="p">,</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;歌名是 &quot;</span><span class="p">,</span> <span class="n">song_name</span><span class="p">))</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">FriendMessage</span><span class="p">,</span> <span class="n">dispatchers</span><span class="o">=</span><span class="p">[</span><span class="n">AlconnaDispatcher</span><span class="p">(</span><span class="n">alconna</span><span class="o">=</span><span class="n">music</span><span class="p">,</span> <span class="n">help_flag</span><span class="o">=</span><span class="s1">&#39;reply&#39;</span><span class="p">)])</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">friend_message_listener</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">Ariadne</span><span class="p">,</span> <span class="n">friend</span><span class="p">:</span> <span class="n">Friend</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">Arpamar</span><span class="p">):</span>
+    <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sendFriendMessage</span><span class="p">(</span><span class="n">friend</span><span class="p">,</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;歌名是 &quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">song_name</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">singer_name</span><span class="p">:</span>
-        <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sendFriendMessage</span><span class="p">(</span><span class="n">friend</span><span class="p">,</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;歌手是 &quot;</span><span class="p">,</span> <span class="n">singer_name</span><span class="p">))</span>
+        <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">sendFriendMessage</span><span class="p">(</span><span class="n">friend</span><span class="p">,</span> <span class="n">MessageChain</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;歌手是 &quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">singer_name</span><span class="p">))</span>
 </code></pre></div>
 <p>执行这段代码后，向你的 bot 发送 <code>!点歌 大地 -s Beyond</code> 试试.</p>
 <div>
@@ -2206,8 +2206,9 @@
 <p>解析时，先判断命令头(即 headers + command ),再判断 options 与 main args , 这里 options 与 main args 在输入指令时是不分先后的</p>
 <p>假设有个 Alconna 如下:</p>
 <div class="highlight"><pre><span></span><code><span class="n">Alconna</span><span class="p">(</span>
-    <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/&quot;</span><span class="p">],</span>
     <span class="n">command</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="n">main_args</span><span class="o">=</span><span class="s2">&quot;main_args&quot;</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/&quot;</span><span class="p">],</span>
     <span class="n">options</span><span class="o">=</span><span class="p">[</span>
         <span class="n">Subcommand</span><span class="p">(</span>
             <span class="s2">&quot;sub_name&quot;</span><span class="p">,</span>
@@ -2215,8 +2216,7 @@
             <span class="n">sub_main_arg</span><span class="o">=</span><span class="s2">&quot;sub_main_arg&quot;</span>
         <span class="p">),</span>
         <span class="n">Option</span><span class="p">(</span><span class="s2">&quot;opt&quot;</span><span class="p">,</span> <span class="n">opt_arg</span><span class="o">=</span><span class="s2">&quot;opt_arg&quot;</span><span class="p">)</span>
-    <span class="p">]</span>
-    <span class="n">main_args</span><span class="o">=</span><span class="s2">&quot;main_args&quot;</span>
+    <span class="p">],</span>
 <span class="p">)</span>
 </code></pre></div>
 <p>则它可以解析如下命令:</p>
@@ -2227,7 +2227,7 @@
 </code></pre></div>
 <p>解析成功的命令的参数会保存在 analysis_message 方法返回的 <code>Arpamar</code> 实例中</p>
 <h2 id="alconna">创建 Alconna<a class="headerlink" href="#alconna" title="Permanent link">🔗</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">alconna</span> <span class="o">=</span> <span class="n">Alconna</span><span class="p">(</span><span class="n">command</span><span class="o">=</span><span class="s2">&quot;指令&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="n">Option</span><span class="p">(</span><span class="s2">&quot;选项&quot;</span><span class="p">)],</span> <span class="n">main_args</span><span class="o">=</span><span class="n">Args</span><span class="o">.</span><span class="n">foo</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="n">alconna</span> <span class="o">=</span> <span class="n">Alconna</span><span class="p">(</span><span class="n">command</span><span class="o">=</span><span class="s2">&quot;指令&quot;</span><span class="p">,</span> <span class="n">main_args</span><span class="o">=</span><span class="n">Args</span><span class="o">.</span><span class="n">foo</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="n">Option</span><span class="p">(</span><span class="s2">&quot;选项&quot;</span><span class="p">)])</span>
 </code></pre></div>
 <p>这里说明我们需要匹配内容为 "指令 something:str"的消息, 并把 "something" 赋予参数名 "foo"; 该指令可以使用 "选项" 这个命令选项</p>
 <p>而后另有4种构造方式, 可以满足不同使用者的需求:
@@ -2242,9 +2242,14 @@
 <ul>
 <li><code>Alconna</code>: 使用的 <code>Alconna</code> 对象.</li>
 <li><code>Arpamar</code>: <code>Alconna</code> 生成的数据容器.</li>
-<li><code>AlconnaProperty</code>: 在 <code>name</code> 上进行此标注等价于进行 <code>arpamar.get(name)</code>.</li>
-<li><code>dict</code>: 当<code>name</code>代表<code>Alconna</code>内的选项, 并且确实解析到数据时返回对应的字典对象; 未解析时为None</li>
-<li>其他类型: 在 <code>name</code> 上进行此标注等价于<code>arpamar.all_matched_args.get(name)</code>; 未解析时为None</li>
+<li><code>AlconnaProperty</code>: <code>AlconnaDispatcher</code> 返回的特殊对象, 可以获取:<ul>
+<li><code>origin</code>: 原始消息链</li>
+<li><code>help_text</code>: 可能的帮助信息</li>
+<li><code>result</code>: <code>Arpamar</code></li>
+<li><code>source</code>: 原始事件</li>
+</ul>
+</li>
+<li>其他类型: 在 <code>name</code> 上进行此标注等价于<code>arpamar.all_matched_args.get(name)</code></li>
 </ul>
 <h3 id="_4">特殊事件<a class="headerlink" href="#_4" title="Permanent link">🔗</a></h3>
 <p>当<code>AlconnaDispatcher</code>的<code>reply_help</code>为<code>False</code>时, 其会向bcc广播一个<code>AlconnaHelpMessage</code>事件</p>
