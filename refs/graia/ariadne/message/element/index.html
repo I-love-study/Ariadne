@@ -5207,8 +5207,7 @@ size
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">772</span>
-<span class="normal">773</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">773</span>
 <span class="normal">774</span>
 <span class="normal">775</span>
 <span class="normal">776</span>
@@ -5242,7 +5241,8 @@ size
 <span class="normal">804</span>
 <span class="normal">805</span>
 <span class="normal">806</span>
-<span class="normal">807</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FlashImage</span><span class="p">(</span><span class="n">Image</span><span class="p">):</span>
+<span class="normal">807</span>
+<span class="normal">808</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FlashImage</span><span class="p">(</span><span class="n">Image</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;指示消息中的闪照元素&quot;&quot;&quot;</span>
 
     <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;FlashImage&quot;</span>
@@ -5332,14 +5332,14 @@ fromImage
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">797</span>
-<span class="normal">798</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">798</span>
 <span class="normal">799</span>
 <span class="normal">800</span>
 <span class="normal">801</span>
 <span class="normal">802</span>
 <span class="normal">803</span>
-<span class="normal">804</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">804</span>
+<span class="normal">805</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">fromImage</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">image</span><span class="p">:</span> <span class="s2">&quot;Image&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FlashImage&quot;</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;从 Image 构造 FlashImage</span>
 
@@ -5392,13 +5392,13 @@ toImage
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">789</span>
-<span class="normal">790</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">790</span>
 <span class="normal">791</span>
 <span class="normal">792</span>
 <span class="normal">793</span>
 <span class="normal">794</span>
-<span class="normal">795</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">toImage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Image&quot;</span><span class="p">:</span>
+<span class="normal">795</span>
+<span class="normal">796</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">toImage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Image&quot;</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;将 FlashImage 转换为 Image</span>
 
 <span class="sd">    Returns:</span>
@@ -5828,8 +5828,7 @@ time
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">732</span>
-<span class="normal">733</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">733</span>
 <span class="normal">734</span>
 <span class="normal">735</span>
 <span class="normal">736</span>
@@ -5865,7 +5864,8 @@ time
 <span class="normal">766</span>
 <span class="normal">767</span>
 <span class="normal">768</span>
-<span class="normal">769</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Image</span><span class="p">(</span><span class="n">MultimediaElement</span><span class="p">):</span>
+<span class="normal">769</span>
+<span class="normal">770</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Image</span><span class="p">(</span><span class="n">MultimediaElement</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;指示消息中的图片元素&quot;&quot;&quot;</span>
 
     <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;Image&quot;</span>
@@ -5958,14 +5958,14 @@ fromFlashImage
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">759</span>
-<span class="normal">760</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">760</span>
 <span class="normal">761</span>
 <span class="normal">762</span>
 <span class="normal">763</span>
 <span class="normal">764</span>
 <span class="normal">765</span>
-<span class="normal">766</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">766</span>
+<span class="normal">767</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">fromFlashImage</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flash</span><span class="p">:</span> <span class="s2">&quot;FlashImage&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Image&quot;</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;从 FlashImage 构造 Image</span>
 
@@ -6018,13 +6018,13 @@ toFlashImage
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">751</span>
-<span class="normal">752</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">752</span>
 <span class="normal">753</span>
 <span class="normal">754</span>
 <span class="normal">755</span>
 <span class="normal">756</span>
-<span class="normal">757</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">toFlashImage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FlashImage&quot;</span><span class="p">:</span>
+<span class="normal">757</span>
+<span class="normal">758</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">toFlashImage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;FlashImage&quot;</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;将 Image 转换为 FlashImage</span>
 
 <span class="sd">    Returns:</span>
@@ -6673,7 +6673,8 @@ code
 <span class="normal">726</span>
 <span class="normal">727</span>
 <span class="normal">728</span>
-<span class="normal">729</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MultimediaElement</span><span class="p">(</span><span class="n">Element</span><span class="p">):</span>
+<span class="normal">729</span>
+<span class="normal">730</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MultimediaElement</span><span class="p">(</span><span class="n">Element</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;指示多媒体消息元素.&quot;&quot;&quot;</span>
 
     <span class="nb">id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
@@ -6728,12 +6729,13 @@ code
 <span class="sd">            bytes: 元素原始数据</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">get_running</span>
+        <span class="kn">from</span> <span class="nn">..adapter</span> <span class="kn">import</span> <span class="n">Adapter</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">base64</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">b64decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base64</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;you should offer a url.&quot;</span><span class="p">)</span>
-        <span class="n">session</span> <span class="o">=</span> <span class="n">get_running</span><span class="p">()</span><span class="o">.</span><span class="n">adapter</span><span class="o">.</span><span class="n">session</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">get_running</span><span class="p">(</span><span class="n">Adapter</span><span class="p">)</span><span class="o">.</span><span class="n">session</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">session</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Unable to get session!&quot;</span><span class="p">)</span>
         <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
@@ -6899,8 +6901,7 @@ asNoBinaryPersistentString
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">698</span>
-<span class="normal">699</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">699</span>
 <span class="normal">700</span>
 <span class="normal">701</span>
 <span class="normal">702</span>
@@ -6914,7 +6915,8 @@ asNoBinaryPersistentString
 <span class="normal">710</span>
 <span class="normal">711</span>
 <span class="normal">712</span>
-<span class="normal">713</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">asNoBinaryPersistentString</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">713</span>
+<span class="normal">714</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">asNoBinaryPersistentString</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;生成不附带二进制数据的持久化字符串</span>
 
 <span class="sd">    Returns:</span>
@@ -7018,7 +7020,8 @@ get_bytes
 <span class="normal">693</span>
 <span class="normal">694</span>
 <span class="normal">695</span>
-<span class="normal">696</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">get_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="normal">696</span>
+<span class="normal">697</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">get_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;尝试获取消息元素的 bytes, 注意, 你无法获取并不包含 url 且不包含 base64 属性的本元素的 bytes.</span>
 
 <span class="sd">    Raises:</span>
@@ -7028,12 +7031,13 @@ get_bytes
 <span class="sd">        bytes: 元素原始数据</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">get_running</span>
+    <span class="kn">from</span> <span class="nn">..adapter</span> <span class="kn">import</span> <span class="n">Adapter</span>
 
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">base64</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">b64decode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base64</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;you should offer a url.&quot;</span><span class="p">)</span>
-    <span class="n">session</span> <span class="o">=</span> <span class="n">get_running</span><span class="p">()</span><span class="o">.</span><span class="n">adapter</span><span class="o">.</span><span class="n">session</span>
+    <span class="n">session</span> <span class="o">=</span> <span class="n">get_running</span><span class="p">(</span><span class="n">Adapter</span><span class="p">)</span><span class="o">.</span><span class="n">session</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">session</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Unable to get session!&quot;</span><span class="p">)</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
@@ -7068,10 +7072,10 @@ uuid
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">715</span>
-<span class="normal">716</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">716</span>
 <span class="normal">717</span>
-<span class="normal">718</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">718</span>
+<span class="normal">719</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">uuid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;多媒体元素的 uuid, 即元素在 mirai 内部的标识&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
@@ -8937,8 +8941,7 @@ fetchOriginal
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">810</span>
-<span class="normal">811</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">811</span>
 <span class="normal">812</span>
 <span class="normal">813</span>
 <span class="normal">814</span>
@@ -8960,7 +8963,8 @@ fetchOriginal
 <span class="normal">830</span>
 <span class="normal">831</span>
 <span class="normal">832</span>
-<span class="normal">833</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voice</span><span class="p">(</span><span class="n">MultimediaElement</span><span class="p">):</span>
+<span class="normal">833</span>
+<span class="normal">834</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Voice</span><span class="p">(</span><span class="n">MultimediaElement</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;指示消息中的语音元素&quot;&quot;&quot;</span>
 
     <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;Voice&quot;</span>
@@ -9156,8 +9160,7 @@ Update the forward references.</p>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/element.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">836</span>
-<span class="normal">837</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">837</span>
 <span class="normal">838</span>
 <span class="normal">839</span>
 <span class="normal">840</span>
@@ -9166,7 +9169,8 @@ Update the forward references.</p>
 <span class="normal">843</span>
 <span class="normal">844</span>
 <span class="normal">845</span>
-<span class="normal">846</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">_update_forward_refs</span><span class="p">():</span>
+<span class="normal">846</span>
+<span class="normal">847</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">_update_forward_refs</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Internal function.</span>
 <span class="sd">    Update the forward references.</span>
