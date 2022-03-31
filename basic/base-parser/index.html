@@ -650,10 +650,10 @@
       
         <li class="md-nav__item">
   <a href="#matchtemplate" class="md-nav__link">
-    matchTemplate
+    MatchTemplate
   </a>
   
-    <nav class="md-nav" aria-label="matchTemplate">
+    <nav class="md-nav" aria-label="MatchTemplate">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -901,6 +901,10 @@
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../advance/alconna/quickstart/">Alconna</a>
+          
+            <label for="__nav_1_4_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -1515,6 +1519,10 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../refs/graia/ariadne/console/">console</a>
           
+            <label for="__nav_2_1_1_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
         </div>
       
       <nav class="md-nav" aria-label="console" data-md-level="4">
@@ -1799,6 +1807,10 @@
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../refs/graia/ariadne/message/commander/">commander</a>
+          
+            <label for="__nav_2_1_1_9_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -2417,10 +2429,10 @@
       
         <li class="md-nav__item">
   <a href="#matchtemplate" class="md-nav__link">
-    matchTemplate
+    MatchTemplate
   </a>
   
-    <nav class="md-nav" aria-label="matchTemplate">
+    <nav class="md-nav" aria-label="MatchTemplate">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2540,16 +2552,16 @@
 <span class="k">async</span> <span class="k">def</span> <span class="nf">on_match_regex</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span> <span class="c1"># 不会改动消息链</span>
     <span class="o">...</span>
 </code></pre></div>
-<h2 id="matchtemplate">matchTemplate<a class="headerlink" href="#matchtemplate" title="Permanent link">🔗</a></h2>
+<h2 id="matchtemplate">MatchTemplate<a class="headerlink" href="#matchtemplate" title="Permanent link">🔗</a></h2>
 <p>检测消息链是否匹配指定模板.</p>
 <p>遇到元素实例则检测是否相等，遇到元素类型则检测类型是否匹配.</p>
 <p><code>Plain</code> 实例与类型会被自动拼接起来.</p>
 <h3 id="_9">使用<a class="headerlink" href="#_9" title="Permanent link">🔗</a></h3>
 <p><code>Decorator</code>: 放入 <code>broadcast.receiver</code> / <code>ListenerSchema</code> 的 <code>decorators</code> .</p>
-<p>```py
-<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/broadcast" title="GitHub User: broadcast">@broadcast</a>.receiver(..., decorators=[MatchTemplate([Plain, Plain("搜图"), Image])]) # 需要 "*搜图 [图片]" 才能匹配 (*为任意多字符)
-async def on_match_regex(chain: MessageChain): # 不会改动消息链
-    ...</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">MatchTemplate</span><span class="p">([</span><span class="n">Plain</span><span class="p">,</span> <span class="n">Plain</span><span class="p">(</span><span class="s2">&quot;搜图&quot;</span><span class="p">),</span> <span class="n">Image</span><span class="p">])])</span> <span class="c1"># 需要 &quot;*搜图 [图片]&quot; 才能匹配 (*为任意多字符)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_match_regex</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span> <span class="c1"># 不会改动消息链</span>
+    <span class="o">...</span>
+</code></pre></div>
 <div class="admonition graiax">
 <p class="admonition-title">社区文档相关章节: <a href="https://graiax.cn/make_ero_bot/tutorials/6_1_base_parser.html">链接</a></p>
 </div>

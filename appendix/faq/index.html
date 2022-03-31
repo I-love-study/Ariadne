@@ -706,6 +706,10 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../advance/alconna/quickstart/">Alconna</a>
           
+            <label for="__nav_1_4_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
         </div>
       
       <nav class="md-nav" aria-label="Alconna" data-md-level="3">
@@ -1098,6 +1102,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshoot-" class="md-nav__link">
+    TROUBLESHOOT - 常见故障排查
+  </a>
+  
+    <nav class="md-nav" aria-label="TROUBLESHOOT - 常见故障排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeouterror-unable-to-connect-to-mirai-api-http-configuration-problem" class="md-nav__link">
+    TimeoutError: Unable to connect to mirai-api-http. Configuration Problem?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-send-message-your-account-may-be-blocked" class="md-nav__link">
+    收不到消息，且控制台显示 Failed to send message, your account may be blocked.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1390,6 +1421,10 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../refs/graia/ariadne/console/">console</a>
           
+            <label for="__nav_2_1_1_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
         </div>
       
       <nav class="md-nav" aria-label="console" data-md-level="4">
@@ -1674,6 +1709,10 @@
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../refs/graia/ariadne/message/commander/">commander</a>
+          
+            <label for="__nav_2_1_1_9_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -2185,6 +2224,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshoot-" class="md-nav__link">
+    TROUBLESHOOT - 常见故障排查
+  </a>
+  
+    <nav class="md-nav" aria-label="TROUBLESHOOT - 常见故障排查">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeouterror-unable-to-connect-to-mirai-api-http-configuration-problem" class="md-nav__link">
+    TimeoutError: Unable to connect to mirai-api-http. Configuration Problem?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-send-message-your-account-may-be-blocked" class="md-nav__link">
+    收不到消息，且控制台显示 Failed to send message, your account may be blocked.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2236,6 +2302,31 @@
 <li>可以保证 <code>asPersistentString</code> 完整存储了图片数据, 以防止不可靠 <code>url</code> 影响.</li>
 </ul>
 <p>可能后续会添加一个 <code>remove_url</code> 的仅关键字参数.</p>
+<h2 id="troubleshoot-">TROUBLESHOOT - 常见故障排查<a class="headerlink" href="#troubleshoot-" title="Permanent link">🔗</a></h2>
+<blockquote>
+<p>本部分用于排查常见用户错误.</p>
+</blockquote>
+<h3 id="timeouterror-unable-to-connect-to-mirai-api-http-configuration-problem">TimeoutError: Unable to connect to mirai-api-http. Configuration Problem?<a class="headerlink" href="#timeouterror-unable-to-connect-to-mirai-api-http-configuration-problem" title="Permanent link">🔗</a></h3>
+<p>请检查：</p>
+<ol>
+<li>
+<p>mirai-console 是否成功登录账号</p>
+</li>
+<li>
+<p>mirai-api-http 是否正确配置 (启用 <code>HTTP</code> 与 <code>Websocket</code> 适配器)</p>
+</li>
+<li>
+<p><code>Python</code> 版本 (3.8 以上)</p>
+</li>
+<li>
+<p><code>Ariadne</code> 版本是否为最新 (<img alt="PyPI" src="https://img.shields.io/pypi/v/graia-ariadne?label=%20" />)</p>
+</li>
+<li>
+<p><code>Ariadne</code> 配置是否与 <code>mirai-api-http</code> 相同.</p>
+</li>
+</ol>
+<h3 id="failed-to-send-message-your-account-may-be-blocked">收不到消息，且控制台显示 <code>Failed to send message, your account may be blocked.</code><a class="headerlink" href="#failed-to-send-message-your-account-may-be-blocked" title="Permanent link">🔗</a></h3>
+<p>你的账号可能被 <strong>风控</strong> 了. 请等待几天后再试.</p>
 
               
             </article>
