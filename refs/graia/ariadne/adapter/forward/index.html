@@ -2320,12 +2320,12 @@
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/adapter/forward.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">272</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">271</span>
+<span class="normal">272</span>
 <span class="normal">273</span>
 <span class="normal">274</span>
 <span class="normal">275</span>
-<span class="normal">276</span>
-<span class="normal">277</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ComposeForwardAdapter</span><span class="p">(</span><span class="n">WebsocketAdapter</span><span class="p">):</span>
+<span class="normal">276</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ComposeForwardAdapter</span><span class="p">(</span><span class="n">WebsocketAdapter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;正向 HTTP 与 Websocket 的组合适配器.&quot;&quot;&quot;</span>
 
     <span class="n">tags</span><span class="p">:</span> <span class="n">FrozenSet</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">([</span><span class="s2">&quot;websocket&quot;</span><span class="p">,</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;forward&quot;</span><span class="p">])</span>
@@ -2514,7 +2514,7 @@
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">authenticate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;在 mira-api-http 进行认证并存入 MiraiSession&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span><span class="p">:</span>
             <span class="k">async</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">url_gen</span><span class="p">(</span><span class="s2">&quot;verify&quot;</span><span class="p">),</span>
                 <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;verifyKey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">verify_key</span><span class="p">}),</span>
@@ -2532,9 +2532,9 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_cycle</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">authenticate</span><span class="p">()</span>
         <span class="k">async</span> <span class="k">with</span> <span class="n">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span>
+            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">authenticate</span><span class="p">()</span>
             <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="p">:</span>
                 <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fetch_interval</span><span class="p">)</span>
                 <span class="k">async</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
@@ -2547,8 +2547,8 @@
                     <span class="n">resp</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="n">validate_response</span><span class="p">(</span><span class="n">resp_json</span><span class="p">)</span>
                 <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">resp</span><span class="p">:</span>
                     <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">event_queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">build_event</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">call_api</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -2590,8 +2590,8 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">val</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">InvalidSession</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">raise</span> <span class="n">val</span>
 </code></pre></div>
 </td></tr></table>
@@ -2767,7 +2767,7 @@ authenticate
 <span class="normal">68</span>
 <span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">authenticate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;在 mira-api-http 进行认证并存入 MiraiSession&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span><span class="p">:</span>
         <span class="k">async</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">url_gen</span><span class="p">(</span><span class="s2">&quot;verify&quot;</span><span class="p">),</span>
             <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s2">&quot;verifyKey&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">verify_key</span><span class="p">}),</span>
@@ -2959,8 +2959,7 @@ authenticate
 <span class="normal">265</span>
 <span class="normal">266</span>
 <span class="normal">267</span>
-<span class="normal">268</span>
-<span class="normal">269</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">WebsocketAdapter</span><span class="p">(</span><span class="n">Adapter</span><span class="p">):</span>
+<span class="normal">268</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">WebsocketAdapter</span><span class="p">(</span><span class="n">Adapter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    正向 Websocket 适配器.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -3082,7 +3081,6 @@ authenticate
                 <span class="k">pass</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
             <span class="k">finally</span><span class="p">:</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ping_task</span><span class="p">:</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">ping_task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
@@ -3091,10 +3089,10 @@ authenticate
                         <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;websocket: ping task complete&quot;</span><span class="p">)</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;websocket: disconnected&quot;</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">mirai_session</span><span class="o">.</span><span class="n">session_key</span> <span class="o">=</span> <span class="kc">None</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">websocket</span> <span class="o">=</span> <span class="kc">None</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="kc">None</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
           </details>
