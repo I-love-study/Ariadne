@@ -866,6 +866,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../../extra/cooldown/" class="md-nav__link">
+        冷却
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../../extra/log/" class="md-nav__link">
         日志记录
       </a>
@@ -2320,8 +2334,8 @@
         <span class="sd">&quot;&quot;&quot;通过初始化时传入的格式字符串 格式化消息链</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            *args (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
-<span class="sd">            **kwargs (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
+<span class="sd">            *o_args (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
+<span class="sd">            **o_kwargs (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            MessageChain: 格式化后的消息链</span>
@@ -2394,23 +2408,23 @@ format
     </thead>
     <tbody>
         <tr>
-          <td><code>*args</code></td>
+          <td><code>*o_args</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>
           </td>
           <td><p>格式化时传入的关键字参数</p></td>
           <td>
-              <em>required</em>
+                <code>()</code>
           </td>
         </tr>
         <tr>
-          <td><code>**kwargs</code></td>
+          <td><code>**o_kwargs</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>
           </td>
           <td><p>格式化时传入的关键字参数</p></td>
           <td>
-              <em>required</em>
+                <code>{}</code>
           </td>
         </tr>
     </tbody>
@@ -2476,8 +2490,8 @@ format
     <span class="sd">&quot;&quot;&quot;通过初始化时传入的格式字符串 格式化消息链</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        *args (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
-<span class="sd">        **kwargs (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
+<span class="sd">        *o_args (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
+<span class="sd">        **o_kwargs (Union[Element, MessageChain, str]): 格式化时传入的关键字参数</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        MessageChain: 格式化后的消息链</span>

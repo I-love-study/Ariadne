@@ -668,6 +668,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fuzzymatch" class="md-nav__link">
+    FuzzyMatch
+  </a>
+  
+    <nav class="md-nav" aria-label="FuzzyMatch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuzzydispatcher" class="md-nav__link">
+    FuzzyDispatcher
+  </a>
+  
+    <nav class="md-nav" aria-label="FuzzyDispatcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1052,6 +1092,20 @@
     <li class="md-nav__item">
       <a href="../../extra/scheduler/" class="md-nav__link">
         计划任务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extra/cooldown/" class="md-nav__link">
+        冷却
       </a>
     </li>
   
@@ -2475,6 +2529,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fuzzymatch" class="md-nav__link">
+    FuzzyMatch
+  </a>
+  
+    <nav class="md-nav" aria-label="FuzzyMatch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fuzzydispatcher" class="md-nav__link">
+    FuzzyDispatcher
+  </a>
+  
+    <nav class="md-nav" aria-label="FuzzyDispatcher">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2587,7 +2681,30 @@
 <h3 id="_9">使用<a class="headerlink" href="#_9" title="Permanent link">🔗</a></h3>
 <p><code>Decorator</code>: 放入 <code>broadcast.receiver</code> / <code>ListenerSchema</code> 的 <code>decorators</code> .</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">MatchTemplate</span><span class="p">([</span><span class="n">Plain</span><span class="p">,</span> <span class="n">Plain</span><span class="p">(</span><span class="s2">&quot;搜图&quot;</span><span class="p">),</span> <span class="n">Image</span><span class="p">])])</span> <span class="c1"># 需要 &quot;*搜图 [图片]&quot; 才能匹配 (*为任意多字符)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">on_match_regex</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span> <span class="c1"># 不会改动消息链</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_match</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span> <span class="c1"># 不会改动消息链</span>
+    <span class="o">...</span>
+</code></pre></div>
+<h2 id="fuzzymatch">FuzzyMatch<a class="headerlink" href="#fuzzymatch" title="Permanent link">🔗</a></h2>
+<p>模糊匹配字符串.</p>
+<h3 id="_10">使用<a class="headerlink" href="#_10" title="Permanent link">🔗</a></h3>
+<p><code>Decorator</code>: 放入 <code>broadcast.receiver</code> / <code>ListenerSchema</code> 的 <code>decorators</code> .</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">decorators</span><span class="o">=</span><span class="p">[</span><span class="n">FuzzyMatch</span><span class="p">(</span><span class="s2">&quot;github&quot;</span><span class="p">))])</span> <span class="c1"># 默认阈值为 60% 相似</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_match</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span> <span class="c1"># 不会改动消息链</span>
+    <span class="o">...</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">我们更推荐 FuzzyDispatcher, 因为它只在多个匹配中选择最相近的一个.</p>
+</div>
+<h2 id="fuzzydispatcher">FuzzyDispatcher<a class="headerlink" href="#fuzzydispatcher" title="Permanent link">🔗</a></h2>
+<p>模糊匹配字符串.</p>
+<h3 id="_11">使用<a class="headerlink" href="#_11" title="Permanent link">🔗</a></h3>
+<p>作为 <code>Dispatcher</code> 使用. 在相同 <code>scope</code> 中只有最相近的匹配会被激活.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dispatchers</span><span class="o">=</span><span class="p">[</span><span class="n">FuzzyDispatcher</span><span class="p">(</span><span class="s2">&quot;github&quot;</span><span class="p">))])</span> <span class="c1"># 默认阈值为 60% 相似</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_match</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span> <span class="c1"># 若要获取相似度必须包含 &quot;rate&quot; 单词</span>
+    <span class="o">...</span>
+
+<span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">dispatchers</span><span class="o">=</span><span class="p">[</span><span class="n">FuzzyDispatcher</span><span class="p">(</span><span class="s2">&quot;gitlab&quot;</span><span class="p">))])</span> <span class="c1"># 与上面的默认不能同时触发</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">on_match</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">):</span>
     <span class="o">...</span>
 </code></pre></div>
 <div class="admonition graiax">

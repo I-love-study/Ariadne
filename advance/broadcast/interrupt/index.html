@@ -634,6 +634,13 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    方便的封装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     它是怎么运作的?
   </a>
   
@@ -908,6 +915,20 @@
     <li class="md-nav__item">
       <a href="../../../extra/scheduler/" class="md-nav__link">
         计划任务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../extra/cooldown/" class="md-nav__link">
+        冷却
       </a>
     </li>
   
@@ -2180,6 +2201,13 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    方便的封装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     它是怎么运作的?
   </a>
   
@@ -2304,7 +2332,36 @@
 <div class="admonition note">
 <p class="admonition-title">在 <code>InterruptControl.wait</code> 上使用 <code>timeout</code> 参数可以设置超时时间, 超时会引发 <code>TimeoutError</code>.</p>
 </div>
-<h2 id="_2">它是怎么运作的?<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<h2 id="_2">方便的封装<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<p>从 <code>Ariadne</code> 0.6.16 开始, 我们引入了两个方便的 <code>Waiter</code> 封装：</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../../refs/graia/ariadne/util/interrupt/#graia.ariadne.util.interrupt.FunctionWaiter"><code>FunctionWaiter</code></a></li>
+<li><a class="autorefs autorefs-internal" href="../../../refs/graia/ariadne/util/interrupt/#graia.ariadne.util.interrupt.EventWaiter"><code>EventWaiter</code></a></li>
+</ul>
+<p>二者支持以下用法:</p>
+<div class="highlight"><pre><span></span><code><span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">FunctionWaiter</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">EventWaiter</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>等价于:</p>
+<div class="highlight"><pre><span></span><code><span class="n">inc</span> <span class="o">=</span> <span class="n">InterruptControl</span><span class="p">(</span><span class="n">broadcast</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">inc</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">FunctionWaiter</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="k">await</span> <span class="n">inc</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">EventWaiter</span><span class="p">(</span><span class="o">...</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p><code>FunctionWaiter</code> 对 <code>Waiter.create_using_function</code> 的简单封装.</p>
+<p>它的参数名更自然, 且自动支持了类型标注.</p>
+<p><code>EventWaiter</code> 返回对应的事件, 和 <code>Application</code> 中提供的方便封装类似.</p>
+<p>同时提供了 <code>extra_validator</code> 以供你自定义额外的验证.</p>
+<div class="admonition info">
+<p class="admonition-title">配合 <a class="autorefs autorefs-internal" href="../../../refs/graia/ariadne/util/validator/#graia.ariadne.util.validator"><code>util.validator</code></a> 模块使用更佳</p>
+</div>
+<h2 id="_3">它是怎么运作的?<a class="headerlink" href="#_3" title="Permanent link">🔗</a></h2>
 <p><code>Interrupt</code> 创建的 <code>Waiter</code> 对象很像 <code>asyncio.Future</code>, 是基于回调的设计.</p>
 <p>在 <code>inc.wait()</code> 时, 会创建一个临时的事件监听器, 等待 <code>Waiter</code> 成功执行事件处理, 并将其处理结果传回 <code>inc.wait()</code> 的调用者.</p>
 <p>也就是说, <code>inc.wait</code> 判断, 处理的是 <strong>"下一个"</strong> 消息 / 事件.</p>

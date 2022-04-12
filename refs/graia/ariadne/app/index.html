@@ -866,6 +866,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../extra/cooldown/" class="md-nav__link">
+        冷却
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../extra/log/" class="md-nav__link">
         日志记录
       </a>
@@ -9914,7 +9928,7 @@ sendTempMessage
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Image&quot;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;上传一张图片到远端服务器, 需要提供: 图片的原始数据(bytes), 图片的上传类型.</span>
 <span class="sd">        Args:</span>
-<span class="sd">            image_bytes (Union[bytes, io.IOBase, os.PathLike]): 图片的原始数据</span>
+<span class="sd">            data (Union[bytes, io.IOBase, os.PathLike]): 图片的原始数据</span>
 <span class="sd">            method (str | UploadMethod, optional): 图片的上传类型, 可从上下文推断</span>
 <span class="sd">        Returns:</span>
 <span class="sd">            Image: 生成的图片消息元素</span>
@@ -10015,7 +10029,7 @@ uploadImage
     </thead>
     <tbody>
         <tr>
-          <td><code>image_bytes</code></td>
+          <td><code>data</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#bytes">bytes</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/io.html#module-io">io</a>.<a class="autorefs autorefs-external" title="io.IOBase" href="https://docs.python.org/zh-cn/3/library/io.html#io.IOBase">IOBase</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/os.html#module-os">os</a>.<a class="autorefs autorefs-external" title="os.PathLike" href="https://docs.python.org/zh-cn/3/library/os.html#os.PathLike">PathLike</a>]</code>
           </td>
@@ -10092,7 +10106,7 @@ uploadImage
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Image&quot;</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;上传一张图片到远端服务器, 需要提供: 图片的原始数据(bytes), 图片的上传类型.</span>
 <span class="sd">    Args:</span>
-<span class="sd">        image_bytes (Union[bytes, io.IOBase, os.PathLike]): 图片的原始数据</span>
+<span class="sd">        data (Union[bytes, io.IOBase, os.PathLike]): 图片的原始数据</span>
 <span class="sd">        method (str | UploadMethod, optional): 图片的上传类型, 可从上下文推断</span>
 <span class="sd">    Returns:</span>
 <span class="sd">        Image: 生成的图片消息元素</span>
@@ -13154,7 +13168,7 @@ unmuteMember
         <span class="sd">&quot;&quot;&quot;尝试从已知的群组唯一 ID 和已知的群组成员的 ID, 获取对应成员的信息.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            group_id (Union[Group, int]): 已知的群组唯一 ID</span>
+<span class="sd">            group (Union[Group, int]): 已知的群组唯一 ID</span>
 <span class="sd">            member_id (int): 已知的群组成员的 ID</span>
 
 <span class="sd">        Returns:</span>
@@ -13841,7 +13855,7 @@ getMember
     </thead>
     <tbody>
         <tr>
-          <td><code>group_id</code></td>
+          <td><code>group</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.model.Group" href="../model/#graia.ariadne.model.Group">Group</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>]</code>
           </td>
@@ -13909,7 +13923,7 @@ getMember
     <span class="sd">&quot;&quot;&quot;尝试从已知的群组唯一 ID 和已知的群组成员的 ID, 获取对应成员的信息.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        group_id (Union[Group, int]): 已知的群组唯一 ID</span>
+<span class="sd">        group (Union[Group, int]): 已知的群组唯一 ID</span>
 <span class="sd">        member_id (int): 已知的群组成员的 ID</span>
 
 <span class="sd">    Returns:</span>
