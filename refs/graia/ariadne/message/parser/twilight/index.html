@@ -2969,10 +2969,10 @@
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">388</span>
-<span class="normal">389</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">389</span>
 <span class="normal">390</span>
-<span class="normal">391</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArgResult</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">MatchResult</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">ArgumentMatch</span><span class="p">]):</span>
+<span class="normal">391</span>
+<span class="normal">392</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArgResult</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">MatchResult</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">ArgumentMatch</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;表示 ArgumentMatch 匹配结果&quot;&quot;&quot;</span>
 
     <span class="o">...</span>
@@ -3009,8 +3009,7 @@
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
-<span class="normal">307</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">307</span>
 <span class="normal">308</span>
 <span class="normal">309</span>
 <span class="normal">310</span>
@@ -3088,7 +3087,8 @@
 <span class="normal">382</span>
 <span class="normal">383</span>
 <span class="normal">384</span>
-<span class="normal">385</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArgumentMatch</span><span class="p">(</span><span class="n">Match</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="normal">385</span>
+<span class="normal">386</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ArgumentMatch</span><span class="p">(</span><span class="n">Match</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;参数匹配&quot;&quot;&quot;</span>
 
     <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
@@ -3315,8 +3315,7 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">339</span>
-<span class="normal">340</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">340</span>
 <span class="normal">341</span>
 <span class="normal">342</span>
 <span class="normal">343</span>
@@ -3350,7 +3349,8 @@ __init__
 <span class="normal">371</span>
 <span class="normal">372</span>
 <span class="normal">373</span>
-<span class="normal">374</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">374</span>
+<span class="normal">375</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;初始化 ArgumentMatch 对象.</span>
 
 <span class="sd">    Args:</span>
@@ -3430,8 +3430,7 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">247</span>
-<span class="normal">248</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">248</span>
 <span class="normal">249</span>
 <span class="normal">250</span>
 <span class="normal">251</span>
@@ -3459,7 +3458,8 @@ __init__
 <span class="normal">273</span>
 <span class="normal">274</span>
 <span class="normal">275</span>
-<span class="normal">276</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ElementMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
+<span class="normal">276</span>
+<span class="normal">277</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ElementMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;元素类型匹配&quot;&quot;&quot;</span>
 
     <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span>
@@ -3560,8 +3560,7 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">253</span>
-<span class="normal">254</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">254</span>
 <span class="normal">255</span>
 <span class="normal">256</span>
 <span class="normal">257</span>
@@ -3576,7 +3575,8 @@ __init__
 <span class="normal">266</span>
 <span class="normal">267</span>
 <span class="normal">268</span>
-<span class="normal">269</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">269</span>
+<span class="normal">270</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="nb">type</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
     <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -3636,10 +3636,10 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">400</span>
-<span class="normal">401</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">401</span>
 <span class="normal">402</span>
-<span class="normal">403</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ElementResult</span><span class="p">(</span><span class="n">MatchResult</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">ElementMatch</span><span class="p">]):</span>
+<span class="normal">403</span>
+<span class="normal">404</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ElementResult</span><span class="p">(</span><span class="n">MatchResult</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="n">ElementMatch</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;表示 ElementMatch 匹配结果&quot;&quot;&quot;</span>
 
     <span class="o">...</span>
@@ -3676,12 +3676,12 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">207</span>
-<span class="normal">208</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">208</span>
 <span class="normal">209</span>
 <span class="normal">210</span>
 <span class="normal">211</span>
-<span class="normal">212</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FullMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
+<span class="normal">212</span>
+<span class="normal">213</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FullMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;全匹配&quot;&quot;&quot;</span>
 
     <span class="nd">@property</span>
@@ -3735,7 +3735,11 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">791</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">787</span>
+<span class="normal">788</span>
+<span class="normal">789</span>
+<span class="normal">790</span>
+<span class="normal">791</span>
 <span class="normal">792</span>
 <span class="normal">793</span>
 <span class="normal">794</span>
@@ -3765,11 +3769,7 @@ __init__
 <span class="normal">818</span>
 <span class="normal">819</span>
 <span class="normal">820</span>
-<span class="normal">821</span>
-<span class="normal">822</span>
-<span class="normal">823</span>
-<span class="normal">824</span>
-<span class="normal">825</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Help</span><span class="p">(</span><span class="n">Decorator</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
+<span class="normal">821</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Help</span><span class="p">(</span><span class="n">Decorator</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;返回帮助信息的装饰器&quot;&quot;&quot;</span>
 
     <span class="n">pre</span> <span class="o">=</span> <span class="kc">True</span>
@@ -3795,7 +3795,7 @@ __init__
         <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span> <span class="o">=</span> <span class="n">formatter</span>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">target</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="n">DecoratorInterface</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
-        <span class="n">twilight</span><span class="p">:</span> <span class="n">Twilight</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;twilight&quot;</span><span class="p">]</span>
+        <span class="n">twilight</span><span class="p">:</span> <span class="n">Twilight</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:twilight&quot;</span><span class="p">]</span>
         <span class="n">help_string</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">twilight</span><span class="o">.</span><span class="n">matcher</span><span class="o">.</span><span class="n">get_help</span><span class="p">(</span><span class="o">**</span><span class="p">(</span><span class="n">twilight</span><span class="o">.</span><span class="n">help_data</span> <span class="ow">or</span> <span class="p">{}))</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="p">:</span>
             <span class="n">coro_or_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">formatter</span><span class="p">(</span><span class="n">help_string</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
@@ -3862,15 +3862,15 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">806</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">802</span>
+<span class="normal">803</span>
+<span class="normal">804</span>
+<span class="normal">805</span>
+<span class="normal">806</span>
 <span class="normal">807</span>
 <span class="normal">808</span>
 <span class="normal">809</span>
-<span class="normal">810</span>
-<span class="normal">811</span>
-<span class="normal">812</span>
-<span class="normal">813</span>
-<span class="normal">814</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">810</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span> <span class="n">formatter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DecoratorInterface</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Awaitable</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">T</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -3921,8 +3921,7 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 76</span>
-<span class="normal"> 77</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 77</span>
 <span class="normal"> 78</span>
 <span class="normal"> 79</span>
 <span class="normal"> 80</span>
@@ -3950,7 +3949,8 @@ __init__
 <span class="normal">102</span>
 <span class="normal">103</span>
 <span class="normal">104</span>
-<span class="normal">105</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Match</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Representation</span><span class="p">):</span>
+<span class="normal">105</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Match</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">,</span> <span class="n">Representation</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;匹配项抽象基类&quot;&quot;&quot;</span>
 
     <span class="n">dest</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
@@ -4020,10 +4020,10 @@ help
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
-<span class="normal">86</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">86</span>
 <span class="normal">87</span>
-<span class="normal">88</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="normal">88</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;设置匹配项的帮助信息.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">_help</span> <span class="o">=</span> <span class="n">value</span>
     <span class="k">return</span> <span class="bp">self</span>
@@ -4054,10 +4054,10 @@ param
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">90</span>
-<span class="normal">91</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">91</span>
 <span class="normal">92</span>
-<span class="normal">93</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">param</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="normal">93</span>
+<span class="normal">94</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">param</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;设置匹配项的分派位置.&quot;&quot;&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">dest</span> <span class="o">=</span> <span class="n">target</span>
     <span class="k">return</span> <span class="bp">self</span>
@@ -4102,8 +4102,7 @@ param
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">111</span>
-<span class="normal">112</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">112</span>
 <span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
@@ -4126,7 +4125,8 @@ param
 <span class="normal">132</span>
 <span class="normal">133</span>
 <span class="normal">134</span>
-<span class="normal">135</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MatchResult</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">T_Match</span><span class="p">],</span> <span class="n">Representation</span><span class="p">):</span>
+<span class="normal">135</span>
+<span class="normal">136</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MatchResult</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">,</span> <span class="n">T_Match</span><span class="p">],</span> <span class="n">Representation</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;匹配结果&quot;&quot;&quot;</span>
 
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;matched&quot;</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="p">,</span> <span class="s2">&quot;origin&quot;</span><span class="p">)</span>
@@ -4232,8 +4232,7 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
-<span class="normal">126</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">126</span>
 <span class="normal">127</span>
 <span class="normal">128</span>
 <span class="normal">129</span>
@@ -4242,7 +4241,8 @@ __init__
 <span class="normal">132</span>
 <span class="normal">133</span>
 <span class="normal">134</span>
-<span class="normal">135</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matched</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="n">T_Match</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">T</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">135</span>
+<span class="normal">136</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">matched</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="n">T_Match</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">T</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;初始化 MatchResult 对象.</span>
 
 <span class="sd">    Args:</span>
@@ -4294,8 +4294,7 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">279</span>
-<span class="normal">280</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">280</span>
 <span class="normal">281</span>
 <span class="normal">282</span>
 <span class="normal">283</span>
@@ -4305,7 +4304,8 @@ __init__
 <span class="normal">287</span>
 <span class="normal">288</span>
 <span class="normal">289</span>
-<span class="normal">290</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ParamMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
+<span class="normal">290</span>
+<span class="normal">291</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ParamMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;与 WildcardMatch 类似, 但需要至少一个字符. 且仅匹配用空格分开的一段&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -4367,8 +4367,7 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
-<span class="normal">142</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">142</span>
 <span class="normal">143</span>
 <span class="normal">144</span>
 <span class="normal">145</span>
@@ -4427,7 +4426,8 @@ __init__
 <span class="normal">198</span>
 <span class="normal">199</span>
 <span class="normal">200</span>
-<span class="normal">201</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RegexMatch</span><span class="p">(</span><span class="n">Match</span><span class="p">):</span>
+<span class="normal">201</span>
+<span class="normal">202</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RegexMatch</span><span class="p">(</span><span class="n">Match</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;正则表达式匹配&quot;&quot;&quot;</span>
 
     <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span>
@@ -4577,8 +4577,7 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">147</span>
-<span class="normal">148</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">148</span>
 <span class="normal">149</span>
 <span class="normal">150</span>
 <span class="normal">151</span>
@@ -4590,7 +4589,8 @@ __init__
 <span class="normal">157</span>
 <span class="normal">158</span>
 <span class="normal">159</span>
-<span class="normal">160</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">160</span>
+<span class="normal">161</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pattern</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;初始化 RegexMatch 对象.</span>
 
 <span class="sd">    Args:</span>
@@ -4632,14 +4632,14 @@ _regex_str
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">186</span>
-<span class="normal">187</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">187</span>
 <span class="normal">188</span>
 <span class="normal">189</span>
 <span class="normal">190</span>
 <span class="normal">191</span>
 <span class="normal">192</span>
-<span class="normal">193</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@final</span>
+<span class="normal">193</span>
+<span class="normal">194</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@final</span>
 <span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">_regex_str</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;生成 RegexMatch 相应的正则表达式.&quot;&quot;&quot;</span>
@@ -4674,10 +4674,10 @@ _src
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">195</span>
-<span class="normal">196</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">196</span>
 <span class="normal">197</span>
-<span class="normal">198</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">198</span>
+<span class="normal">199</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">_src</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;正则表达式的来源&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span>
@@ -4750,8 +4750,7 @@ flags
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">162</span>
-<span class="normal">163</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">163</span>
 <span class="normal">164</span>
 <span class="normal">165</span>
 <span class="normal">166</span>
@@ -4760,7 +4759,8 @@ flags
 <span class="normal">169</span>
 <span class="normal">170</span>
 <span class="normal">171</span>
-<span class="normal">172</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">flags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flags</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">RegexFlag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="normal">172</span>
+<span class="normal">173</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">flags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flags</span><span class="p">:</span> <span class="n">re</span><span class="o">.</span><span class="n">RegexFlag</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;设置正则表达式的标志.</span>
 
 <span class="sd">    Args:</span>
@@ -4840,8 +4840,7 @@ space
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">174</span>
-<span class="normal">175</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">175</span>
 <span class="normal">176</span>
 <span class="normal">177</span>
 <span class="normal">178</span>
@@ -4850,7 +4849,8 @@ space
 <span class="normal">181</span>
 <span class="normal">182</span>
 <span class="normal">183</span>
-<span class="normal">184</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">space</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">space</span><span class="p">:</span> <span class="n">SpacePolicy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
+<span class="normal">184</span>
+<span class="normal">185</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">space</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">space</span><span class="p">:</span> <span class="n">SpacePolicy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;设置正则表达式的尾随空格策略.</span>
 
 <span class="sd">    Args:</span>
@@ -4902,10 +4902,10 @@ space
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">394</span>
-<span class="normal">395</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">395</span>
 <span class="normal">396</span>
-<span class="normal">397</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RegexResult</span><span class="p">(</span><span class="n">MatchResult</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">RegexMatch</span><span class="p">]):</span>
+<span class="normal">397</span>
+<span class="normal">398</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">RegexResult</span><span class="p">(</span><span class="n">MatchResult</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">RegexMatch</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;表示 RegexMatch 匹配结果&quot;&quot;&quot;</span>
 
     <span class="o">...</span>
@@ -4942,25 +4942,25 @@ space
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">777</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">773</span>
+<span class="normal">774</span>
+<span class="normal">775</span>
+<span class="normal">776</span>
+<span class="normal">777</span>
 <span class="normal">778</span>
 <span class="normal">779</span>
 <span class="normal">780</span>
 <span class="normal">781</span>
 <span class="normal">782</span>
 <span class="normal">783</span>
-<span class="normal">784</span>
-<span class="normal">785</span>
-<span class="normal">786</span>
-<span class="normal">787</span>
-<span class="normal">788</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ResultValue</span><span class="p">(</span><span class="n">Decorator</span><span class="p">):</span>
+<span class="normal">784</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ResultValue</span><span class="p">(</span><span class="n">Decorator</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;返回 Match 结果值的装饰器&quot;&quot;&quot;</span>
 
     <span class="n">pre</span> <span class="o">=</span> <span class="kc">True</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">target</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="n">DecoratorInterface</span><span class="p">):</span>
-        <span class="n">sparkle</span><span class="p">:</span> <span class="n">Sparkle</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span>
+        <span class="n">sparkle</span><span class="p">:</span> <span class="n">Sparkle</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:result&quot;</span><span class="p">]</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">sparkle</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">generic_isinstance</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">res</span>
@@ -5014,8 +5014,7 @@ space
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
-<span class="normal">54</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">54</span>
 <span class="normal">55</span>
 <span class="normal">56</span>
 <span class="normal">57</span>
@@ -5026,7 +5025,8 @@ space
 <span class="normal">62</span>
 <span class="normal">63</span>
 <span class="normal">64</span>
-<span class="normal">65</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SpacePolicy</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SpacePolicy</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;指示 RegexMatch 的尾随空格策略.&quot;&quot;&quot;</span>
 
     <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
@@ -5159,8 +5159,7 @@ PRESERVE
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">406</span>
-<span class="normal">407</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">407</span>
 <span class="normal">408</span>
 <span class="normal">409</span>
 <span class="normal">410</span>
@@ -5191,7 +5190,8 @@ PRESERVE
 <span class="normal">435</span>
 <span class="normal">436</span>
 <span class="normal">437</span>
-<span class="normal">438</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sparkle</span><span class="p">(</span><span class="n">Representation</span><span class="p">):</span>
+<span class="normal">438</span>
+<span class="normal">439</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sparkle</span><span class="p">(</span><span class="n">Representation</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Sparkle: Twilight 的匹配容器&quot;&quot;&quot;</span>
 
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;res&quot;</span><span class="p">,)</span>
@@ -5277,7 +5277,11 @@ PRESERVE
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">599</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
 <span class="normal">600</span>
 <span class="normal">601</span>
 <span class="normal">602</span>
@@ -5448,11 +5452,7 @@ PRESERVE
 <span class="normal">767</span>
 <span class="normal">768</span>
 <span class="normal">769</span>
-<span class="normal">770</span>
-<span class="normal">771</span>
-<span class="normal">772</span>
-<span class="normal">773</span>
-<span class="normal">774</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Twilight</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T_Sparkle</span><span class="p">],</span> <span class="n">BaseDispatcher</span><span class="p">):</span>
+<span class="normal">770</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Twilight</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T_Sparkle</span><span class="p">],</span> <span class="n">BaseDispatcher</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;暮光&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
@@ -5603,17 +5603,17 @@ PRESERVE
 <span class="sd">        Raises:</span>
 <span class="sd">            ExecutionStop: 匹配以任意方式失败</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">local_storage</span><span class="p">:</span> <span class="n">_TwilightLocalStorage</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">local_storage</span>  <span class="c1"># type: ignore</span>
+        <span class="n">local_storage</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">local_storage</span>
         <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span> <span class="o">=</span> <span class="k">await</span> <span class="n">interface</span><span class="o">.</span><span class="n">lookup_param</span><span class="p">(</span><span class="s2">&quot;message_chain&quot;</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
-            <span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;twilight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="n">ExecutionStop</span> <span class="kn">from</span> <span class="nn">e</span>
+        <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+            <span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:result&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
+            <span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:twilight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+            <span class="k">return</span>
+        <span class="k">raise</span> <span class="n">ExecutionStop</span>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">catch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
-        <span class="n">local_storage</span><span class="p">:</span> <span class="n">_TwilightLocalStorage</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">local_storage</span>  <span class="c1"># type: ignore</span>
-        <span class="n">sparkle</span> <span class="o">=</span> <span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span>
+        <span class="n">local_storage</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">local_storage</span>
+        <span class="n">sparkle</span><span class="p">:</span> <span class="n">T_Sparkle</span> <span class="o">=</span> <span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:result&quot;</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">generic_issubclass</span><span class="p">(</span><span class="n">Sparkle</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">sparkle</span>
         <span class="k">if</span> <span class="n">generic_issubclass</span><span class="p">(</span><span class="n">Twilight</span><span class="p">,</span> <span class="n">interface</span><span class="o">.</span><span class="n">annotation</span><span class="p">):</span>
@@ -5700,7 +5700,11 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">602</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
 <span class="normal">603</span>
 <span class="normal">604</span>
 <span class="normal">605</span>
@@ -5711,11 +5715,7 @@ __init__
 <span class="normal">610</span>
 <span class="normal">611</span>
 <span class="normal">612</span>
-<span class="normal">613</span>
-<span class="normal">614</span>
-<span class="normal">615</span>
-<span class="normal">616</span>
-<span class="normal">617</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">613</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">root</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="n">Match</span><span class="p">],</span> <span class="n">Match</span><span class="p">],</span>
     <span class="n">map_param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -5804,7 +5804,11 @@ beforeExecution
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">741</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">737</span>
+<span class="normal">738</span>
+<span class="normal">739</span>
+<span class="normal">740</span>
+<span class="normal">741</span>
 <span class="normal">742</span>
 <span class="normal">743</span>
 <span class="normal">744</span>
@@ -5815,11 +5819,7 @@ beforeExecution
 <span class="normal">749</span>
 <span class="normal">750</span>
 <span class="normal">751</span>
-<span class="normal">752</span>
-<span class="normal">753</span>
-<span class="normal">754</span>
-<span class="normal">755</span>
-<span class="normal">756</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">beforeExecution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
+<span class="normal">752</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">beforeExecution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interface</span><span class="p">:</span> <span class="n">DispatcherInterface</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;检验 MessageChain 并将 Sparkle 存入本地存储</span>
 
 <span class="sd">    Args:</span>
@@ -5828,13 +5828,13 @@ beforeExecution
 <span class="sd">    Raises:</span>
 <span class="sd">        ExecutionStop: 匹配以任意方式失败</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">local_storage</span><span class="p">:</span> <span class="n">_TwilightLocalStorage</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">local_storage</span>  <span class="c1"># type: ignore</span>
+    <span class="n">local_storage</span> <span class="o">=</span> <span class="n">interface</span><span class="o">.</span><span class="n">local_storage</span>
     <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span> <span class="o">=</span> <span class="k">await</span> <span class="n">interface</span><span class="o">.</span><span class="n">lookup_param</span><span class="p">(</span><span class="s2">&quot;message_chain&quot;</span><span class="p">,</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
-        <span class="n">local_storage</span><span class="p">[</span><span class="s2">&quot;twilight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">ExecutionStop</span> <span class="kn">from</span> <span class="nn">e</span>
+    <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+        <span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:result&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">chain</span><span class="p">)</span>
+        <span class="n">local_storage</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">:twilight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">return</span>
+    <span class="k">raise</span> <span class="n">ExecutionStop</span>
 </code></pre></div>
 </td></tr></table>
         </details>
@@ -5915,7 +5915,11 @@ from_command
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">638</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
 <span class="normal">639</span>
 <span class="normal">640</span>
 <span class="normal">641</span>
@@ -5943,11 +5947,7 @@ from_command
 <span class="normal">663</span>
 <span class="normal">664</span>
 <span class="normal">665</span>
-<span class="normal">666</span>
-<span class="normal">667</span>
-<span class="normal">668</span>
-<span class="normal">669</span>
-<span class="normal">670</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
+<span class="normal">666</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">from_command</span><span class="p">(</span>  <span class="c1"># ANCHOR: Sparkle: From command</span>
     <span class="bp">cls</span><span class="p">,</span>
     <span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -6049,7 +6049,11 @@ generate
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">622</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span>
 <span class="normal">623</span>
 <span class="normal">624</span>
 <span class="normal">625</span>
@@ -6059,11 +6063,7 @@ generate
 <span class="normal">629</span>
 <span class="normal">630</span>
 <span class="normal">631</span>
-<span class="normal">632</span>
-<span class="normal">633</span>
-<span class="normal">634</span>
-<span class="normal">635</span>
-<span class="normal">636</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T_Sparkle</span><span class="p">:</span>
+<span class="normal">632</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T_Sparkle</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;从消息链生成 Sparkle 实例.</span>
 
 <span class="sd">    Args:</span>
@@ -6197,7 +6197,11 @@ get_help
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">715</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">711</span>
+<span class="normal">712</span>
+<span class="normal">713</span>
+<span class="normal">714</span>
+<span class="normal">715</span>
 <span class="normal">716</span>
 <span class="normal">717</span>
 <span class="normal">718</span>
@@ -6217,11 +6221,7 @@ get_help
 <span class="normal">732</span>
 <span class="normal">733</span>
 <span class="normal">734</span>
-<span class="normal">735</span>
-<span class="normal">736</span>
-<span class="normal">737</span>
-<span class="normal">738</span>
-<span class="normal">739</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_help</span><span class="p">(</span>
+<span class="normal">735</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_help</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -6395,7 +6395,11 @@ help
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">672</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">668</span>
+<span class="normal">669</span>
+<span class="normal">670</span>
+<span class="normal">671</span>
+<span class="normal">672</span>
 <span class="normal">673</span>
 <span class="normal">674</span>
 <span class="normal">675</span>
@@ -6432,11 +6436,7 @@ help
 <span class="normal">706</span>
 <span class="normal">707</span>
 <span class="normal">708</span>
-<span class="normal">709</span>
-<span class="normal">710</span>
-<span class="normal">711</span>
-<span class="normal">712</span>
-<span class="normal">713</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">help</span><span class="p">(</span>
+<span class="normal">709</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">help</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -6517,8 +6517,7 @@ help
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">444</span>
-<span class="normal">445</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">445</span>
 <span class="normal">446</span>
 <span class="normal">447</span>
 <span class="normal">448</span>
@@ -6655,7 +6654,8 @@ help
 <span class="normal">579</span>
 <span class="normal">580</span>
 <span class="normal">581</span>
-<span class="normal">582</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">TwilightMatcher</span><span class="p">:</span>
+<span class="normal">582</span>
+<span class="normal">583</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">TwilightMatcher</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Twilight 匹配器&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">root</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="n">Match</span><span class="p">],</span> <span class="n">Match</span><span class="p">]):</span>
@@ -6929,8 +6929,7 @@ get_help
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">527</span>
-<span class="normal">528</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">528</span>
 <span class="normal">529</span>
 <span class="normal">530</span>
 <span class="normal">531</span>
@@ -6978,7 +6977,8 @@ get_help
 <span class="normal">573</span>
 <span class="normal">574</span>
 <span class="normal">575</span>
-<span class="normal">576</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_help</span><span class="p">(</span>
+<span class="normal">576</span>
+<span class="normal">577</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_help</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -7107,8 +7107,7 @@ match
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">489</span>
-<span class="normal">490</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">490</span>
 <span class="normal">491</span>
 <span class="normal">492</span>
 <span class="normal">493</span>
@@ -7143,7 +7142,8 @@ match
 <span class="normal">522</span>
 <span class="normal">523</span>
 <span class="normal">524</span>
-<span class="normal">525</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">match</span><span class="p">(</span>
+<span class="normal">525</span>
+<span class="normal">526</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">match</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span> <span class="n">arguments</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">elem_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MatchResult</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;匹配参数</span>
@@ -7221,8 +7221,7 @@ match
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">215</span>
-<span class="normal">216</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">216</span>
 <span class="normal">217</span>
 <span class="normal">218</span>
 <span class="normal">219</span>
@@ -7250,7 +7249,8 @@ match
 <span class="normal">241</span>
 <span class="normal">242</span>
 <span class="normal">243</span>
-<span class="normal">244</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnionMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
+<span class="normal">244</span>
+<span class="normal">245</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UnionMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;多重匹配&quot;&quot;&quot;</span>
 
     <span class="n">pattern</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
@@ -7349,8 +7349,7 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">221</span>
-<span class="normal">222</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">222</span>
 <span class="normal">223</span>
 <span class="normal">224</span>
 <span class="normal">225</span>
@@ -7368,7 +7367,8 @@ __init__
 <span class="normal">237</span>
 <span class="normal">238</span>
 <span class="normal">239</span>
-<span class="normal">240</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="normal">240</span>
+<span class="normal">241</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="o">*</span><span class="n">pattern</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span>
     <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -7430,8 +7430,7 @@ __init__
 
           <details class="quote">
             <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">293</span>
-<span class="normal">294</span>
+            <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">294</span>
 <span class="normal">295</span>
 <span class="normal">296</span>
 <span class="normal">297</span>
@@ -7440,7 +7439,8 @@ __init__
 <span class="normal">300</span>
 <span class="normal">301</span>
 <span class="normal">302</span>
-<span class="normal">303</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">WildcardMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
+<span class="normal">303</span>
+<span class="normal">304</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">WildcardMatch</span><span class="p">(</span><span class="n">RegexMatch</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;泛匹配&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">greed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -7518,14 +7518,14 @@ __init__
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/twilight.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">296</span>
-<span class="normal">297</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">297</span>
 <span class="normal">298</span>
 <span class="normal">299</span>
 <span class="normal">300</span>
 <span class="normal">301</span>
 <span class="normal">302</span>
-<span class="normal">303</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">greed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">303</span>
+<span class="normal">304</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">greed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">optional</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;初始化 WildcardMatch 对象.</span>
 
 <span class="sd">    Args:</span>
@@ -7549,7 +7549,6 @@ __init__
     </div>
 
   </div>
-
 
 
 
