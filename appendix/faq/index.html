@@ -1138,6 +1138,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mcl-cannot-download-package-netmamoemirai-api-http" class="md-nav__link">
+    MCL 显示 Cannot download package "net.mamoe:mirai-api-http"
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2288,6 +2295,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mcl-cannot-download-package-netmamoemirai-api-http" class="md-nav__link">
+    MCL 显示 Cannot download package "net.mamoe:mirai-api-http"
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2372,6 +2386,15 @@
 </ol>
 <h3 id="failed-to-send-message-your-account-may-be-blocked">收不到消息，且控制台显示 <code>Failed to send message, your account may be blocked.</code><a class="headerlink" href="#failed-to-send-message-your-account-may-be-blocked" title="Permanent link">🔗</a></h3>
 <p>你的账号可能被 <strong>风控</strong> 了. 请等待几天后再试.</p>
+<h3 id="mcl-cannot-download-package-netmamoemirai-api-http">MCL 显示 <code>Cannot download package "net.mamoe:mirai-api-http"</code><a class="headerlink" href="#mcl-cannot-download-package-netmamoemirai-api-http" title="Permanent link">🔗</a></h3>
+<p>如果你的 MCL 显示以下错误输出:</p>
+<div class="highlight"><pre><span></span><code>[INFO] Verifying &quot;net.mamoe:mirai-api-http&quot; v2.5.0
+[ERROR] &quot;net.mamoe:mirai-api-http&quot; is corrupted.
+[ERROR] Cannot download package &quot;net.mamoe:mirai-api-http&quot;
+[ERROR] The local file &quot;net.mamoe:mirai-api-http&quot; is still corrupted, please check the network.
+</code></pre></div>
+<p>请手动下载 <code>mirai-api-http</code> 包, 并将其放置于 <code>MCL</code> 的 <code>plugins</code> 目录下.</p>
+<p>之后便可以安全忽略这个错误. (这是因为 <code>mirai-api-http</code> 的维护者忘记发布 <code>mirai-api-http</code> 到 maven 仓库托管了, 详见 <a href="https://github.com/project-mirai/mirai-api-http/issues/557#issuecomment-1099900036">这里</a>)</p>
 
               
             </article>

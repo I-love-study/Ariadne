@@ -879,9 +879,81 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          冷却
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         冷却
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    示例
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取冷却时间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    不同的上下文
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    设置越权条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    异常处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    手动触发
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2139,6 +2211,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    示例
+  </a>
+  
+    <nav class="md-nav" aria-label="示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    获取冷却时间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    不同的上下文
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    设置越权条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    异常处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    手动触发
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2160,6 +2288,19 @@
 <p>位置: <a class="autorefs autorefs-internal" href="../../refs/graia/ariadne/util/cooldown/#graia.ariadne.util.cooldown"><code>graia.ariadne.util.cooldown</code></a></p>
 </blockquote>
 <p>该模块提供了 <code>CoolDown</code> 类用于方便的实现冷却功能。</p>
+<p><code>CoolDown</code> 应该作为一个 <code>Dispatcher</code> 被使用.</p>
+<h2 id="_2">示例<a class="headerlink" href="#_2" title="Permanent link">🔗</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nd">@bcc</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="n">GroupMessage</span><span class="p">,</span> <span class="n">dispatchers</span><span class="o">=</span><span class="p">[</span><span class="n">CoolDown</span><span class="p">(</span><span class="mi">5</span><span class="p">)])</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">handle</span><span class="p">():</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>这样即可设置 5 秒为触发间隔, 默认全局共用.</p>
+<h3 id="_3">获取冷却时间<a class="headerlink" href="#_3" title="Permanent link">🔗</a></h3>
+<h3 id="_4">不同的上下文<a class="headerlink" href="#_4" title="Permanent link">🔗</a></h3>
+<h3 id="_5">设置越权条件<a class="headerlink" href="#_5" title="Permanent link">🔗</a></h3>
+<h3 id="_6">异常处理<a class="headerlink" href="#_6" title="Permanent link">🔗</a></h3>
+<h2 id="_7">手动触发<a class="headerlink" href="#_7" title="Permanent link">🔗</a></h2>
+<p><code>CoolDown</code> 的实例还可以作为 <strong>异步上下文管理器</strong> 使用.</p>
 
               
             </article>
