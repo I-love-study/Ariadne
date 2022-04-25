@@ -938,13 +938,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#component" class="md-nav__link">
-    Component
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2190,13 +2183,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#component" class="md-nav__link">
-    Component
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2245,59 +2231,8 @@
 </div>
 </div>
 </div>
-<h2 id="component">Component<a class="headerlink" href="#component" title="Permanent link">🔗</a></h2>
-<p><code>Component</code> 是一个 <code>Decorator</code> 类, 可以方便的保留消息链中的某些部分.</p>
-<p>从 <code>graia.ariadne.message.component</code> 导入 <code>Component</code>.</p>
-<p>我们重载了它的 <code>__class_getitem__</code> 方法使其可以通过 <code>Component[T_Types:T_Time]</code> 的特殊切片形式实例化.</p>
-<p>像这样:</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">reply</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="n">MessageChain</span> <span class="o">=</span> <span class="n">Component</span><span class="p">[(</span><span class="n">Plain</span><span class="p">,</span> <span class="n">Image</span><span class="p">):</span> <span class="mi">2</span><span class="p">],</span> <span class="o">...</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">2</span>
-    <span class="k">assert</span> <span class="n">msg</span><span class="o">.</span><span class="n">onlyContains</span><span class="p">(</span><span class="n">Plain</span><span class="p">,</span> <span class="n">Image</span><span class="p">)</span>
-    <span class="o">...</span>
-</code></pre></div>
-<p>或者你也可以自定义过滤函数:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">e_filter</span><span class="p">(</span><span class="n">e</span><span class="p">:</span> <span class="n">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">Plain</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">e</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">):</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
-
-<span class="nd">@broadcast</span><span class="o">.</span><span class="n">receiver</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="k">async</span> <span class="k">def</span> <span class="nf">reply</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="n">MessageChain</span> <span class="o">=</span> <span class="n">Component</span><span class="p">[</span><span class="n">e_filter</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="o">...</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">5</span>
-    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">msg</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Plain</span><span class="p">))</span>
-    <span class="o">...</span>
-</code></pre></div>
-<p>如你所见, <code>Component</code> 有以下实例化形式:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">直接实例化</label><label for="__tabbed_2_2">切片实例化</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="n">Component</span><span class="p">(</span><span class="n">e_filter</span><span class="p">,</span> <span class="n">match_time</span><span class="p">)</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="n">Component</span><span class="p">[</span><span class="n">e_filter</span><span class="p">:</span><span class="n">match_time</span><span class="p">]</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">提示</p>
-<p>这里 <code>match_time</code> 是可选的.</p>
-<p>像这样:</p>
-<div class="highlight"><pre><span></span><code><span class="n">c</span> <span class="o">=</span> <span class="n">Component</span><span class="p">[</span><span class="n">e_filter</span><span class="p">]</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<p><code>e_filter</code> 可为以下形式:</p>
-<ul>
-<li><code>Type[Element]</code></li>
-<li><code>Iterable[Type[Element]]</code></li>
-<li>签名为 <code>(Element) -&gt; bool</code> 的函数.</li>
-</ul>
-<p><code>match_time</code> 为一个 <code>int</code>, 代表总匹配次数.</p>
 <div class="admonition graiax">
-<p class="admonition-title">社区文档相关章节: <a href="https://graiax.cn/make_ero_bot/tutorials/8_huaji.html">链接</a></p>
+<p class="admonition-title">社区文档相关章节: <a href="https://graiax.cn/guide/formatter.html">链接</a></p>
 </div>
 
               
