@@ -2740,29 +2740,14 @@ __init__
 
       <p>初始化前缀检测器.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>prefix</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]]</code>
-          </td>
-          <td><p>要匹配的前缀</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>prefix</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]]</code>)
+        – <p>要匹配的前缀</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/base.py</code></summary>
@@ -2896,29 +2881,14 @@ __init__
 
       <p>初始化后缀检测器.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>suffix</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]]</code>
-          </td>
-          <td><p>要匹配的后缀</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>suffix</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]]</code>)
+        – <p>要匹配的后缀</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/base.py</code></summary>
@@ -3302,39 +3272,19 @@ __init__
 
       <p>初始化匹配正则表达式.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>regex</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>正则表达式</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>flags</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/re.html#module-re">re</a>.<span title="re.RegexFlag">RegexFlag</span></code>
-          </td>
-          <td><p>正则表达式标志</p></td>
-          <td>
-                <code>re.RegexFlag(0)</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>regex</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>正则表达式</p>
+      </li>
+      <li class="field-body">
+        <b>flags</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/re.html#module-re">re</a>.<span title="re.RegexFlag">RegexFlag</span></code>)
+        – <p>正则表达式标志</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/parser/base.py</code></summary>

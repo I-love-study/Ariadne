@@ -2744,49 +2744,24 @@ __init__
 
       <p>初始化并行执行器.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>loop</code></td>
-          <td>
-                <code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>
-          </td>
-          <td><p>要绑定的事件循环, 会自动获取当前事件循环. Defaults to None.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>max_thread</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>
-          </td>
-          <td><p>最大线程数. Defaults to None.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>max_process</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>
-          </td>
-          <td><p>最大进程数. Defaults to None.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>loop</b>
+            (<code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>)
+        – <p>要绑定的事件循环, 会自动获取当前事件循环. Defaults to None.</p>
+      </li>
+      <li class="field-body">
+        <b>max_thread</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>)
+        – <p>最大线程数. Defaults to None.</p>
+      </li>
+      <li class="field-body">
+        <b>max_process</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>)
+        – <p>最大进程数. Defaults to None.</p>
+      </li>
+  </ul>
       <p><code>max_thread</code> 与 <code>max_process</code> 参数默认值请参阅 <code>concurrent.futures</code>.</p>
 
         <details class="quote">
@@ -2855,29 +2830,14 @@ bind_loop
 
       <p>绑定本实例到 loop.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>loop</code></td>
-          <td>
-                <code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>
-          </td>
-          <td><p>要绑定到的事件循环.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>loop</b>
+            (<code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>)
+        – <p>要绑定到的事件循环.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -2956,47 +2916,22 @@ get
 
       <p>获取 ParallelExecutor 实例</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>loop</code></td>
-          <td>
-                <code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>
-          </td>
-          <td><p>查找的事件循环. Defaults to None.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>loop</b>
+            (<code><span title="asyncio.events.AbstractEventLoop">AbstractEventLoop</span></code>)
+        – <p>查找的事件循环. Defaults to None.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>ParallelExecutor</code></td>          <td>
-                <code>&#39;ParallelExecutor&#39;</code>
-          </td>
-          <td><p>找到的 / 新创建的 ParallelExecutor.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>ParallelExecutor</b>(            <code>&#39;ParallelExecutor&#39;</code>
+)        – <p>找到的 / 新创建的 ParallelExecutor.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3055,77 +2990,37 @@ run_func
 
       <p>运行函数的实现</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>name</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>函数名 (<strong>qualname</strong>)</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>module</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>函数所在模块名 (<strong>module</strong>)</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>args</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple">tuple</a></code>
-          </td>
-          <td><p>位置参数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>kwargs</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a></code>
-          </td>
-          <td><p>关键字参数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>name</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>函数名 (<strong>qualname</strong>)</p>
+      </li>
+      <li class="field-body">
+        <b>module</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>函数所在模块名 (<strong>module</strong>)</p>
+      </li>
+      <li class="field-body">
+        <b>args</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple">tuple</a></code>)
+        – <p>位置参数</p>
+      </li>
+      <li class="field-body">
+        <b>kwargs</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a></code>)
+        – <p>关键字参数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>Any</code></td>          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a></code>
-          </td>
-          <td><p>底层函数的返回值</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>Any</b>(            <code><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a></code>
+)        – <p>底层函数的返回值</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3186,67 +3081,32 @@ run_func_static
 
       <p>调用一个静态函数 (会自动解包装已被 ParallelExecutor 包装过的函数)</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>func</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[..., <span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>要调用的函数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>args</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple">tuple</a></code>
-          </td>
-          <td><p>位置参数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>kwargs</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a></code>
-          </td>
-          <td><p>关键字参数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>func</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[..., <span title="graia.ariadne.typing.R">R</span>]</code>)
+        – <p>要调用的函数</p>
+      </li>
+      <li class="field-body">
+        <b>args</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#tuple">tuple</a></code>)
+        – <p>位置参数</p>
+      </li>
+      <li class="field-body">
+        <b>kwargs</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a></code>)
+        – <p>关键字参数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>R</code></td>          <td>
-                <code><span title="graia.ariadne.typing.R">R</span></code>
-          </td>
-          <td><p>底层函数的返回值</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>R</b>(            <code><span title="graia.ariadne.typing.R">R</span></code>
+)        – <p>底层函数的返回值</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3343,67 +3203,32 @@ to_process
 
       <p>在进程中异步运行 func 函数. 需要先注册过才行.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>func</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>要调用的函数.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>*args</code></td>
-          <td>
-                <code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.args">args</span></code>
-          </td>
-          <td><p>附带的位置参数.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-                <code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.kwargs">kwargs</span></code>
-          </td>
-          <td><p>附带的关键词参数.</p></td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>func</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>)
+        – <p>要调用的函数.</p>
+      </li>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.args">args</span></code>)
+        – <p>附带的位置参数.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.kwargs">kwargs</span></code>)
+        – <p>附带的关键词参数.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>Future[R]: 返回结果. 需要被异步等待.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]</code>
+        – <p>Future[R]: 返回结果. 需要被异步等待.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3467,67 +3292,32 @@ to_thread
 
       <p>在线程中异步运行 func 函数.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>func</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>要调用的函数.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>*args</code></td>
-          <td>
-                <code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.args">args</span></code>
-          </td>
-          <td><p>附带的位置参数.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**kwargs</code></td>
-          <td>
-                <code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.kwargs">kwargs</span></code>
-          </td>
-          <td><p>附带的关键词参数.</p></td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>func</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>)
+        – <p>要调用的函数.</p>
+      </li>
+      <li class="field-body">
+        <b>*args</b>
+            (<code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.args">args</span></code>)
+        – <p>附带的位置参数.</p>
+      </li>
+      <li class="field-body">
+        <b>**kwargs</b>
+            (<code><span title="graia.ariadne.typing.P">P</span>.<span title="graia.ariadne.typing.P.kwargs">kwargs</span></code>)
+        – <p>附带的关键词参数.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>Future[R]: 返回结果. 需要被异步等待.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]</code>
+        – <p>Future[R]: 返回结果. 需要被异步等待.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3602,23 +3392,13 @@ IS_MAIN_PROCESS
 
       <p>返回是否为主进程</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否为主进程</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>是否为主进程</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3698,47 +3478,22 @@ cpu_bound
 
       <p>包装一个函数在进程中异步运行.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>func</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>要包装的函数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>func</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>)
+        – <p>要包装的函数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]]</code>
-          </td>
-          <td><p>Callable[P, Awaitable[R]]: 包装后的函数</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]]</code>
+        – <p>Callable[P, Awaitable[R]]: 包装后的函数</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>
@@ -3816,47 +3571,22 @@ io_bound
 
       <p>包装一个函数在线程中异步运行.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>func</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>
-          </td>
-          <td><p>要包装的函数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>func</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <span title="graia.ariadne.typing.R">R</span>]</code>)
+        – <p>要包装的函数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]]</code>
-          </td>
-          <td><p>Callable[P, Awaitable[R]]: 包装后的函数</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Callable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Callable">Callable</a>[<span title="graia.ariadne.typing.P">P</span>, <a class="autorefs autorefs-external" title="typing.Awaitable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Awaitable">Awaitable</a>[<span title="graia.ariadne.typing.R">R</span>]]</code>
+        – <p>Callable[P, Awaitable[R]]: 包装后的函数</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/util/async_exec.py</code></summary>

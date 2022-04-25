@@ -2669,59 +2669,29 @@ __init__
 
       <p>初始化 HttpAdapter</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>broadcast</code></td>
-          <td>
-                <code><span title="graia.broadcast.Broadcast">Broadcast</span></code>
-          </td>
-          <td><p>广播系统</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>mirai_session</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.model.MiraiSession" href="../../model/#graia.ariadne.model.MiraiSession">MiraiSession</a></code>
-          </td>
-          <td><p>MiraiSession 实例</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>fetch_interval</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#float">float</a></code>
-          </td>
-          <td><p>抓取事件间隔(s). Defaults to 0.5.</p></td>
-          <td>
-                <code>0.5</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>count</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>
-          </td>
-          <td><p>单次抓取事件数目. Defaults to 10.</p></td>
-          <td>
-                <code>10</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>broadcast</b>
+            (<code><span title="graia.broadcast.Broadcast">Broadcast</span></code>)
+        – <p>广播系统</p>
+      </li>
+      <li class="field-body">
+        <b>mirai_session</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.model.MiraiSession" href="../../model/#graia.ariadne.model.MiraiSession">MiraiSession</a></code>)
+        – <p>MiraiSession 实例</p>
+      </li>
+      <li class="field-body">
+        <b>fetch_interval</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#float">float</a></code>)
+        – <p>抓取事件间隔(s). Defaults to 0.5.</p>
+      </li>
+      <li class="field-body">
+        <b>count</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>)
+        – <p>单次抓取事件数目. Defaults to 10.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/adapter/forward.py</code></summary>
@@ -3179,59 +3149,29 @@ __init__
 
       <p>初始化 WebsocketAdapter</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>broadcast</code></td>
-          <td>
-                <code><span title="graia.broadcast.Broadcast">Broadcast</span></code>
-          </td>
-          <td><p>广播系统</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>mirai_session</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.model.MiraiSession" href="../../model/#graia.ariadne.model.MiraiSession">MiraiSession</a></code>
-          </td>
-          <td><p>MiraiSession 实例</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>ping</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否发送 ping 消息. Defaults to True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>log</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否记录网络日志. Defaults to False.</p></td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>broadcast</b>
+            (<code><span title="graia.broadcast.Broadcast">Broadcast</span></code>)
+        – <p>广播系统</p>
+      </li>
+      <li class="field-body">
+        <b>mirai_session</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.model.MiraiSession" href="../../model/#graia.ariadne.model.MiraiSession">MiraiSession</a></code>)
+        – <p>MiraiSession 实例</p>
+      </li>
+      <li class="field-body">
+        <b>ping</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否发送 ping 消息. Defaults to True.</p>
+      </li>
+      <li class="field-body">
+        <b>log</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否记录网络日志. Defaults to False.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/adapter/forward.py</code></summary>
@@ -3304,29 +3244,14 @@ ws_ping
 
       <p>向 Mirai API HTTP 的 WebsocketAdapter 循环发送 ping.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>interval</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#float">float</a></code>
-          </td>
-          <td><p>ping 间隔 (s). 默认 30.0.</p></td>
-          <td>
-                <code>30.0</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>interval</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#float">float</a></code>)
+        – <p>ping 间隔 (s). 默认 30.0.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/adapter/forward.py</code></summary>

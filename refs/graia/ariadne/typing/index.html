@@ -2500,47 +2500,22 @@ exception
 
       <p>发生异常时进行处理，可以选择不返回而是直接引发异常</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.typing.SendMessageException" href="#graia.ariadne.typing.SendMessageException">SendMessageException</a></code>
-          </td>
-          <td><p>发生的异常</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>item</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.typing.SendMessageException" href="#graia.ariadne.typing.SendMessageException">SendMessageException</a></code>)
+        – <p>发生的异常</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>T</code></td>          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Optional">Optional</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
-          </td>
-          <td><p>将作为 sendMessage 的返回值</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>T</b>(            <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Optional">Optional</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
+)        – <p>将作为 sendMessage 的返回值</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/typing.py</code></summary>
@@ -2594,47 +2569,22 @@ param
 
       <p>传入 SendMessageDict 作为参数, 传出 SendMessageDict 作为结果</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.typing.SendMessageDict" href="#graia.ariadne.typing.SendMessageDict">SendMessageDict</a></code>
-          </td>
-          <td><p>调用参数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>item</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.typing.SendMessageDict" href="#graia.ariadne.typing.SendMessageDict">SendMessageDict</a></code>)
+        – <p>调用参数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>SendMessageDict</code></td>          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.typing.SendMessageDict" href="#graia.ariadne.typing.SendMessageDict">SendMessageDict</a></code>
-          </td>
-          <td><p>修改后的调用参数</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>SendMessageDict</b>(            <code><a class="autorefs autorefs-internal" title="graia.ariadne.typing.SendMessageDict" href="#graia.ariadne.typing.SendMessageDict">SendMessageDict</a></code>
+)        – <p>修改后的调用参数</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/typing.py</code></summary>
@@ -2688,47 +2638,22 @@ result
 
       <p>处理返回结果</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.model.BotMessage" href="../model/#graia.ariadne.model.BotMessage">BotMessage</a></code>
-          </td>
-          <td><p>SendMessage 成功时的结果</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>item</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.model.BotMessage" href="../model/#graia.ariadne.model.BotMessage">BotMessage</a></code>)
+        – <p>SendMessage 成功时的结果</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>R</code></td>          <td>
-                <code><span title="graia.ariadne.typing.R">R</span></code>
-          </td>
-          <td><p>要实际由 SendMessage 返回的数据</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>R</b>(            <code><span title="graia.ariadne.typing.R">R</span></code>
+)        – <p>要实际由 SendMessage 返回的数据</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/typing.py</code></summary>
@@ -2967,57 +2892,27 @@ generic_isinstance
 
       <p>检查 obj 是否是 args 中的一个类型, 支持泛型, Any, Union</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>obj</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a></code>
-          </td>
-          <td><p>要检查的对象</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>par</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, ...]]</code>
-          </td>
-          <td><p>要检查的对象的类型</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a></code>)
+        – <p>要检查的对象</p>
+      </li>
+      <li class="field-body">
+        <b>par</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, ...]]</code>)
+        – <p>要检查的对象的类型</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否是类型</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>是否是类型</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/typing.py</code></summary>
@@ -3091,57 +2986,27 @@ generic_issubclass
 
       <p>检查 cls 是否是 args 中的一个子类, 支持泛型, Any, Union</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>cls</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a></code>
-          </td>
-          <td><p>要检查的类</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>par</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, ...]]</code>
-          </td>
-          <td><p>要检查的类的父类</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>cls</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a></code>)
+        – <p>要检查的类</p>
+      </li>
+      <li class="field-body">
+        <b>par</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a>, <a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#type">type</a>, ...]]</code>)
+        – <p>要检查的类的父类</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否是父类</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>是否是父类</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/typing.py</code></summary>

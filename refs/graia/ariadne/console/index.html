@@ -2743,99 +2743,49 @@ __init__
 
       <p>初始化控制台.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>broadcast</code></td>
-          <td>
-                <code><span title="graia.broadcast.Broadcast">Broadcast</span></code>
-          </td>
-          <td><p>事件系统.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>prompt</code></td>
-          <td>
-                <code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>
-          </td>
-          <td><p>输入提示, 可使用 f-string 形式的格式化字符串.             默认为 "{library_name} {graia_ariadne_version}&gt;".</p></td>
-          <td>
-                <code>&#39;{library_name} {graia_ariadne_version}&gt;&#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>r_prompt</code></td>
-          <td>
-                <code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>
-          </td>
-          <td><p>右侧提示, 可使用 f-string 形式的格式化字符串. 默认为空.</p></td>
-          <td>
-                <code>&#39;&#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>style</code></td>
-          <td>
-                <code><span title="prompt_toolkit.styles.Style">Style</span></code>
-          </td>
-          <td><p>输入提示的格式, 详见 prompt_toolkit 的介绍.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>extra_data_getter</code></td>
-          <td>
-                <code>Iterable[() -&gt; Dict[str, Any]</code>
-          </td>
-          <td><p>额外的 Callable, 用于生成 prompt 的格式化数据.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>replace_logger</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否尝试替换 loguru 的 0 号 handler (sys.stderr) 为 StdoutProxy. 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>listen_launch</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否监听 Ariadne 的 ApplicationLaunched 事件并启动自身, 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>listen_shutdown</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否监听 Ariadne 的 ApplicationShutdowned 事件并停止自身, 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>broadcast</b>
+            (<code><span title="graia.broadcast.Broadcast">Broadcast</span></code>)
+        – <p>事件系统.</p>
+      </li>
+      <li class="field-body">
+        <b>prompt</b>
+            (<code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>)
+        – <p>输入提示, 可使用 f-string 形式的格式化字符串.             默认为 "{library_name} {graia_ariadne_version}&gt;".</p>
+      </li>
+      <li class="field-body">
+        <b>r_prompt</b>
+            (<code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>)
+        – <p>右侧提示, 可使用 f-string 形式的格式化字符串. 默认为空.</p>
+      </li>
+      <li class="field-body">
+        <b>style</b>
+            (<code><span title="prompt_toolkit.styles.Style">Style</span></code>)
+        – <p>输入提示的格式, 详见 prompt_toolkit 的介绍.</p>
+      </li>
+      <li class="field-body">
+        <b>extra_data_getter</b>
+            (<code>Iterable[() -&gt; Dict[str, Any]</code>)
+        – <p>额外的 Callable, 用于生成 prompt 的格式化数据.</p>
+      </li>
+      <li class="field-body">
+        <b>replace_logger</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否尝试替换 loguru 的 0 号 handler (sys.stderr) 为 StdoutProxy. 默认为 True.</p>
+      </li>
+      <li class="field-body">
+        <b>listen_launch</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否监听 Ariadne 的 ApplicationLaunched 事件并启动自身, 默认为 True.</p>
+      </li>
+      <li class="field-body">
+        <b>listen_shutdown</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否监听 Ariadne 的 ApplicationShutdowned 事件并停止自身, 默认为 True.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/console/__init__.py</code></summary>
@@ -2967,23 +2917,13 @@ data_getter
 
       <p>返回用于 prompt 的数据</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a>]</code>
-          </td>
-          <td><p>Dict[str, Any]: 可用于 format_map 的数据字典</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Any">Any</a>]</code>
+        – <p>Dict[str, Any]: 可用于 format_map 的数据字典</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/console/__init__.py</code></summary>
@@ -3226,67 +3166,32 @@ prompt
 
       <p>向控制台发送一个输入请求, 异步</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>l_prompt</code></td>
-          <td>
-                <code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>
-          </td>
-          <td><p>左输入提示, 可使用 f-string 形式的格式化字符串.             默认为 "{library_name} {graia_ariadne_version}&gt;". 注意为 l_prompt .</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>r_prompt</code></td>
-          <td>
-                <code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>
-          </td>
-          <td><p>右侧提示, 可使用 f-string 形式的格式化字符串. 默认为空.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>style</code></td>
-          <td>
-                <code><span title="prompt_toolkit.styles.Style">Style</span></code>
-          </td>
-          <td><p>输入提示的格式, 详见 prompt_toolkit 的介绍.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>l_prompt</b>
+            (<code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>)
+        – <p>左输入提示, 可使用 f-string 形式的格式化字符串.             默认为 "{library_name} {graia_ariadne_version}&gt;". 注意为 l_prompt .</p>
+      </li>
+      <li class="field-body">
+        <b>r_prompt</b>
+            (<code><span title="prompt_toolkit.formatted_text.AnyFormattedText">AnyFormattedText</span></code>)
+        – <p>右侧提示, 可使用 f-string 形式的格式化字符串. 默认为空.</p>
+      </li>
+      <li class="field-body">
+        <b>style</b>
+            (<code><span title="prompt_toolkit.styles.Style">Style</span></code>)
+        – <p>输入提示的格式, 详见 prompt_toolkit 的介绍.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>str</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>输入结果</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>str</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
+)        – <p>输入结果</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/console/__init__.py</code></summary>
@@ -3386,39 +3291,19 @@ register
 
       <p>注册命令处理函数</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>dispatchers</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.entities.dispatcher.BaseDispatcher">BaseDispatcher</span>]</code>
-          </td>
-          <td><p>使用的 Dispatcher 列表.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>decorators</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.entities.decorator.Decorator">Decorator</span>]</code>
-          </td>
-          <td><p>使用的 Decorator 列表.</p></td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>dispatchers</b>
+            (<code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.entities.dispatcher.BaseDispatcher">BaseDispatcher</span>]</code>)
+        – <p>使用的 Dispatcher 列表.</p>
+      </li>
+      <li class="field-body">
+        <b>decorators</b>
+            (<code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.broadcast.entities.decorator.Decorator">Decorator</span>]</code>)
+        – <p>使用的 Decorator 列表.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/console/__init__.py</code></summary>

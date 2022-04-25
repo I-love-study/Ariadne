@@ -2204,57 +2204,27 @@ get_running
 
       <p>获取正在运行的实例</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>type</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
-          </td>
-          <td><p>实例类型</p></td>
-          <td>
-                <code>Ariadne</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>fail_err</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>如果没有正在运行的实例, 是否抛出异常</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>type</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.typing.T">T</span>]</code>)
+        – <p>实例类型</p>
+      </li>
+      <li class="field-body">
+        <b>fail_err</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>如果没有正在运行的实例, 是否抛出异常</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>T</code></td>          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Optional">Optional</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
-          </td>
-          <td><p>对应类型实例</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>T</b>(            <code><a class="autorefs autorefs-external" title="typing.Optional" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Optional">Optional</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
+)        – <p>对应类型实例</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/__init__.py</code></summary>

@@ -4459,47 +4459,22 @@ __getitem__
 <p>通过 <code>type</code> 取出属于 <code>type</code> 的元素列表</p>
 <p>通过 <code>int</code> 取出对应位置元素.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>], <a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#slice">slice</a>]</code>
-          </td>
-          <td><p>索引项</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>item</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>], <a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#slice">slice</a>]</code>)
+        – <p>索引项</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, &#39;MessageChain&#39;]</code>
-          </td>
-          <td><p>Union[List[Element], Element, MessageChain]: 索引结果.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, &#39;MessageChain&#39;]</code>
+        – <p>Union[List[Element], Element, MessageChain]: 索引结果.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -4591,57 +4566,27 @@ _from_mapping_string
 
       <p>从映射字符串与映射字典的元组还原消息链.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>string</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>映射字符串</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>mapping</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>
-          </td>
-          <td><p>映射字典.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>string</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>映射字符串</p>
+      </li>
+      <li class="field-body">
+        <b>mapping</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>)
+        – <p>映射字典.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>构建的消息链</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>构建的消息链</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -4717,67 +4662,32 @@ _to_mapping_str
 
       <p>转换消息链为映射字符串与映射字典的元组.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>remove_source</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否移除消息链中的 Source 元素. 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>remove_quote</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否移除消息链中的 Quote 元素. 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>remove_extra_space</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否移除 Quote At AtAll 的多余空格. 默认为 False.</p></td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>remove_source</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否移除消息链中的 Source 元素. 默认为 True.</p>
+      </li>
+      <li class="field-body">
+        <b>remove_quote</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否移除消息链中的 Quote 元素. 默认为 True.</p>
+      </li>
+      <li class="field-body">
+        <b>remove_extra_space</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否移除 Quote At AtAll 的多余空格. 默认为 False.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>
-          </td>
-          <td><p>Tuple[str, Dict[str, Element]]: 生成的映射字符串与映射字典的元组</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Tuple" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Tuple">Tuple</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Dict" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Dict">Dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>
+        – <p>Tuple[str, Dict[str, Element]]: 生成的映射字符串与映射字典的元组</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -4883,57 +4793,27 @@ append
 
       <p>向消息链最后追加单个元素</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>element</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a></code>
-          </td>
-          <td><p>要添加的元素</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>copy</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否要在副本上修改.</p></td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>element</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a></code>)
+        – <p>要添加的元素</p>
+      </li>
+      <li class="field-body">
+        <b>copy</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否要在副本上修改.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>copy = True 时返回副本, 否则返回自己的引用.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>copy = True 时返回副本, 否则返回自己的引用.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -4993,23 +4873,13 @@ asDisplay
 
       <p>获取以字符串形式表示的消息链, 且趋于通常你见到的样子.</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>str</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>以字符串形式表示的消息链</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>str</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
+)        – <p>以字符串形式表示的消息链</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5053,85 +4923,41 @@ asPersistentString
 
       <p>转换为持久化字符串.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>binary</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否附带图片或声音的二进制. 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>include</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>
-          </td>
-          <td><p>筛选, 只包含本参数提供的元素类型.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>exclude</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>
-          </td>
-          <td><p>筛选, 排除本参数提供的元素类型.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>binary</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否附带图片或声音的二进制. 默认为 True.</p>
+      </li>
+      <li class="field-body">
+        <b>include</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>)
+        – <p>筛选, 只包含本参数提供的元素类型.</p>
+      </li>
+      <li class="field-body">
+        <b>exclude</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>)
+        – <p>筛选, 排除本参数提供的元素类型.</p>
+      </li>
+  </ul>
 
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError">ValueError</a></code>
-          </td>
-          <td><p>同时提供 include 与 exclude</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Raises:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/exceptions.html#ValueError">ValueError</a></code>
+          –
+        <p>同时提供 include 与 exclude</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>str</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>持久化字符串. 不是 Mirai Code.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>str</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
+)        – <p>持久化字符串. 不是 Mirai Code.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5235,23 +5061,13 @@ asSendable
 
       <p>将消息链转换为可发送形式 (去除 Source, Quote, File)</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>转换后的消息链.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>转换后的消息链.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5296,47 +5112,22 @@ build_chain
 
       <p>内部接口, 会自动反序列化对象并生成.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>obj</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]]</code>
-          </td>
-          <td><p>需要反序列化的对象</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#dict">dict</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]]</code>)
+        – <p>需要反序列化的对象</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>
-          </td>
-          <td><p>List[Element]: 内部承载有尽量有效的消息元素的列表</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>
+        – <p>List[Element]: 内部承载有尽量有效的消息元素的列表</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5408,23 +5199,13 @@ copy
 
       <p>拷贝本消息链.</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>拷贝的副本.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>拷贝的副本.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5468,47 +5249,22 @@ count
 
       <p>统计共有多少个指定的元素.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>element</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>] | <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a></code>
-          </td>
-          <td><p>元素或元素类型</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>element</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>] | <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a></code>)
+        – <p>元素或元素类型</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>int</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>
-          </td>
-          <td><p>元素数量</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>int</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>
+)        – <p>元素数量</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5566,47 +5322,22 @@ create
       <p>创建消息链.
 比起直接实例化, 本方法拥有更丰富的输入实例类型支持.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*elements</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>
-          </td>
-          <td><p>元素的容器, 为承载元素的可迭代对象/单元素实例,             字符串会被自动不可逆的转换为 <code>Plain</code></p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*elements</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>], <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>元素的容器, 为承载元素的可迭代对象/单元素实例,             字符串会被自动不可逆的转换为 <code>Plain</code></p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>创建的消息链</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>创建的消息链</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5723,47 +5454,22 @@ endswith
 
       <p>判定消息链是否以相应字符串结尾</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>string</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>需要判断的字符串</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>string</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>需要判断的字符串</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否以此字符串结尾</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>是否以此字符串结尾</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5821,47 +5527,22 @@ exclude
 
       <p>将除了在给出的消息元素类型中符合的消息元素重新包装为一个新的消息链</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*types</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>
-          </td>
-          <td><p>将排除在外的消息元素类型</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*types</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>)
+        – <p>将排除在外的消息元素类型</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>返回的消息链中不包含参数中给出的消息元素类型</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>返回的消息链中不包含参数中给出的消息元素类型</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -5909,57 +5590,27 @@ extend
 
       <p>向消息链最后添加元素/元素列表/消息链</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*content</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>
-          </td>
-          <td><p>要添加的元素/元素容器.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>copy</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否要在副本上修改.</p></td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*content</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>)
+        – <p>要添加的元素/元素容器.</p>
+      </li>
+      <li class="field-body">
+        <b>copy</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否要在副本上修改.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>copy = True 时返回副本, 否则返回自己的引用.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>copy = True 时返回副本, 否则返回自己的引用.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6053,47 +5704,22 @@ findSubChain
 
       <p>判断消息链是否含有子链. 使用 KMP 算法.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>subchain</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>
-          </td>
-          <td><p>要判断的子链.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>subchain</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]]</code>)
+        – <p>要判断的子链.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>]</code>
-          </td>
-          <td><p>List[int]: 所有找到的下标.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>]</code>
+        – <p>List[int]: 所有找到的下标.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6204,23 +5830,13 @@ fromPersistentString
 
       <p>从持久化字符串生成消息链.</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>还原的消息链.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>还原的消息链.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6280,47 +5896,22 @@ get
 
       <p>获取消息链中所有特定类型的消息元素</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>element_class</code></td>
-          <td>
-                <code><span title="graia.ariadne.typing.T">T</span></code>
-          </td>
-          <td><p>指定的消息元素的类型, 例如 "Plain", "At", "Image" 等.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>element_class</b>
+            (<code><span title="graia.ariadne.typing.T">T</span></code>)
+        – <p>指定的消息元素的类型, 例如 "Plain", "At", "Image" 等.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>]</code>
-          </td>
-          <td><p>List[T]: 获取到的符合要求的所有消息元素; 另: 可能是空列表([]).</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>]</code>
+        – <p>List[T]: 获取到的符合要求的所有消息元素; 另: 可能是空列表([]).</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6374,47 +5965,22 @@ getFirst
 
       <p>获取消息链中第 1 个特定类型的消息元素</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>element_class</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>]</code>
-          </td>
-          <td><p>指定的消息元素的类型, 例如 "Plain", "At", "Image" 等.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>element_class</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>]</code>)
+        – <p>指定的消息元素的类型, 例如 "Plain", "At", "Image" 等.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>Element_T</code></td>          <td>
-                <code><span title="graia.ariadne.message.chain.Element_T">Element_T</span></code>
-          </td>
-          <td><p>消息链第 1 个特定类型的消息元素</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>Element_T</b>(            <code><span title="graia.ariadne.message.chain.Element_T">Element_T</span></code>
+)        – <p>消息链第 1 个特定类型的消息元素</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6464,57 +6030,27 @@ getOne
 
       <p>获取消息链中第 index + 1 个特定类型的消息元素</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>element_class</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>]</code>
-          </td>
-          <td><p>指定的消息元素的类型, 例如 "Plain", "At", "Image" 等.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>index</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>
-          </td>
-          <td><p>索引, 从 0 开始数</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>element_class</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>]</code>)
+        – <p>指定的消息元素的类型, 例如 "Plain", "At", "Image" 等.</p>
+      </li>
+      <li class="field-body">
+        <b>index</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a></code>)
+        – <p>索引, 从 0 开始数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>Element_T</code></td>          <td>
-                <code><span title="graia.ariadne.message.chain.Element_T">Element_T</span></code>
-          </td>
-          <td><p>消息链第 index + 1 个特定类型的消息元素</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>Element_T</b>(            <code><span title="graia.ariadne.message.chain.Element_T">Element_T</span></code>
+)        – <p>消息链第 index + 1 个特定类型的消息元素</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6566,47 +6102,22 @@ has
 
       <p>判断消息链中是否含有特定的元素/元素类型/消息链/字符串.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>item</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>, <a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>], &#39;MessageChain&#39;]</code>
-          </td>
-          <td><p>需要判断的元素/元素类型/消息链/字符串.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>item</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>, <a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<span title="graia.ariadne.message.chain.Element_T">Element_T</span>], &#39;MessageChain&#39;]</code>)
+        – <p>需要判断的元素/元素类型/消息链/字符串.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>判断结果</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>判断结果</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6672,47 +6183,22 @@ include
 
       <p>将只在给出的消息元素类型中符合的消息元素重新包装为一个新的消息链</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*types</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[Un]</code>
-          </td>
-          <td><p>将只包含在内的消息元素类型</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*types</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[Un]</code>)
+        – <p>将只包含在内的消息元素类型</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>返回的消息链中只包含参数中给出的消息元素类型</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>返回的消息链中只包含参数中给出的消息元素类型</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6760,47 +6246,22 @@ index
 
       <p>寻找第一个特定类型的元素, 并返回其下标.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>element_type</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>
-          </td>
-          <td><p>元素或元素类型</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>element_type</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Type" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Type">Type</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>]</code>)
+        – <p>元素或元素类型</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>, None]</code>
-          </td>
-          <td><p>Optional[int]: 元素下标, 若未找到则为 None.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#int">int</a>, None]</code>
+        – <p>Optional[int]: 元素下标, 若未找到则为 None.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6858,57 +6319,27 @@ join
 
       <p>将多个消息链连接起来, 并在其中插入自身.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*chains</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a>]</code>
-          </td>
-          <td><p>要连接的消息链.</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>merge</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否合并消息链文本, 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*chains</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Iterable" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Iterable">Iterable</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a>]</code>)
+        – <p>要连接的消息链.</p>
+      </li>
+      <li class="field-body">
+        <b>merge</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否合并消息链文本, 默认为 True.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>连接后的消息链.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>连接后的消息链.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -6987,23 +6418,13 @@ merge
       <p>在实例内合并相邻的 Plain 项</p>
 <p>copy (bool): 是否要在副本上修改.</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>copy = True 时返回副本, 否则返回自己的引用.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>copy = True 时返回副本, 否则返回自己的引用.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7089,23 +6510,13 @@ onlyContains
 
       <p>判断消息链中是否只含有特定类型元素.</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>判断结果</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>判断结果</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7150,47 +6561,22 @@ parse_obj
 
       <p>内部接口, 会自动将作为外部态的消息元素转为内部态.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>obj</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.ariadne.typing.T">T</span>]</code>
-          </td>
-          <td><p>需要反序列化的对象</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>obj</b>
+            (<code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[<span title="graia.ariadne.typing.T">T</span>]</code>)
+        – <p>需要反序列化的对象</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>内部承载有尽量有效的消息元素的消息链</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>内部承载有尽量有效的消息元素的消息链</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7240,23 +6626,13 @@ prepare
 
       <p>对消息链中所有元素进行处理.</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>copy = True 时返回副本, 否则返回自己的引用.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>copy = True 时返回副本, 否则返回自己的引用.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7314,67 +6690,32 @@ removeprefix
 
       <p>移除消息链前缀.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>prefix</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>要移除的前缀.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>copy</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否在副本上修改, 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>skip_header</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否要忽略 Source 与 Quote 类型查找, 默认为 True. (移除后仍会带上 Source 与 Quote)</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>prefix</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>要移除的前缀.</p>
+      </li>
+      <li class="field-body">
+        <b>copy</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否在副本上修改, 默认为 True.</p>
+      </li>
+      <li class="field-body">
+        <b>skip_header</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否要忽略 Source 与 Quote 类型查找, 默认为 True. (移除后仍会带上 Source 与 Quote)</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>修改后的消息链, 若未移除则原样返回.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>修改后的消息链, 若未移除则原样返回.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7466,57 +6807,27 @@ removesuffix
 
       <p>移除消息链后缀.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>suffix</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>要移除的后缀.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>copy</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否在副本上修改, 默认为 True.</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>suffix</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>要移除的后缀.</p>
+      </li>
+      <li class="field-body">
+        <b>copy</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否在副本上修改, 默认为 True.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>修改后的消息链, 若未移除则原样返回.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>修改后的消息链, 若未移除则原样返回.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7584,57 +6895,27 @@ replace
 
       <p>替换消息链中的一部分. (在副本上操作)</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>old</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a></code>
-          </td>
-          <td><p>要替换的消息链.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>new</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a></code>
-          </td>
-          <td><p>替换后的消息链.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>old</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a></code>)
+        – <p>要替换的消息链.</p>
+      </li>
+      <li class="field-body">
+        <b>new</b>
+            (<code><a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="#graia.ariadne.message.chain.MessageChain">MessageChain</a></code>)
+        – <p>替换后的消息链.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code>&#39;MessageChain&#39;</code>
-          </td>
-          <td><p>修改后的消息链, 若未替换则原样返回.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code>&#39;MessageChain&#39;</code>
+)        – <p>修改后的消息链, 若未替换则原样返回.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7746,57 +7027,27 @@ split
 
       <p>和 <code>str.split</code> 差不多, 提供一个字符串, 然后返回分割结果.</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>pattern</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>分隔符. 默认为单个空格.</p></td>
-          <td>
-                <code>&#39; &#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>raw_string</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否要包含 "空" 的文本元素.</p></td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>pattern</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>分隔符. 默认为单个空格.</p>
+      </li>
+      <li class="field-body">
+        <b>raw_string</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否要包含 "空" 的文本元素.</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[&#39;MessageChain&#39;]</code>
-          </td>
-          <td><p>List["MessageChain"]: 分割结果, 行为和 <code>str.split</code> 差不多.</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+            <code><a class="autorefs autorefs-external" title="typing.List" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.List">List</a>[&#39;MessageChain&#39;]</code>
+        – <p>List["MessageChain"]: 分割结果, 行为和 <code>str.split</code> 差不多.</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>
@@ -7884,57 +7135,27 @@ startswith
 
       <p>判定消息链是否以相应字符串开头</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>string</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>
-          </td>
-          <td><p>需要判断的字符串</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>ignore_header</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否忽略元数据, 默认为 True</p></td>
-          <td>
-                <code>True</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>string</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a></code>)
+        – <p>需要判断的字符串</p>
+      </li>
+      <li class="field-body">
+        <b>ignore_header</b>
+            (<code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>)
+        – <p>是否忽略元数据, 默认为 True</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>bool</code></td>          <td>
-                <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
-          </td>
-          <td><p>是否以此字符串开头</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>bool</b>(            <code><a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/functions.html#bool">bool</a></code>
+)        – <p>是否以此字符串开头</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/chain.py</code></summary>

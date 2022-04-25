@@ -2396,57 +2396,27 @@ format
 
       <p>通过初始化时传入的格式字符串 格式化消息链</p>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>*o_args</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>
-          </td>
-          <td><p>格式化时传入的关键字参数</p></td>
-          <td>
-                <code>()</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>**o_kwargs</code></td>
-          <td>
-                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>
-          </td>
-          <td><p>格式化时传入的关键字参数</p></td>
-          <td>
-                <code>{}</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Parameters:</p>
+  <ul>
+      <li class="field-body">
+        <b>*o_args</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>格式化时传入的关键字参数</p>
+      </li>
+      <li class="field-body">
+        <b>**o_kwargs</b>
+            (<code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/zh-cn/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-internal" title="graia.ariadne.message.element.Element" href="../element/#graia.ariadne.message.element.Element">Element</a>, <a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/zh-cn/3/library/stdtypes.html#str">str</a>]</code>)
+        – <p>格式化时传入的关键字参数</p>
+      </li>
+  </ul>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-<td><code>MessageChain</code></td>          <td>
-                <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a></code>
-          </td>
-          <td><p>格式化后的消息链</p></td>
-        </tr>
-    </tbody>
-  </table>
+  <p>Returns:</p>
+  <ul>
+      <li class="field-body">
+<b>MessageChain</b>(            <code><a class="autorefs autorefs-internal" title="graia.ariadne.message.chain.MessageChain" href="../chain/#graia.ariadne.message.chain.MessageChain">MessageChain</a></code>
+)        – <p>格式化后的消息链</p>
+      </li>
+  </ul>
 
         <details class="quote">
           <summary>Source code in <code>graia/ariadne/message/formatter.py</code></summary>
