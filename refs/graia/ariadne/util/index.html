@@ -2873,7 +2873,11 @@ eval_ctx
 
 
 <a href="#graia.ariadne.util.eval_ctx" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">eval_ctx</span><span class="p">(</span><span class="n">layer</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">globals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">locals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">,</span> <span class="n">DictStrAny</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">eval_ctx</span><span class="p">(</span>
+    <span class="n">layer</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">globals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">locals_</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DictStrAny</span><span class="p">,</span> <span class="n">DictStrAny</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3253,7 +3257,9 @@ loguru_excepthook
 
 
 <a href="#graia.ariadne.util.loguru_excepthook" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">loguru_excepthook</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">BaseException</span><span class="p">],</span> <span class="n">val</span><span class="p">:</span> <span class="ne">BaseException</span><span class="p">,</span> <span class="n">tb</span><span class="p">:</span> <span class="n">TracebackType</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">loguru_excepthook</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="ne">BaseException</span><span class="p">],</span> <span class="n">val</span><span class="p">:</span> <span class="ne">BaseException</span><span class="p">,</span> <span class="n">tb</span><span class="p">:</span> <span class="n">TracebackType</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3358,7 +3364,9 @@ resolve_dispatchers_mixin
 
 
 <a href="#graia.ariadne.util.resolve_dispatchers_mixin" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">resolve_dispatchers_mixin</span><span class="p">(</span><span class="n">dispatchers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">resolve_dispatchers_mixin</span><span class="p">(</span>
+    <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">T_Dispatcher</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3565,7 +3573,11 @@ yield_with_timeout
   </span>
 
 <a href="#graia.ariadne.util.yield_with_timeout" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">yield_with_timeout</span><span class="p">(</span><span class="n">getter_coro</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Coroutine</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="p">]],</span> <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">await_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">yield_with_timeout</span><span class="p">(</span>
+    <span class="n">getter_coro</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="n">Coroutine</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">T</span><span class="p">]],</span>
+    <span class="n">predicate</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[],</span> <span class="nb">bool</span><span class="p">],</span>
+    <span class="n">await_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

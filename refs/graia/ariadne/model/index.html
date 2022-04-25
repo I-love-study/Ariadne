@@ -5106,7 +5106,9 @@ friend_message_log_format
   </span>
 
 <a href="#graia.ariadne.model.ChatLogConfig.friend_message_log_format" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">friend_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{bot_id}</span><span class="s1">: [</span><span class="si">{friend_name}</span><span class="s1">(</span><span class="si">{friend_id}</span><span class="s1">)] -&gt; </span><span class="si">{message_string}</span><span class="s1">&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">friend_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="si">{bot_id}</span><span class="s2">: [</span><span class="si">{friend_name}</span><span class="s2">(</span><span class="si">{friend_id}</span><span class="s2">)] -&gt; </span><span class="si">{message_string}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5130,7 +5132,7 @@ group_message_log_format
   </span>
 
 <a href="#graia.ariadne.model.ChatLogConfig.group_message_log_format" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">group_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{bot_id}</span><span class="s1">: [</span><span class="si">{group_name}</span><span class="s1">(</span><span class="si">{group_id}</span><span class="s1">)] </span><span class="si">{member_name}</span><span class="s1">(</span><span class="si">{member_id}</span><span class="s1">) -&gt; </span><span class="si">{message_string}</span><span class="s1">&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">group_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{bot_id}</span><span class="s2">: [</span><span class="si">{group_name}</span><span class="s2">(</span><span class="si">{group_id}</span><span class="s2">)] </span><span class="si">{member_name}</span><span class="s2">(</span><span class="si">{member_id}</span><span class="s2">) -&gt; </span><span class="si">{message_string}</span><span class="s2">&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5178,7 +5180,9 @@ other_client_message_log_format
   </span>
 
 <a href="#graia.ariadne.model.ChatLogConfig.other_client_message_log_format" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">other_client_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{bot_id}</span><span class="s1">: [</span><span class="si">{platform_name}</span><span class="s1">(</span><span class="si">{platform_id}</span><span class="s1">)] -&gt; </span><span class="si">{message_string}</span><span class="s1">&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">other_client_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="si">{bot_id}</span><span class="s2">: [</span><span class="si">{platform_name}</span><span class="s2">(</span><span class="si">{platform_id}</span><span class="s2">)] -&gt; </span><span class="si">{message_string}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5202,7 +5206,9 @@ stranger_message_log_format
   </span>
 
 <a href="#graia.ariadne.model.ChatLogConfig.stranger_message_log_format" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">stranger_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{bot_id}</span><span class="s1">: [</span><span class="si">{stranger_name}</span><span class="s1">(</span><span class="si">{stranger_id}</span><span class="s1">)] -&gt; </span><span class="si">{message_string}</span><span class="s1">&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">stranger_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="si">{bot_id}</span><span class="s2">: [</span><span class="si">{stranger_name}</span><span class="s2">(</span><span class="si">{stranger_id}</span><span class="s2">)] -&gt; </span><span class="si">{message_string}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5226,7 +5232,7 @@ temp_message_log_format
   </span>
 
 <a href="#graia.ariadne.model.ChatLogConfig.temp_message_log_format" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">temp_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{bot_id}</span><span class="s1">: [</span><span class="si">{group_name}</span><span class="s1">(</span><span class="si">{group_id}</span><span class="s1">).</span><span class="si">{member_name}</span><span class="s1">(</span><span class="si">{member_id}</span><span class="s1">)] -&gt; </span><span class="si">{message_string}</span><span class="s1">&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">temp_message_log_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{bot_id}</span><span class="s2">: [</span><span class="si">{group_name}</span><span class="s2">(</span><span class="si">{group_id}</span><span class="s2">).</span><span class="si">{member_name}</span><span class="s2">(</span><span class="si">{member_id}</span><span class="s2">)] -&gt; </span><span class="si">{message_string}</span><span class="s2">&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

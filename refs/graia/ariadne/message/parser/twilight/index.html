@@ -3750,7 +3750,11 @@ __init__
 
 
 <a href="#graia.ariadne.message.parser.twilight.Help.__init__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">formatter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DecoratorInterface</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Awaitable</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">T</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
+    <span class="n">formatter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
+        <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">,</span> <span class="n">DecoratorInterface</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Awaitable</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">T</span><span class="p">]]</span>
+    <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5463,7 +5467,10 @@ __init__
 
 
 <a href="#graia.ariadne.message.parser.twilight.Twilight.__init__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">root</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="n">Match</span><span class="p">],</span> <span class="n">Match</span><span class="p">],</span> <span class="n">map_param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">root</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Iterable</span><span class="p">[</span><span class="n">Match</span><span class="p">],</span> <span class="n">Match</span><span class="p">],</span>
+    <span class="n">map_param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5619,7 +5626,9 @@ from_command
   </span>
 
 <a href="#graia.ariadne.message.parser.twilight.Twilight.from_command" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">from_command</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extra_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Match</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Twilight&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">from_command</span><span class="p">(</span>
+    <span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">extra_args</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Match</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Twilight&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5806,7 +5815,14 @@ get_help
 
 
 <a href="#graia.ariadne.message.parser.twilight.Twilight.get_help" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">get_help</span><span class="p">(</span><span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">epilog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39; -&gt; &#39;</span><span class="p">,</span> <span class="n">formatter_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">HelpFormatter</span><span class="p">]</span> <span class="o">=</span> <span class="n">HelpFormatter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="highlight"><pre><span></span><code><span class="n">get_help</span><span class="p">(</span>
+    <span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">epilog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">dest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">,</span>
+    <span class="n">formatter_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">HelpFormatter</span><span class="p">]</span> <span class="o">=</span> <span class="n">HelpFormatter</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5924,7 +5940,18 @@ help
 
 
 <a href="#graia.ariadne.message.parser.twilight.Twilight.help" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">help</span><span class="p">(</span><span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">epilog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39; -&gt; &#39;</span><span class="p">,</span> <span class="n">formatter_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">HelpFormatter</span><span class="p">]</span> <span class="o">=</span> <span class="n">HelpFormatter</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">brief</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">help_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">TwilightHelpManager</span><span class="o">.</span><span class="n">AUTO_ID</span><span class="p">,</span> <span class="n">manager</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">TwilightHelpManager</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span>
+<div class="highlight"><pre><span></span><code><span class="n">help</span><span class="p">(</span>
+    <span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">epilog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">dest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">,</span>
+    <span class="n">formatter_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">HelpFormatter</span><span class="p">]</span> <span class="o">=</span> <span class="n">HelpFormatter</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">brief</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">help_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">TwilightHelpManager</span><span class="o">.</span><span class="n">AUTO_ID</span><span class="p">,</span>
+    <span class="n">manager</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">TwilightHelpManager</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;global&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Self</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6423,7 +6450,14 @@ get_help
 
 
 <a href="#graia.ariadne.message.parser.twilight.TwilightMatcher.get_help" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">get_help</span><span class="p">(</span><span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">epilog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39; -&gt; &#39;</span><span class="p">,</span> <span class="n">formatter_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">HelpFormatter</span><span class="p">]</span> <span class="o">=</span> <span class="n">HelpFormatter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="highlight"><pre><span></span><code><span class="n">get_help</span><span class="p">(</span>
+    <span class="n">usage</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">epilog</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">dest</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">sep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot; -&gt; &quot;</span><span class="p">,</span>
+    <span class="n">formatter_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">HelpFormatter</span><span class="p">]</span> <span class="o">=</span> <span class="n">HelpFormatter</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6591,7 +6625,9 @@ match
 
 
 <a href="#graia.ariadne.message.parser.twilight.TwilightMatcher.match" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">match</span><span class="p">(</span><span class="n">arguments</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">elem_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MatchResult</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="k">match</span><span class="p">(</span>
+    <span class="n">arguments</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">elem_mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MatchResult</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

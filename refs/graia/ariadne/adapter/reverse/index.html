@@ -2631,7 +2631,18 @@ __init__
 
 
 <a href="#graia.ariadne.adapter.reverse.ComposeWebhookAdapter.__init__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">mirai_session</span><span class="p">:</span> <span class="n">MiraiSession</span><span class="p">,</span> <span class="n">route</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">extra_headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">log</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FastAPI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span> <span class="n">server_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">NoSigServer</span><span class="p">]</span> <span class="o">=</span> <span class="n">NoSigServer</span><span class="p">,</span> <span class="o">**</span><span class="n">config_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
+    <span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span>
+    <span class="n">mirai_session</span><span class="p">:</span> <span class="n">MiraiSession</span><span class="p">,</span>
+    <span class="n">route</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">extra_headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">log</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FastAPI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="n">server_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">NoSigServer</span><span class="p">]</span> <span class="o">=</span> <span class="n">NoSigServer</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">config_kwargs</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3034,7 +3045,17 @@ __init__
 
 
 <a href="#graia.ariadne.adapter.reverse.ReverseAdapter.__init__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">mirai_session</span><span class="p">:</span> <span class="n">MiraiSession</span><span class="p">,</span> <span class="n">route</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">log</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FastAPI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span> <span class="n">server_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">NoSigServer</span><span class="p">]</span> <span class="o">=</span> <span class="n">NoSigServer</span><span class="p">,</span> <span class="o">**</span><span class="n">config_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
+    <span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span>
+    <span class="n">mirai_session</span><span class="p">:</span> <span class="n">MiraiSession</span><span class="p">,</span>
+    <span class="n">route</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">log</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FastAPI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="n">server_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">NoSigServer</span><span class="p">]</span> <span class="o">=</span> <span class="n">NoSigServer</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">config_kwargs</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3533,7 +3554,19 @@ __init__
 
 
 <a href="#graia.ariadne.adapter.reverse.ReverseWebsocketAdapter.__init__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span><span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span> <span class="n">mirai_session</span><span class="p">:</span> <span class="n">MiraiSession</span><span class="p">,</span> <span class="n">route</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="n">extra_headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">query_params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">log</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FastAPI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span> <span class="n">server_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">NoSigServer</span><span class="p">]</span> <span class="o">=</span> <span class="n">NoSigServer</span><span class="p">,</span> <span class="o">**</span><span class="n">config_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__init__</span><span class="p">(</span>
+    <span class="n">broadcast</span><span class="p">:</span> <span class="n">Broadcast</span><span class="p">,</span>
+    <span class="n">mirai_session</span><span class="p">:</span> <span class="n">MiraiSession</span><span class="p">,</span>
+    <span class="n">route</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="n">extra_headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">query_params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">log</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FastAPI</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="n">server_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">NoSigServer</span><span class="p">]</span> <span class="o">=</span> <span class="n">NoSigServer</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">config_kwargs</span><span class="p">:</span> <span class="n">Any</span>
+<span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

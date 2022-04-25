@@ -4412,7 +4412,9 @@ __contains__
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.__contains__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__contains__</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;MessageChain&#39;</span><span class="p">,</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element_T</span><span class="p">],</span> <span class="n">Element_T</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__contains__</span><span class="p">(</span>
+    <span class="n">item</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="s2">&quot;MessageChain&quot;</span><span class="p">,</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element_T</span><span class="p">],</span> <span class="n">Element_T</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4449,7 +4451,9 @@ __getitem__
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.__getitem__" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="fm">__getitem__</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Element_T</span><span class="p">],</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element_T</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Element</span><span class="p">],</span> <span class="n">Element</span><span class="p">,</span> <span class="s1">&#39;MessageChain&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="fm">__getitem__</span><span class="p">(</span>
+    <span class="n">item</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Element_T</span><span class="p">],</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Type</span><span class="p">[</span><span class="n">Element_T</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">slice</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Element</span><span class="p">],</span> <span class="n">Element</span><span class="p">,</span> <span class="s2">&quot;MessageChain&quot;</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4559,7 +4563,9 @@ _from_mapping_string
   </span>
 
 <a href="#graia.ariadne.message.chain.MessageChain._from_mapping_string" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">_from_mapping_string</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s1">&#39;MessageChain&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">_from_mapping_string</span><span class="p">(</span>
+    <span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mapping</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessageChain&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4655,7 +4661,12 @@ _to_mapping_str
 
 
 <a href="#graia.ariadne.message.chain.MessageChain._to_mapping_str" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">_to_mapping_str</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">remove_source</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">remove_quote</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">remove_extra_space</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">]]</span>
+<div class="highlight"><pre><span></span><code><span class="n">_to_mapping_str</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">remove_source</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">remove_quote</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">remove_extra_space</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Element</span><span class="p">]]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4916,7 +4927,12 @@ asPersistentString
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.asPersistentString" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">asPersistentString</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">binary</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">include</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">exclude</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">]]</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="highlight"><pre><span></span><code><span class="n">asPersistentString</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">binary</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">include</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(),</span>
+    <span class="n">exclude</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Element</span><span class="p">]]</span> <span class="o">=</span> <span class="p">()</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5583,7 +5599,10 @@ extend
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.extend" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">extend</span><span class="p">(</span><span class="o">*</span><span class="n">content</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;MessageChain&#39;</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]],</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;MessageChain&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">extend</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">content</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="s2">&quot;MessageChain&quot;</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]],</span>
+    <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessageChain&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6312,7 +6331,9 @@ join
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.join" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">chains</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="s1">&#39;MessageChain&#39;</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="s1">&#39;MessageChain&#39;</span><span class="p">]],</span> <span class="n">merge</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;MessageChain&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">join</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">chains</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="s2">&quot;MessageChain&quot;</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="s2">&quot;MessageChain&quot;</span><span class="p">]],</span> <span class="n">merge</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessageChain&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6683,7 +6704,9 @@ removeprefix
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.removeprefix" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">removeprefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">skip_header</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;MessageChain&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">removeprefix</span><span class="p">(</span>
+    <span class="n">prefix</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">copy</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">skip_header</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessageChain&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6888,7 +6911,10 @@ replace
 
 
 <a href="#graia.ariadne.message.chain.MessageChain.replace" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">replace</span><span class="p">(</span><span class="n">old</span><span class="p">:</span> <span class="s1">&#39;MessageChain | Iterable[Element] | Element&#39;</span><span class="p">,</span> <span class="n">new</span><span class="p">:</span> <span class="s1">&#39;MessageChain | Iterable[Element] | Element&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;MessageChain&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">replace</span><span class="p">(</span>
+    <span class="n">old</span><span class="p">:</span> <span class="s2">&quot;MessageChain | Iterable[Element] | Element&quot;</span><span class="p">,</span>
+    <span class="n">new</span><span class="p">:</span> <span class="s2">&quot;MessageChain | Iterable[Element] | Element&quot;</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;MessageChain&quot;</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">

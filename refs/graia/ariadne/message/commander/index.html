@@ -2730,7 +2730,11 @@ get_data
 
 
 <a href="#graia.ariadne.message.commander.CommandHandler.get_data" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">get_data</span><span class="p">(</span><span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">],</span> <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]],</span> <span class="n">wildcard_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">get_data</span><span class="p">(</span>
+    <span class="n">slot_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">MessageChain</span><span class="p">],</span>
+    <span class="n">arg_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">]],</span>
+    <span class="n">wildcard_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3608,7 +3612,12 @@ command
 
 
 <a href="#graia.ariadne.message.commander.Commander.command" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">command</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">setting</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span> <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T_Callable</span><span class="p">],</span> <span class="n">T_Callable</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">command</span><span class="p">(</span>
+    <span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">setting</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">Slot</span><span class="p">,</span> <span class="n">Arg</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dispatchers</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">BaseDispatcher</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+    <span class="n">decorators</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Decorator</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">T_Callable</span><span class="p">],</span> <span class="n">T_Callable</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -4429,7 +4438,9 @@ chain_validator
 
 
 <a href="#graia.ariadne.message.commander.chain_validator" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">chain_validator</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">ModelField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">chain_validator</span><span class="p">(</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">MessageChain</span><span class="p">,</span> <span class="n">field</span><span class="p">:</span> <span class="n">ModelField</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MessageChain</span><span class="p">,</span> <span class="n">Element</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
